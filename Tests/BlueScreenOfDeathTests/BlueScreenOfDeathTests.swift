@@ -986,6 +986,69 @@ final class LocalizationCoverageTests: XCTestCase {
         }
     }
 
+    func testNonLatinScriptLanguagesUseNativeScript() {
+        // Languages that use non-Latin scripts should have values written
+        // in their native script, NOT in ASCII/Latin. This catches the exact
+        // bug where style names like "Mojibake" or "CyberWin 2070" are left
+        // untransliterated.
+        let nonLatinLanguages: [String] = [
+            "ar", "bn", "chr", "zh-Hans", "zh-Hant", "hi", "ja", "ko", "ru", "th", "uk",
+        ]
+
+        // Keys where Latin/ASCII values are acceptable even for non-Latin languages
+        let latinExemptKeys: Set<String> = [
+            "bsod.modern.percentComplete",   // "%d% complete" — format specifier
+            "about.versionFormat",            // "Version %@" — format specifier
+            "bsod.cyber.signalFormat",        // "signal %d" — short format
+            "interval.customFormat",          // "Custom (%d min)…" — format with number
+            "interval.everyNMinFormat",       // "Every %d min" — format with number
+        ]
+
+        // Load English bundle for comparison
+        let enCandidates = ["en", "en".lowercased()]
+        var enBundle: Bundle?
+        for candidate in enCandidates {
+            if let path = Bundle.module.path(forResource: candidate, ofType: "lproj") {
+                enBundle = Bundle(path: path)
+                if enBundle != nil { break }
+            }
+        }
+        guard let englishBundle = enBundle else {
+            XCTFail("Missing English .lproj bundle")
+            return
+        }
+
+        for lang in nonLatinLanguages {
+            let candidates = [lang, lang.lowercased()]
+            var bundle: Bundle?
+            for candidate in candidates {
+                if let path = Bundle.module.path(forResource: candidate, ofType: "lproj") {
+                    bundle = Bundle(path: path)
+                    if bundle != nil { break }
+                }
+            }
+            guard let langBundle = bundle else {
+                XCTFail("Missing .lproj bundle for non-Latin language: \(lang)")
+                continue
+            }
+
+            for key in Self.allKeys where !latinExemptKeys.contains(key) {
+                let enValue = englishBundle.localizedString(forKey: key, value: nil, table: nil)
+                let langValue = langBundle.localizedString(forKey: key, value: nil, table: nil)
+
+                // If the English value is purely ASCII and more than 2 chars,
+                // the non-Latin translation should NOT be identical
+                let isEnglishPureAscii = enValue.allSatisfy { $0.isASCII }
+                if isEnglishPureAscii && enValue.count > 2 && langValue == enValue {
+                    XCTFail(
+                        "Non-Latin language '\(lang)' has untransliterated value for '\(key)': " +
+                        "'\(langValue)' is identical to English '\(enValue)'"
+                    )
+                }
+            }
+        }
+    }
+
     func testFormatSpecifiersPreserved() {
         // Keys that contain format specifiers and what they should contain
         let formatKeys: [(key: String, specifier: String)] = [

@@ -64,7 +64,7 @@
 "lunch.helpText" = "점심시간이 되면 블루스크린이 알려드립니다.";
 
 /* About */
-"about.title" = "Blue Screen of Death";
+"about.title" = "블루스크린";
 "about.subtitle" = "현대의 마음챙김 종";
 "about.description" = "시력을 보호하고 마음챙김을 실천하세요. 몇 시간마다 부드러운 블루스크린이 나타나 화면에서 눈을 떼고, 먼 곳을 바라보며, 깊게 숨을 쉬도록 안내합니다.\n\n클래식 컴퓨터의 향수에서 영감을 받아 디지털 웰빙 도구로 새롭게 탄생했습니다.";
 "about.versionFormat" = "버전 %@";
@@ -76,7 +76,7 @@
 /* Accessibility */
 "a11y.overlay.label" = "블루스크린 알림";
 "a11y.overlay.hint" = "잠시 화면에서 눈을 떼고 심호흡하세요. 아무 키를 누르거나 클릭하면 닫힙니다.";
-"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.label" = "블루스크린";
 "a11y.statusItem.hint" = "왼쪽 클릭으로 표시, 오른쪽 클릭으로 설정";
 
 /* Modern BSOD */

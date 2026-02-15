@@ -64,7 +64,7 @@
 "lunch.helpText" = "到了午餐時間，藍色畫面會提醒你。";
 
 /* About */
-"about.title" = "Blue Screen of Death";
+"about.title" = "藍屏死機";
 "about.subtitle" = "一面現代的正念之鐘";
 "about.description" = "保護視力，培養正念。每隔幾小時，一個溫和的藍色畫面提醒會鼓勵你將目光從螢幕上移開，注視遠方，深呼吸片刻。\n\n靈感源自經典電腦的懷舊風格，重新構想為一款數位健康工具。";
 "about.versionFormat" = "版本 %@";
@@ -76,7 +76,7 @@
 /* Accessibility */
 "a11y.overlay.label" = "藍色畫面提醒";
 "a11y.overlay.hint" = "請將目光從螢幕上移開，深呼吸。按任意鍵或點按關閉。";
-"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.label" = "藍屏死機";
 "a11y.statusItem.hint" = "左鍵點按觸發，右鍵點按開啟設定";
 
 /* Modern BSOD */

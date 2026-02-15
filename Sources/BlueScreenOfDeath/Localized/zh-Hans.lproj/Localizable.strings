@@ -64,7 +64,7 @@
 "lunch.helpText" = "到了午餐时间，蓝屏会提醒你。";
 
 /* About */
-"about.title" = "Blue Screen of Death";
+"about.title" = "蓝屏死机";
 "about.subtitle" = "一面现代的正念之钟";
 "about.description" = "保护视力，培养正念。每隔几小时，一个温和的蓝屏提醒会鼓励你将目光从屏幕上移开，注视远方，深呼吸片刻。\n\n灵感源自经典计算机的怀旧风格，重新构想为一款数字健康工具。";
 "about.versionFormat" = "版本 %@";
@@ -76,7 +76,7 @@
 /* Accessibility */
 "a11y.overlay.label" = "蓝屏提醒";
 "a11y.overlay.hint" = "请将目光从屏幕上移开，深呼吸。按任意键或点击关闭。";
-"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.label" = "蓝屏死机";
 "a11y.statusItem.hint" = "左键点击触发，右键点击打开设置";
 
 /* Modern BSOD */

@@ -64,7 +64,7 @@
 "lunch.helpText" = "お昼の時間になると、ブルースクリーンがお知らせします。";
 
 /* About */
-"about.title" = "Blue Screen of Death";
+"about.title" = "ブルースクリーン";
 "about.subtitle" = "現代のマインドフルネスベル";
 "about.description" = "目を守り、マインドフルネスを育みましょう。数時間ごとに、穏やかなブルースクリーンが画面から目を離し、遠くを見つめ、深呼吸することを促します。\n\n懐かしいコンピューターの世界からインスピレーションを受け、デジタルウェルビーイングのためのツールとして生まれ変わりました。";
 "about.versionFormat" = "バージョン %@";
@@ -76,7 +76,7 @@
 /* Accessibility */
 "a11y.overlay.label" = "ブルースクリーンリマインダー";
 "a11y.overlay.hint" = "画面から目を離して、深呼吸しましょう。任意のキーを押すかクリックで閉じます。";
-"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.label" = "ブルースクリーン";
 "a11y.statusItem.hint" = "左クリックで表示、右クリックで設定";
 
 /* Modern BSOD */

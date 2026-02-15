@@ -64,7 +64,7 @@
 "lunch.helpText" = "ᏌᎪᏂᎨ ᎠᏍᏓᏩᏛᏍᏗ ᎬᏅᏓᏗᏍᏙᏗ ᎾᏍᎩ ᎠᎵᏍᏓᏴᏗ ᎨᏒᎢ.";
 
 /* About */
-"about.title" = "Blue Screen of Death";
+"about.title" = "ᏌᎪᎾᎨᎢ ᎤᏕᏲᏅ ᎠᏍᎦᏯ";
 "about.subtitle" = "ᎢᏤ ᎨᏒᎢ ᎠᏓᏅᏖᏍᎬ ᎠᎵᏏᎾᎯᏍᏗ";
 "about.description" = "ᏕᏣᏚᎪᏔ ᏫᏓᏎᎸᎩ ᎠᎴ ᎤᏙᎯᏳᎯᏍᏗ ᏕᎦᎶᏗ. ᏐᏈᎢ ᏔᎵ ᏑᏟᎶᏓ ᏗᎧᎸᎬ, ᏌᎪᏂᎨ ᎠᏍᏓᏩᏛᏍᏗ ᎠᏅᏓᏗᏍᏗ ᏫᏣᏓᏅᏖᏍᏗ ᎠᏍᏓᏩᏛᏍᏗ ᏂᏗᎬᏪᎳᏁᎸ ᎢᏗ, ᎣᏏ ᏂᏗᎬᏪᎳᏁᎸ ᎢᏅ ᏥᏄᏍᏗ, ᎠᎴ ᎤᏙᎯᏳᎯᏍᏗ ᎠᏓᏄᎸᏍᏗ.\n\nᎡᎶᎯ ᎠᏍᏆᏗᏍᏗ ᎧᏁᏉᏍᏗ ᎨᏒᎢ, ᎢᏤ ᎠᏓᏅᏖᏍᎬ ᎢᎬᏱ ᏗᎦᏓᏄᎸ ᎪᎱᏍᏗ.";
 "about.versionFormat" = "ᎤᏙᎯᏳᎯ %@";
@@ -76,7 +76,7 @@
 /* Accessibility */
 "a11y.overlay.label" = "ᏌᎪᏂᎨ ᎠᏍᏓᏩᏛᏍᏗ ᎠᏅᏓᏗᏍᏗ";
 "a11y.overlay.hint" = "ᏫᏣᏓᏅᏖᏍᏗ ᎠᏍᏓᏩᏛᏍᏗ ᏂᏗᎬᏪᎳᏁᎸ ᎢᏗ ᎠᎴ ᎠᏓᏄᎸᏍᏗ. ᎦᏙᎯ ᏗᏍᏚᎢᏍᏗ ᏗᎦᎳᏅᏓ ᎠᎴᏃ ᏗᏍᏚᎢᏍᏗ ᎠᏁᏢᏔᏅᎢ.";
-"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.label" = "ᏌᎪᎾᎨᎢ ᎤᏕᏲᏅ ᎠᏍᎦᏯ";
 "a11y.statusItem.hint" = "ᎠᎦᏍᎦᏂ ᏗᏍᏚᎢᏍᏗ ᎠᎴᏂᏙᎲ, ᎠᎦᏘᏏ ᏗᏍᏚᎢᏍᏗ ᎠᏓᏅᏖᏍᏗ";
 
 /* Modern BSOD */
