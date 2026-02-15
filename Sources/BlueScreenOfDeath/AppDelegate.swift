@@ -117,10 +117,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         menu.addItem(.separator())
 
-        menu.addItem(NSMenuItem(title: "Lock Screen", action: #selector(lockScreen), keyEquivalent: ""))
-
-        menu.addItem(.separator())
-
         menu.addItem(NSMenuItem(title: "About Blue Screen of Death", action: #selector(openAbout), keyEquivalent: ""))
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(quit), keyEquivalent: "q"))
 
@@ -201,21 +197,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.isReleasedWhenClosed = false
         window.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
-    }
-
-    @objc private func lockScreen() {
-        // Show the blue screen overlay, then lock the real screen behind it
-        overlay.show()
-        // SACLockScreenImmediate locks the display (same as Ctrl+Cmd+Q)
-        let libHandle = dlopen("/System/Library/PrivateFrameworks/login.framework/Versions/Current/login", RTLD_LAZY)
-        if let handle = libHandle {
-            typealias SACLockFunc = @convention(c) () -> Void
-            if let sym = dlsym(handle, "SACLockScreenImmediate") {
-                let lockFunc = unsafeBitCast(sym, to: SACLockFunc.self)
-                lockFunc()
-            }
-            dlclose(handle)
-        }
     }
 
     @objc private func quit() {
