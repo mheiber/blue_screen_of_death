@@ -206,12 +206,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         systemItem.representedObject = "system"
         systemItem.state = (LocalizationManager.shared.currentLanguage == "system") ? .on : .off
         languageMenu.addItem(systemItem)
+        addAlternate(to: languageMenu, systemTitle: SL("language.system"))
 
         // Random option
         let randomLangItem = NSMenuItem(title: L("language.random"), action: #selector(selectLanguage(_:)), keyEquivalent: "")
         randomLangItem.representedObject = "random"
         randomLangItem.state = (LocalizationManager.shared.currentLanguage == "random") ? .on : .off
         languageMenu.addItem(randomLangItem)
+        addAlternate(to: languageMenu, systemTitle: SL("language.random"))
 
         languageMenu.addItem(.separator())
 
