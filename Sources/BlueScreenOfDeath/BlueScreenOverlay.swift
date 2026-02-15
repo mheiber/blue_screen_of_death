@@ -100,10 +100,10 @@ final class BlueScreenOverlay {
 
         yOffset -= sadFace.frame.height + 40
 
-        // Body text — wellness-themed parody (not a real crash message)
+        // Body text
         let bodyText = """
-            Your eyes ran into a problem and need to refocus. \
-            We're just collecting some calm, and then we'll restart your focus for you.
+            Your device ran into a problem and needs to restart. \
+            We're just collecting some error info, and then we'll restart for you.
             """
         let bodyLabel = NSTextField(wrappingLabelWithString: bodyText)
         bodyLabel.font = NSFont.systemFont(ofSize: 18, weight: .light)
@@ -152,13 +152,13 @@ final class BlueScreenOverlay {
             let infoWidth = maxTextWidth - qrSize - 16
 
             let line1 = NSTextField(wrappingLabelWithString:
-                "For more information about eye health and possible stretches, visit our site")
+                "For more information about this issue and possible fixes, visit our site")
             configureSmallInfoLabel(line1, x: textX, width: infoWidth)
             line1.frame.origin.y = yOffset - line1.frame.height
             container.addSubview(line1)
 
             let line2 = NSTextField(wrappingLabelWithString:
-                "If you call a wellness person, give them this info:")
+                "If you call a support person, give them this info:")
             configureSmallInfoLabel(line2, x: textX, width: infoWidth)
             line2.frame.origin.y = line1.frame.origin.y - line1.frame.height - 16
             container.addSubview(line2)
