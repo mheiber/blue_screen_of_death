@@ -1,8 +1,28 @@
 import Foundation
 import Combine
 
+/// Screen style options for the blue screen overlay
+enum ScreenStyle: String, CaseIterable, Identifiable {
+    case modern = "modern"
+    case classic = "classic"
+    case classicDump = "classicDump"
+    case mojibake = "mojibake"
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        switch self {
+        case .modern: return "Modern"
+        case .classic: return "Classic"
+        case .classicDump: return "Classic Dump"
+        case .mojibake: return "Mojibake"
+        }
+    }
+}
+
 /// Interval options for automatic blue screen triggers
 enum TriggerInterval: Int, CaseIterable, Identifiable {
+    case twentyMinutes = 1200
     case thirtyMinutes = 1800
     case oneHour = 3600
     case twoHours = 7200
@@ -12,6 +32,7 @@ enum TriggerInterval: Int, CaseIterable, Identifiable {
 
     var displayName: String {
         switch self {
+        case .twentyMinutes: return "Every 20 minutes"
         case .thirtyMinutes: return "Every 30 minutes"
         case .oneHour: return "Every 1 hour"
         case .twoHours: return "Every 2 hours"
@@ -34,6 +55,9 @@ final class Preferences: ObservableObject {
         static let startHour = "startHour"
         static let endHour = "endHour"
         static let useCustomSchedule = "useCustomSchedule"
+        static let selectedStyleRaw = "selectedStyleRaw"
+        static let customMinutes = "customMinutes"
+        static let useCustomInterval = "useCustomInterval"
     }
 
     @Published var isEnabled: Bool {
@@ -67,8 +91,53 @@ final class Preferences: ObservableObject {
         didSet { defaults.set(endHour, forKey: Keys.endHour) }
     }
 
+    /// Raw style string: one of ScreenStyle.rawValue or "random"
+    @Published var selectedStyleRaw: String {
+        didSet { defaults.set(selectedStyleRaw, forKey: Keys.selectedStyleRaw) }
+    }
+
+    /// Custom interval in minutes (1-240)
+    @Published var customMinutes: Int {
+        didSet {
+            let clamped = min(max(customMinutes, 1), 240)
+            if clamped != customMinutes { customMinutes = clamped }
+            defaults.set(clamped, forKey: Keys.customMinutes)
+        }
+    }
+
+    /// Whether to use custom interval instead of preset
+    @Published var useCustomInterval: Bool {
+        didSet { defaults.set(useCustomInterval, forKey: Keys.useCustomInterval) }
+    }
+
+    /// Returns the selected style, or nil if "random"
+    var selectedStyle: ScreenStyle? {
+        ScreenStyle(rawValue: selectedStyleRaw)
+    }
+
+    /// Resolves the style to use: returns selectedStyle if set, otherwise random pick
+    func resolveStyle() -> ScreenStyle {
+        selectedStyle ?? ScreenStyle.allCases.randomElement()!
+    }
+
     var selectedInterval: TriggerInterval {
         TriggerInterval(rawValue: intervalSeconds) ?? .twoHours
+    }
+
+    /// Effective interval in seconds, accounting for custom interval
+    var effectiveIntervalSeconds: Int {
+        if useCustomInterval {
+            return customMinutes * 60
+        }
+        return intervalSeconds
+    }
+
+    /// Display name for the current interval setting
+    var intervalDisplayName: String {
+        if useCustomInterval {
+            return "Every \(customMinutes) min"
+        }
+        return selectedInterval.displayName
     }
 
     private init() {
@@ -80,13 +149,19 @@ final class Preferences: ObservableObject {
             Keys.useCustomSchedule: false,
             Keys.enabledWeekdays: [2, 3, 4, 5, 6], // Mon-Fri
             Keys.startHour: 9,
-            Keys.endHour: 17
+            Keys.endHour: 17,
+            Keys.selectedStyleRaw: "random",
+            Keys.customMinutes: 20,
+            Keys.useCustomInterval: false,
         ])
 
         self.isEnabled = defaults.bool(forKey: Keys.isEnabled)
         self.intervalSeconds = defaults.integer(forKey: Keys.intervalSeconds)
         self.launchAtLogin = defaults.bool(forKey: Keys.launchAtLogin)
         self.useCustomSchedule = defaults.bool(forKey: Keys.useCustomSchedule)
+        self.selectedStyleRaw = defaults.string(forKey: Keys.selectedStyleRaw) ?? "random"
+        self.customMinutes = defaults.integer(forKey: Keys.customMinutes)
+        self.useCustomInterval = defaults.bool(forKey: Keys.useCustomInterval)
 
         if let weekdays = defaults.array(forKey: Keys.enabledWeekdays) as? [Int] {
             self.enabledWeekdays = Set(weekdays)

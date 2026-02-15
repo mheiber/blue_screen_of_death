@@ -17,7 +17,11 @@ final class ScheduleManager: ObservableObject {
     private init() {
         // React to preference changes
         preferences.$isEnabled
-            .combineLatest(preferences.$intervalSeconds)
+            .combineLatest(
+                preferences.$intervalSeconds,
+                preferences.$useCustomInterval,
+                preferences.$customMinutes
+            )
             .sink { [weak self] _ in
                 self?.reschedule()
             }
@@ -43,7 +47,7 @@ final class ScheduleManager: ObservableObject {
             return
         }
 
-        let interval = TimeInterval(preferences.intervalSeconds)
+        let interval = TimeInterval(preferences.effectiveIntervalSeconds)
         nextTriggerDate = Date().addingTimeInterval(interval)
 
         timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { [weak self] _ in
@@ -59,7 +63,7 @@ final class ScheduleManager: ObservableObject {
         }
 
         // Update next trigger date
-        nextTriggerDate = Date().addingTimeInterval(TimeInterval(preferences.intervalSeconds))
+        nextTriggerDate = Date().addingTimeInterval(TimeInterval(preferences.effectiveIntervalSeconds))
     }
 
     /// Trigger immediately (manual trigger from menu)

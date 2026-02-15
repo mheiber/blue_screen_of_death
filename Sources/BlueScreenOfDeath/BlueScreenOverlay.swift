@@ -32,7 +32,8 @@ final class BlueScreenOverlay {
         contentView.wantsLayer = true
         contentView.layer?.backgroundColor = NSColor(red: 0, green: 0, blue: 0.667, alpha: 1).cgColor
 
-        let crashText = CrashDumpGenerator.generate()
+        let style = Preferences.shared.resolveStyle()
+        let crashText = CrashDumpGenerator.generate(style: style)
 
         let textView = NSTextView(frame: contentView.bounds.insetBy(dx: 60, dy: 60))
         textView.isEditable = false
