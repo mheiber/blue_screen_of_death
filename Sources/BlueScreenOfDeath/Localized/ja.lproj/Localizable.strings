@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "画面から目を離して、深呼吸しましょう。任意のキーを押すかクリックで閉じます。";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "左クリックで表示、右クリックで設定";
+
+/* Modern BSOD */
+"bsod.modern.body" = "デバイスに問題が発生したため、再起動する必要があります。エラー情報を収集しています。その後、自動的に再起動します。";
+"bsod.modern.percentComplete" = "%d%% 完了";
+"bsod.modern.moreInfo" = "この問題と考えられる解決策の詳細については、当社のサイトをご覧ください";
+"bsod.modern.supportInfo" = "サポート担当者に連絡する場合は、次の情報をお伝えください:";
+"bsod.modern.stopCode" = "停止コード: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "問題が検出されたため、コンピューターへの損傷を防ぐために Winsome が";
+"bsod.classic.toYourComputer" = "シャットダウンされました。";
+"bsod.classic.causedBy" = "この問題は次のファイルが原因と考えられます: %@";
+"bsod.classic.firstTime" = "この Stop エラー画面が初めて表示された場合は、";
+"bsod.classic.restartComputer" = "コンピューターを再起動してください。この画面が再び表示される場合は、";
+"bsod.classic.theseSteps" = "次の手順に従ってください:";
+"bsod.classic.checkHardware" = "新しいハードウェアまたはソフトウェアが正しくインストールされていることを確認してください。";
+"bsod.classic.newInstallation" = "新規インストールの場合は、ハードウェアまたはソフトウェアの製造元に";
+"bsod.classic.updatesNeeded" = "必要な Winsome の更新プログラムについてお問い合わせください。";
+"bsod.classic.continueProblems" = "問題が解決しない場合は、新しくインストールしたハードウェアまたは";
+"bsod.classic.orSoftware" = "ソフトウェアを無効にするか削除してください。キャッシュやシャドウイングなどの BIOS メモリオプションを無効にしてください。";
+"bsod.classic.safeMode" = "コンポーネントの削除または無効化にセーフモードを使用する必要がある場合は、";
+"bsod.classic.pressF8" = "コンピューターを再起動し、F8 キーを押して詳細起動オプションを選択し、";
+"bsod.classic.selectSafeMode" = "セーフモードを選択してください。";
+"bsod.classic.techInfo" = "技術情報:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "再起動して、システムコントロールパネルで回復オプションを設定するか、";
+"bsod.classicDump.recovery2" = "システム起動オプション /CRASHDEBUG を使用してください。このメッセージが再び表示される場合は、";
+"bsod.classicDump.recovery3" = "システム管理者またはテクニカルサポートにお問い合わせください。";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> 診断レポートをスキャン";
+"bsod.cyber.collectingDiagnostics" = "診断情報を収集中 ";
+"bsod.cyber.percentComplete" = "% 完了";
+"bsod.cyber.dumpingCore" = "コアダンプ中";

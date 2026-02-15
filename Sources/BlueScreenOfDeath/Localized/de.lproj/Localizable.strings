@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "Nehmen Sie sich einen Moment, um den Blick vom Bildschirm abzuwenden und zu atmen. Drücken Sie eine beliebige Taste oder klicken Sie, um zu schließen.";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "Linksklick zum Auslösen, Rechtsklick für Einstellungen";
+
+/* Modern BSOD */
+"bsod.modern.body" = "Auf Ihrem Gerät ist ein Problem aufgetreten und es muss neu gestartet werden. Wir sammeln nur einige Fehlerinformationen und starten dann für Sie neu.";
+"bsod.modern.percentComplete" = "%d%% abgeschlossen";
+"bsod.modern.moreInfo" = "Weitere Informationen zu diesem Problem und mögliche Lösungen finden Sie auf unserer Website";
+"bsod.modern.supportInfo" = "Wenn Sie den Support kontaktieren, geben Sie folgende Informationen an:";
+"bsod.modern.stopCode" = "Stillstandcode: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "Ein Problem wurde erkannt und Winsome wurde heruntergefahren, um Schäden";
+"bsod.classic.toYourComputer" = "an Ihrem Computer zu verhindern.";
+"bsod.classic.causedBy" = "Das Problem scheint durch folgende Datei verursacht zu werden: %@";
+"bsod.classic.firstTime" = "Wenn Sie diesen Stoppfehler zum ersten Mal sehen,";
+"bsod.classic.restartComputer" = "starten Sie Ihren Computer neu. Wenn dieser Bildschirm erneut erscheint,";
+"bsod.classic.theseSteps" = "folgen Sie diesen Schritten:";
+"bsod.classic.checkHardware" = "Überprüfen Sie, ob neue Hardware oder Software ordnungsgemäß installiert ist.";
+"bsod.classic.newInstallation" = "Wenn dies eine Neuinstallation ist, wenden Sie sich an Ihren Hardware- oder Softwarehersteller";
+"bsod.classic.updatesNeeded" = "für eventuelle Winsome-Updates, die Sie benötigen.";
+"bsod.classic.continueProblems" = "Wenn die Probleme weiterhin auftreten, deaktivieren oder entfernen Sie kürzlich installierte";
+"bsod.classic.orSoftware" = "Hardware oder Software. Deaktivieren Sie BIOS-Speicheroptionen wie Caching oder Shadowing.";
+"bsod.classic.safeMode" = "Wenn Sie den Abgesicherten Modus verwenden müssen, um Komponenten zu entfernen oder zu deaktivieren,";
+"bsod.classic.pressF8" = "starten Sie Ihren Computer neu, drücken Sie F8, um Erweiterte Startoptionen auszuwählen,";
+"bsod.classic.selectSafeMode" = "und wählen Sie dann Abgesicherter Modus.";
+"bsod.classic.techInfo" = "Technische Informationen:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "Starten Sie neu und legen Sie die Wiederherstellungsoptionen in der Systemsteuerung";
+"bsod.classicDump.recovery2" = "oder die Systemstartoption /CRASHDEBUG fest. Wenn diese Meldung erneut erscheint,";
+"bsod.classicDump.recovery3" = "wenden Sie sich an Ihren Systemadministrator oder den technischen Support.";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> Diagnosebericht wird gescannt";
+"bsod.cyber.collectingDiagnostics" = "Diagnosedaten werden gesammelt ";
+"bsod.cyber.percentComplete" = "% abgeschlossen";
+"bsod.cyber.dumpingCore" = "Kernspeicherabbild wird erstellt";

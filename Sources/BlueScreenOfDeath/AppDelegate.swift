@@ -167,7 +167,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         // All supported languages
         for lang in LocalizationManager.supportedLanguages {
-            let title = lang.code == "en" ? lang.nativeName : "\(lang.nativeName) — \(lang.englishName)"
+            let title = lang.nativeName
             let item = NSMenuItem(title: title, action: #selector(selectLanguage(_:)), keyEquivalent: "")
             item.representedObject = lang.code
             item.state = (LocalizationManager.shared.currentLanguage == lang.code) ? .on : .off

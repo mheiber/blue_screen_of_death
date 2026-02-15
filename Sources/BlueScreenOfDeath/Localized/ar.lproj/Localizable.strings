@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "خذ لحظة للنظر بعيدًا عن الشاشة والتنفس. اضغط أي مفتاح أو انقر للإغلاق.";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "انقر بالزر الأيسر للتشغيل، وبالزر الأيمن للإعدادات";
+
+/* Modern BSOD */
+"bsod.modern.body" = "واجه جهازك مشكلة ويحتاج إلى إعادة التشغيل. نقوم الآن بجمع بعض معلومات الخطأ، وبعدها سنعيد التشغيل تلقائيًا.";
+"bsod.modern.percentComplete" = "%d%% مكتمل";
+"bsod.modern.moreInfo" = "لمزيد من المعلومات حول هذه المشكلة والحلول الممكنة، تفضّل بزيارة موقعنا";
+"bsod.modern.supportInfo" = "إذا اتصلت بشخص الدعم الفني، أعطه هذه المعلومات:";
+"bsod.modern.stopCode" = "رمز الإيقاف: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "تم اكتشاف مشكلة وتم إيقاف Winsome لمنع حدوث ضرر";
+"bsod.classic.toYourComputer" = "لجهاز الكمبيوتر الخاص بك.";
+"bsod.classic.causedBy" = "يبدو أن المشكلة ناتجة عن الملف التالي: %@";
+"bsod.classic.firstTime" = "إذا كانت هذه أول مرة ترى فيها شاشة خطأ الإيقاف هذه،";
+"bsod.classic.restartComputer" = "أعد تشغيل جهاز الكمبيوتر. إذا ظهرت هذه الشاشة مجددًا، اتبع";
+"bsod.classic.theseSteps" = "الخطوات التالية:";
+"bsod.classic.checkHardware" = "تأكد من أن أي جهاز أو برنامج جديد مثبت بشكل صحيح.";
+"bsod.classic.newInstallation" = "إذا كان هذا تثبيتًا جديدًا، اطلب من الشركة المصنعة للجهاز أو البرنامج";
+"bsod.classic.updatesNeeded" = "أي تحديثات Winsome قد تحتاجها.";
+"bsod.classic.continueProblems" = "إذا استمرت المشاكل، قم بتعطيل أو إزالة أي جهاز مثبت حديثًا";
+"bsod.classic.orSoftware" = "أو برنامج. عطّل خيارات ذاكرة BIOS مثل التخزين المؤقت أو الإسقاط.";
+"bsod.classic.safeMode" = "إذا كنت بحاجة لاستخدام الوضع الآمن لإزالة أو تعطيل المكونات، أعد تشغيل";
+"bsod.classic.pressF8" = "جهاز الكمبيوتر، واضغط F8 لاختيار خيارات بدء التشغيل المتقدمة، ثم";
+"bsod.classic.selectSafeMode" = "اختر الوضع الآمن.";
+"bsod.classic.techInfo" = "معلومات تقنية:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "أعد التشغيل واضبط خيارات الاسترداد في لوحة تحكم النظام";
+"bsod.classicDump.recovery2" = "أو خيار بدء تشغيل النظام /CRASHDEBUG. إذا ظهرت هذه الرسالة مجددًا";
+"bsod.classicDump.recovery3" = "تواصل مع مسؤول النظام أو مجموعة الدعم الفني.";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> فحص تقرير التشخيص";
+"bsod.cyber.collectingDiagnostics" = "جمع بيانات التشخيص ";
+"bsod.cyber.percentComplete" = "% مكتمل";
+"bsod.cyber.dumpingCore" = "تفريغ النواة";

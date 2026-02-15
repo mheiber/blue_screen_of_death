@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "ᏫᏣᏓᏅᏖᏍᏗ ᎠᏍᏓᏩᏛᏍᏗ ᏂᏗᎬᏪᎳᏁᎸ ᎢᏗ ᎠᎴ ᎠᏓᏄᎸᏍᏗ. ᎦᏙᎯ ᏗᏍᏚᎢᏍᏗ ᏗᎦᎳᏅᏓ ᎠᎴᏃ ᏗᏍᏚᎢᏍᏗ ᎠᏁᏢᏔᏅᎢ.";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "ᎠᎦᏍᎦᏂ ᏗᏍᏚᎢᏍᏗ ᎠᎴᏂᏙᎲ, ᎠᎦᏘᏏ ᏗᏍᏚᎢᏍᏗ ᎠᏓᏅᏖᏍᏗ";
+
+/* Modern BSOD */
+"bsod.modern.body" = "ᏂᎯ ᏗᏟᎶᏍᏔᏅ ᎤᏓᎴᎾᏔᏅ ᎤᏲᏍᏗ ᎠᎴ ᎢᏤ ᎠᎴᏂᏙᎲ ᎤᏲᏉ. ᎣᏥᏍᏕᏰᎵᏍᎦ ᎩᎶ ᏧᏓᎴᎿᎢ ᎤᏲᏍᏗ ᎠᏔᎴᏒ, ᎠᎴ ᏂᎦᏓ ᎢᏤ ᎣᏥᎴᏂᏙᎭ ᏂᎯ ᏕᏣᏓᏅᏖᏍᏗ.";
+"bsod.modern.percentComplete" = "%d%% ᏚᎸᏌᏓ";
+"bsod.modern.moreInfo" = "ᎤᏟ ᎠᏓᎴᎾᏔᏅ ᎯᎠ ᎤᏲᏍᏗ ᎠᎴ ᎠᎵᏍᏕᏰᏗ ᏕᏣᏓᏅᏖᏍᏗ, ᏫᎦᏥᎶᏎᏍᏗ ᎣᎩᏁᏗ";
+"bsod.modern.supportInfo" = "ᎢᏳ ᏕᏣᏬᏂᏍᎩ ᎠᎵᏍᏕᏰᏗ ᎤᏤᎵ, ᎯᎠ ᎠᏔᎴᏒ ᏕᎬᏩᏁᎵ:";
+"bsod.modern.stopCode" = "ᎠᏍᏆᎵᏍᏗ ᎪᏪᎵ: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "ᎤᏲᏍᏗ ᎤᏙᎴᏃᏔᏁ ᎠᎴ Winsome ᎤᏓᏅᏖᏍᏔᏁ ᎤᏲᏍᏗ ᎠᏍᏆᎵᏍᏗ";
+"bsod.classic.toYourComputer" = "ᏂᎯ ᏗᏟᎶᏍᏔᏅ.";
+"bsod.classic.causedBy" = "ᎤᏲᏍᏗ ᎯᎠ ᎦᏅᎯᏓ ᏧᏓᎴᎿᎢ ᎤᏍᏆᎸᎲ: %@";
+"bsod.classic.firstTime" = "ᎢᏳ ᎯᎠ ᏗᎬᏙᏗ ᎯᎠ ᎠᏍᏆᎵᏍᏗ ᎤᏲᏍᏗ ᎠᏍᏓᏩᏛᏍᏗ ᎡᏣᎪᏩᏛᏗ,";
+"bsod.classic.restartComputer" = "ᎢᏤ ᏕᏣᎴᏂᏙᎲ ᏂᎯ ᏗᏟᎶᏍᏔᏅ. ᎢᏳ ᎯᎠ ᎠᏍᏓᏩᏛᏍᏗ ᎢᏤ ᎠᏓᎾᏅᏗ, ᏯᏍᏗᎢ";
+"bsod.classic.theseSteps" = "ᎯᎠ ᏗᏍᏆᎸᏍᏗ:";
+"bsod.classic.checkHardware" = "ᏓᏓᏚᎵᎭ ᎢᏤ ᏗᏟᎶᏍᏔᏅ ᎠᎴᏃ ᏗᏟᎶᏍᏔᏅ ᏗᎪᏪᎵ ᎣᏍᏛ ᎠᏁᏍᎩᎾ.";
+"bsod.classic.newInstallation" = "ᎢᏳ ᎯᎠ ᎢᏤ ᎠᏁᏍᎩᎾ, ᎯᎵᏍᎪᎸᏓᏁ ᏂᎯ ᏗᏟᎶᏍᏔᏅ ᎠᎴᏃ ᏗᎪᏪᎵ ᎠᏓᏁᎸ";
+"bsod.classic.updatesNeeded" = "ᎩᎶ Winsome ᏗᏓᏁᏟᏴᏍᏗ ᏂᎯ ᎢᏣᏚᎵᎭ.";
+"bsod.classic.continueProblems" = "ᎢᏳ ᎤᏲᏍᏗ ᎦᏓᏄᎸᏍᎩ, ᏓᏓᏅᏖᏍᏗ ᎠᎴᏃ ᏓᏓᏍᏙᏍᏗ ᎢᏤ ᎠᏁᏍᎩᎾ ᏗᏟᎶᏍᏔᏅ";
+"bsod.classic.orSoftware" = "ᎠᎴᏃ ᏗᎪᏪᎵ. ᏓᏓᏅᏖᏍᏗ BIOS ᎠᏍᏓᏱᏗ ᏗᏍᏚᎢᏍᏗ ᏄᏍᏛᎾ ᎠᏍᏓᏱᏗ ᎠᎴᏃ ᎠᏍᎦᎸᏍᏗ.";
+"bsod.classic.safeMode" = "ᎢᏳ Safe Mode ᎤᏲᏉ ᎠᏍᏙᏍᏗ ᎠᎴᏃ ᎠᏓᏅᏖᏍᏗ ᏗᎦᏓᏄᎸ, ᎢᏤ ᏕᏣᎴᏂᏙᎲ";
+"bsod.classic.pressF8" = "ᏂᎯ ᏗᏟᎶᏍᏔᏅ, ᏯᏍᏗ F8 ᎠᏑᏰᏍᏗ ᎤᏙᏢᏒ ᎠᎴᏂᏙᎲ ᏗᏍᏚᎢᏍᏗ, ᎠᎴ ᏂᎦᏓ";
+"bsod.classic.selectSafeMode" = "ᎯᏑᏰᏍᏗ Safe Mode.";
+"bsod.classic.techInfo" = "ᏗᏟᎶᏍᏔᏅ ᎠᏔᎴᏒ:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "ᎢᏤ ᏕᏣᎴᏂᏙᎲ ᎠᎴ ᎠᎵᏍᏕᏰᏗ ᏗᏍᏚᎢᏍᏗ ᎠᏓᏅᏖᏍᏗ ᎠᏍᏆᏗᏍᏗ ᏗᏍᏚᎢᏍᏗ";
+"bsod.classicDump.recovery2" = "ᎠᎴᏃ ᎠᏍᏆᏗᏍᏗ ᎠᎴᏂᏙᎲ ᏗᏍᏚᎢᏍᏗ /CRASHDEBUG. ᎢᏳ ᎯᎠ ᎦᏬᏂᎯᏍᏗ ᎢᏤ ᎠᏓᎾᏅᏗ";
+"bsod.classicDump.recovery3" = "ᏕᏣᏬᏂᏍᎩ ᏂᎯ ᎠᏍᏆᏗᏍᏗ ᎠᏓᏅᏖᏍᏗ ᎠᎴᏃ ᏗᏟᎶᏍᏔᏅ ᎠᎵᏍᏕᏰᏗ ᎤᎾᏙᏢᏒ.";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> ᏓᏓᏚᎵᎭ ᎠᎵᏍᏕᏰᏗ ᎠᏔᎴᏒ";
+"bsod.cyber.collectingDiagnostics" = "ᎠᏍᏕᏰᎵᏍᎦ ᎠᎵᏍᏕᏰᏗ ";
+"bsod.cyber.percentComplete" = "% ᏚᎸᏌᏓ";
+"bsod.cyber.dumpingCore" = "ᎤᏤᎵ ᎠᏍᏓᏩᏛᏍᏗ";

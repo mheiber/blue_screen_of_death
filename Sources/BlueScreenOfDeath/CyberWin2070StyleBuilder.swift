@@ -1034,7 +1034,7 @@ struct CyberWin2070StyleBuilder {
                                                frameHeight: frame.height)
 
             let line1 = makeInfoLabel(
-                text: "> scan for diagnostic report",
+                text: L("bsod.cyber.scanDiagnostic"),
                 fontSize: infoFontSize, color: dimCyan, width: infoWidth
             )
             line1.frame.origin = NSPoint(x: textX, y: yOffset - line1.frame.height)
@@ -1204,7 +1204,7 @@ struct CyberWin2070StyleBuilder {
             + String(repeating: " ", count: max(0, empty - 1))
         lines.append([
             Token(text: "> ", type: .operator),
-            Token(text: "dumping core", type: .plain),
+            Token(text: L("bsod.cyber.dumpingCore"), type: .plain),
             Token(text: "... ", type: .operator),
             Token(text: "[", type: .operator),
             Token(text: bar, type: .number),
@@ -1222,12 +1222,12 @@ struct CyberWin2070StyleBuilder {
         let bar = String(repeating: "#", count: filled) + String(repeating: ".", count: empty)
         return [[
             Token(text: "> ", type: .operator),
-            Token(text: "collecting diagnostics ", type: .plain),
+            Token(text: L("bsod.cyber.collectingDiagnostics"), type: .plain),
             Token(text: "[", type: .operator),
             Token(text: bar, type: .number),
             Token(text: "] ", type: .operator),
             Token(text: "\(percentage)", type: .number),
-            Token(text: "% complete", type: .plain),
+            Token(text: L("bsod.cyber.percentComplete"), type: .plain),
         ]]
     }
 

@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "Hãy dừng lại một chút, nhìn ra xa màn hình và hít thở. Nhấn phím bất kỳ hoặc bấm chuột để đóng.";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "Bấm chuột trái để kích hoạt, bấm chuột phải để mở cài đặt";
+
+/* Modern BSOD */
+"bsod.modern.body" = "Thiết bị của bạn đã gặp sự cố và cần khởi động lại. Chúng tôi đang thu thập thông tin lỗi, sau đó sẽ khởi động lại cho bạn.";
+"bsod.modern.percentComplete" = "%d%% hoàn tất";
+"bsod.modern.moreInfo" = "Để biết thêm thông tin về sự cố này và cách khắc phục, hãy truy cập trang web của chúng tôi";
+"bsod.modern.supportInfo" = "Nếu bạn gọi cho bộ phận hỗ trợ, hãy cung cấp thông tin sau:";
+"bsod.modern.stopCode" = "Mã dừng: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "Đã phát hiện sự cố và Winsome đã tắt để ngăn ngừa thiệt hại";
+"bsod.classic.toYourComputer" = "cho máy tính của bạn.";
+"bsod.classic.causedBy" = "Sự cố có vẻ do tệp sau gây ra: %@";
+"bsod.classic.firstTime" = "Nếu đây là lần đầu tiên bạn thấy màn hình lỗi này,";
+"bsod.classic.restartComputer" = "hãy khởi động lại máy tính. Nếu màn hình này xuất hiện lại, hãy làm theo";
+"bsod.classic.theseSteps" = "các bước sau:";
+"bsod.classic.checkHardware" = "Kiểm tra đảm bảo rằng phần cứng hoặc phần mềm mới đã được cài đặt đúng cách.";
+"bsod.classic.newInstallation" = "Nếu đây là cài đặt mới, hãy liên hệ nhà sản xuất phần cứng hoặc phần mềm";
+"bsod.classic.updatesNeeded" = "để biết các bản cập nhật Winsome mà bạn có thể cần.";
+"bsod.classic.continueProblems" = "Nếu sự cố vẫn tiếp diễn, hãy tắt hoặc gỡ bỏ phần cứng mới cài đặt";
+"bsod.classic.orSoftware" = "hoặc phần mềm. Tắt các tùy chọn bộ nhớ BIOS như bộ nhớ đệm hoặc shadowing.";
+"bsod.classic.safeMode" = "Nếu bạn cần dùng Safe Mode để gỡ bỏ hoặc tắt các thành phần, hãy khởi động lại";
+"bsod.classic.pressF8" = "máy tính, nhấn F8 để chọn Tùy chọn Khởi động Nâng cao, sau đó";
+"bsod.classic.selectSafeMode" = "chọn Safe Mode.";
+"bsod.classic.techInfo" = "Thông tin kỹ thuật:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "Khởi động lại và thiết lập tùy chọn khôi phục trong bảng điều khiển hệ thống";
+"bsod.classicDump.recovery2" = "hoặc tùy chọn khởi động hệ thống /CRASHDEBUG. Nếu thông báo này xuất hiện lại";
+"bsod.classicDump.recovery3" = "hãy liên hệ quản trị viên hệ thống hoặc bộ phận hỗ trợ kỹ thuật.";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> quét báo cáo chẩn đoán";
+"bsod.cyber.collectingDiagnostics" = "đang thu thập chẩn đoán ";
+"bsod.cyber.percentComplete" = "% hoàn tất";
+"bsod.cyber.dumpingCore" = "đang kết xuất lõi";

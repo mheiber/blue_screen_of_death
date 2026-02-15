@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "잠시 화면에서 눈을 떼고 심호흡하세요. 아무 키를 누르거나 클릭하면 닫힙니다.";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "왼쪽 클릭으로 표시, 오른쪽 클릭으로 설정";
+
+/* Modern BSOD */
+"bsod.modern.body" = "디바이스에 문제가 발생하여 다시 시작해야 합니다. 오류 정보를 수집하고 있으며, 완료되면 자동으로 다시 시작됩니다.";
+"bsod.modern.percentComplete" = "%d%% 완료";
+"bsod.modern.moreInfo" = "이 문제에 대한 자세한 정보와 가능한 해결 방법은 당사 사이트를 방문하세요";
+"bsod.modern.supportInfo" = "지원 담당자에게 연락하시는 경우 다음 정보를 알려주세요:";
+"bsod.modern.stopCode" = "중지 코드: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "문제가 감지되어 컴퓨터의 손상을 방지하기 위해 Winsome이";
+"bsod.classic.toYourComputer" = "종료되었습니다.";
+"bsod.classic.causedBy" = "이 문제는 다음 파일이 원인인 것으로 보입니다: %@";
+"bsod.classic.firstTime" = "이 Stop 오류 화면이 처음 나타난 경우,";
+"bsod.classic.restartComputer" = "컴퓨터를 다시 시작하세요. 이 화면이 다시 나타나면";
+"bsod.classic.theseSteps" = "다음 단계를 따르세요:";
+"bsod.classic.checkHardware" = "새 하드웨어나 소프트웨어가 올바르게 설치되었는지 확인하세요.";
+"bsod.classic.newInstallation" = "새로 설치한 경우, 하드웨어 또는 소프트웨어 제조업체에";
+"bsod.classic.updatesNeeded" = "필요한 Winsome 업데이트가 있는지 문의하세요.";
+"bsod.classic.continueProblems" = "문제가 계속되면 새로 설치한 하드웨어 또는";
+"bsod.classic.orSoftware" = "소프트웨어를 비활성화하거나 제거하세요. 캐싱이나 섀도잉과 같은 BIOS 메모리 옵션을 비활성화하세요.";
+"bsod.classic.safeMode" = "구성 요소를 제거하거나 비활성화하기 위해 안전 모드를 사용해야 하는 경우,";
+"bsod.classic.pressF8" = "컴퓨터를 다시 시작하고 F8 키를 눌러 고급 시작 옵션을 선택한 다음";
+"bsod.classic.selectSafeMode" = "안전 모드를 선택하세요.";
+"bsod.classic.techInfo" = "기술 정보:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "다시 시작하고 시스템 제어판에서 복구 옵션을 설정하거나";
+"bsod.classicDump.recovery2" = "시스템 시작 옵션 /CRASHDEBUG를 사용하세요. 이 메시지가 다시 나타나면";
+"bsod.classicDump.recovery3" = "시스템 관리자 또는 기술 지원 그룹에 문의하세요.";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> 진단 보고서 스캔";
+"bsod.cyber.collectingDiagnostics" = "진단 정보 수집 중 ";
+"bsod.cyber.percentComplete" = "% 완료";
+"bsod.cyber.dumpingCore" = "코어 덤프 중";

@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "Prenu momenton por forrigardi de la ekrano kaj spiri. Premu iun ajn klavon aŭ klaku por fermi.";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "Maldekstra klako por ekigi, dekstra klako por agordoj";
+
+/* Modern BSOD */
+"bsod.modern.body" = "Via aparato renkontis problemon kaj bezonas rekomenci. Ni nur kolektas iom da erarinformoj, kaj poste ni rekomencos por vi.";
+"bsod.modern.percentComplete" = "%d%% plenumita";
+"bsod.modern.moreInfo" = "Por pliaj informoj pri ĉi tiu problemo kaj eblaj korektoj, vizitu nian retejon";
+"bsod.modern.supportInfo" = "Se vi vokas helpopersonon, donu al ili ĉi tiun informon:";
+"bsod.modern.stopCode" = "Haltkodo: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "Problemo estis detektita kaj Winsome estis malŝaltita por eviti damaĝon";
+"bsod.classic.toYourComputer" = "al via komputilo.";
+"bsod.classic.causedBy" = "La problemo ŝajne estas kaŭzita de la jena dosiero: %@";
+"bsod.classic.firstTime" = "Se ĉi tio estas la unua fojo kiam vi vidas ĉi tiun Halt-eraran ekranon,";
+"bsod.classic.restartComputer" = "rekomencu vian komputilon. Se ĉi tiu ekrano aperas denove, sekvu";
+"bsod.classic.theseSteps" = "ĉi tiujn paŝojn:";
+"bsod.classic.checkHardware" = "Kontrolu ke ĉiu nova aparataro aŭ programaro estas ĝuste instalita.";
+"bsod.classic.newInstallation" = "Se ĉi tio estas nova instalado, petu de via aparataro aŭ programaro fabrikanto";
+"bsod.classic.updatesNeeded" = "iujn ajn Winsome-ĝisdatigojn kiujn vi eble bezonas.";
+"bsod.classic.continueProblems" = "Se problemoj daŭras, malŝaltu aŭ forigu iun ajn lastatempe instalitan aparataron";
+"bsod.classic.orSoftware" = "aŭ programaron. Malŝaltu BIOS-memorajn opciojn kiel kaŝmemoradon aŭ ombradon.";
+"bsod.classic.safeMode" = "Se vi bezonas uzi Sekuran Reĝimon por forigi aŭ malŝalti komponentojn, rekomencu";
+"bsod.classic.pressF8" = "vian komputilon, premu F8 por elekti Altnivelajn Komencajn Opciojn, kaj poste";
+"bsod.classic.selectSafeMode" = "elektu Sekuran Reĝimon.";
+"bsod.classic.techInfo" = "Teknikaj informoj:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "Rekomencu kaj agordu la restaŭrajn opciojn en la sistema stirpanelo";
+"bsod.classicDump.recovery2" = "aŭ la sistema startopcion /CRASHDEBUG. Se ĉi tiu mesaĝo reaperas";
+"bsod.classicDump.recovery3" = "kontaktu vian sisteman administranton aŭ teknikan helpgrupon.";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> skani por diagnoza raporto";
+"bsod.cyber.collectingDiagnostics" = "kolektante diagnozojn ";
+"bsod.cyber.percentComplete" = "% plenumita";
+"bsod.cyber.dumpingCore" = "elĵetante kernon";

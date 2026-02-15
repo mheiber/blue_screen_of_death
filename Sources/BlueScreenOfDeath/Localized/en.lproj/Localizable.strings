@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "Take a moment to look away from the screen and breathe. Press any key or click to dismiss.";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "Left-click to trigger, right-click for settings";
+
+/* Modern BSOD */
+"bsod.modern.body" = "Your device ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you.";
+"bsod.modern.percentComplete" = "%d%% complete";
+"bsod.modern.moreInfo" = "For more information about this issue and possible fixes, visit our site";
+"bsod.modern.supportInfo" = "If you call a support person, give them this info:";
+"bsod.modern.stopCode" = "Stop code: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "A problem has been detected and Winsome has been shut down to prevent damage";
+"bsod.classic.toYourComputer" = "to your computer.";
+"bsod.classic.causedBy" = "The problem seems to be caused by the following file: %@";
+"bsod.classic.firstTime" = "If this is the first time you've seen this Stop error screen,";
+"bsod.classic.restartComputer" = "restart your computer. If this screen appears again, follow";
+"bsod.classic.theseSteps" = "these steps:";
+"bsod.classic.checkHardware" = "Check to make sure any new hardware or software is properly installed.";
+"bsod.classic.newInstallation" = "If this is a new installation, ask your hardware or software manufacturer";
+"bsod.classic.updatesNeeded" = "for any Winsome updates you might need.";
+"bsod.classic.continueProblems" = "If problems continue, disable or remove any newly installed hardware";
+"bsod.classic.orSoftware" = "or software. Disable BIOS memory options such as caching or shadowing.";
+"bsod.classic.safeMode" = "If you need to use Safe Mode to remove or disable components, restart";
+"bsod.classic.pressF8" = "your computer, press F8 to select Advanced Startup Options, and then";
+"bsod.classic.selectSafeMode" = "select Safe Mode.";
+"bsod.classic.techInfo" = "Technical information:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "Restart and set the recovery options in the system control panel";
+"bsod.classicDump.recovery2" = "or the system startup option /CRASHDEBUG. If this message reappears";
+"bsod.classicDump.recovery3" = "contact your system administrator or technical support group.";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> scan for diagnostic report";
+"bsod.cyber.collectingDiagnostics" = "collecting diagnostics ";
+"bsod.cyber.percentComplete" = "% complete";
+"bsod.cyber.dumpingCore" = "dumping core";

@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "Oderwij wzrok od ekranu i weź oddech. Naciśnij dowolny klawisz lub kliknij, aby zamknąć.";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "Lewy klik — pokaż, prawy klik — ustawienia";
+
+/* Modern BSOD */
+"bsod.modern.body" = "Na urządzeniu wystąpił problem i wymaga ono ponownego uruchomienia. Zbieramy informacje o błędzie, a następnie uruchomimy je ponownie.";
+"bsod.modern.percentComplete" = "%d%% ukończono";
+"bsod.modern.moreInfo" = "Aby uzyskać więcej informacji o tym problemie i możliwych rozwiązaniach, odwiedź naszą stronę";
+"bsod.modern.supportInfo" = "Jeśli dzwonisz do pomocy technicznej, podaj te informacje:";
+"bsod.modern.stopCode" = "Kod zatrzymania: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "Wykryto problem i system Winsome został zamknięty, aby zapobiec uszkodzeniu";
+"bsod.classic.toYourComputer" = "komputera.";
+"bsod.classic.causedBy" = "Problem wydaje się być spowodowany przez następujący plik: %@";
+"bsod.classic.firstTime" = "Jeśli widzisz ten ekran błędu zatrzymania po raz pierwszy,";
+"bsod.classic.restartComputer" = "uruchom ponownie komputer. Jeśli ten ekran pojawi się ponownie,";
+"bsod.classic.theseSteps" = "wykonaj następujące kroki:";
+"bsod.classic.checkHardware" = "Sprawdź, czy nowy sprzęt lub oprogramowanie zostało prawidłowo zainstalowane.";
+"bsod.classic.newInstallation" = "Jeśli to nowa instalacja, skontaktuj się z producentem sprzętu lub oprogramowania";
+"bsod.classic.updatesNeeded" = "w sprawie ewentualnych aktualizacji systemu Winsome.";
+"bsod.classic.continueProblems" = "Jeśli problemy się powtarzają, wyłącz lub usuń ostatnio zainstalowany sprzęt";
+"bsod.classic.orSoftware" = "lub oprogramowanie. Wyłącz opcje pamięci BIOS, takie jak buforowanie lub shadowing.";
+"bsod.classic.safeMode" = "Jeśli musisz użyć trybu awaryjnego, aby usunąć lub wyłączyć składniki,";
+"bsod.classic.pressF8" = "uruchom ponownie komputer, naciśnij F8, aby wybrać Zaawansowane opcje uruchamiania,";
+"bsod.classic.selectSafeMode" = "a następnie wybierz Tryb awaryjny.";
+"bsod.classic.techInfo" = "Informacje techniczne:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "Uruchom ponownie i ustaw opcje odzyskiwania w panelu sterowania systemem";
+"bsod.classicDump.recovery2" = "lub opcję uruchamiania systemu /CRASHDEBUG. Jeśli ten komunikat pojawi się ponownie,";
+"bsod.classicDump.recovery3" = "skontaktuj się z administratorem systemu lub działem pomocy technicznej.";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> skanowanie raportu diagnostycznego";
+"bsod.cyber.collectingDiagnostics" = "zbieranie danych diagnostycznych ";
+"bsod.cyber.percentComplete" = "% ukończono";
+"bsod.cyber.dumpingCore" = "zrzucanie pamięci rdzenia";

@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "Luangkan waktu sejenak untuk melihat jauh dari layar dan bernapas. Tekan tombol apa saja atau klik untuk menutup.";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "Klik kiri untuk menjalankan, klik kanan untuk pengaturan";
+
+/* Modern BSOD */
+"bsod.modern.body" = "Perangkat Anda mengalami masalah dan perlu dimulai ulang. Kami sedang mengumpulkan info kesalahan, lalu kami akan memulai ulang untuk Anda.";
+"bsod.modern.percentComplete" = "%d%% selesai";
+"bsod.modern.moreInfo" = "Untuk informasi lebih lanjut tentang masalah ini dan kemungkinan perbaikan, kunjungi situs kami";
+"bsod.modern.supportInfo" = "Jika Anda menghubungi petugas dukungan, berikan informasi ini:";
+"bsod.modern.stopCode" = "Kode berhenti: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "Masalah telah terdeteksi dan Winsome telah dimatikan untuk mencegah kerusakan";
+"bsod.classic.toYourComputer" = "pada komputer Anda.";
+"bsod.classic.causedBy" = "Masalah tampaknya disebabkan oleh berkas berikut: %@";
+"bsod.classic.firstTime" = "Jika ini pertama kalinya Anda melihat layar kesalahan ini,";
+"bsod.classic.restartComputer" = "mulai ulang komputer Anda. Jika layar ini muncul lagi, ikuti";
+"bsod.classic.theseSteps" = "langkah-langkah berikut:";
+"bsod.classic.checkHardware" = "Pastikan perangkat keras atau perangkat lunak baru telah terpasang dengan benar.";
+"bsod.classic.newInstallation" = "Jika ini adalah instalasi baru, hubungi produsen perangkat keras atau perangkat lunak";
+"bsod.classic.updatesNeeded" = "untuk pembaruan Winsome yang mungkin Anda perlukan.";
+"bsod.classic.continueProblems" = "Jika masalah berlanjut, nonaktifkan atau lepaskan perangkat keras yang baru dipasang";
+"bsod.classic.orSoftware" = "atau perangkat lunak. Nonaktifkan opsi memori BIOS seperti caching atau shadowing.";
+"bsod.classic.safeMode" = "Jika Anda perlu menggunakan Safe Mode untuk menghapus atau menonaktifkan komponen, mulai ulang";
+"bsod.classic.pressF8" = "komputer Anda, tekan F8 untuk memilih Opsi Startup Lanjutan, lalu";
+"bsod.classic.selectSafeMode" = "pilih Safe Mode.";
+"bsod.classic.techInfo" = "Informasi teknis:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "Mulai ulang dan atur opsi pemulihan di panel kontrol sistem";
+"bsod.classicDump.recovery2" = "atau opsi startup sistem /CRASHDEBUG. Jika pesan ini muncul kembali";
+"bsod.classicDump.recovery3" = "hubungi administrator sistem atau tim dukungan teknis Anda.";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> pindai laporan diagnostik";
+"bsod.cyber.collectingDiagnostics" = "mengumpulkan diagnostik ";
+"bsod.cyber.percentComplete" = "% selesai";
+"bsod.cyber.dumpingCore" = "membuang inti";

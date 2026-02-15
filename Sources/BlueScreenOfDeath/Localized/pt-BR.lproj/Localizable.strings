@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "Tire um momento para desviar o olhar da tela e respirar. Pressione qualquer tecla ou clique para fechar.";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "Clique esquerdo para ativar, clique direito para configurações";
+
+/* Modern BSOD */
+"bsod.modern.body" = "Seu dispositivo encontrou um problema e precisa ser reiniciado. Estamos apenas coletando algumas informações sobre o erro e então reiniciaremos para você.";
+"bsod.modern.percentComplete" = "%d%% concluído";
+"bsod.modern.moreInfo" = "Para mais informações sobre este problema e possíveis correções, visite nosso site";
+"bsod.modern.supportInfo" = "Se você entrar em contato com um técnico de suporte, forneça estas informações:";
+"bsod.modern.stopCode" = "Código de parada: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "Um problema foi detectado e o Winsome foi desligado para evitar danos";
+"bsod.classic.toYourComputer" = "ao seu computador.";
+"bsod.classic.causedBy" = "O problema parece ser causado pelo seguinte arquivo: %@";
+"bsod.classic.firstTime" = "Se esta é a primeira vez que você vê esta tela de erro Stop,";
+"bsod.classic.restartComputer" = "reinicie seu computador. Se esta tela aparecer novamente, siga";
+"bsod.classic.theseSteps" = "estes passos:";
+"bsod.classic.checkHardware" = "Verifique se qualquer hardware ou software novo está instalado corretamente.";
+"bsod.classic.newInstallation" = "Se esta é uma nova instalação, consulte o fabricante do seu hardware ou software";
+"bsod.classic.updatesNeeded" = "sobre atualizações do Winsome que você possa precisar.";
+"bsod.classic.continueProblems" = "Se os problemas continuarem, desative ou remova qualquer hardware";
+"bsod.classic.orSoftware" = "ou software instalado recentemente. Desative as opções de memória do BIOS, como cache ou shadowing.";
+"bsod.classic.safeMode" = "Se você precisar usar o Modo de segurança para remover ou desativar componentes, reinicie";
+"bsod.classic.pressF8" = "seu computador, pressione F8 para selecionar as Opções avançadas de inicialização e então";
+"bsod.classic.selectSafeMode" = "selecione Modo de segurança.";
+"bsod.classic.techInfo" = "Informações técnicas:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "Reinicie e configure as opções de recuperação no painel de controle do sistema";
+"bsod.classicDump.recovery2" = "ou na opção de inicialização do sistema /CRASHDEBUG. Se esta mensagem reaparecer,";
+"bsod.classicDump.recovery3" = "entre em contato com o administrador do sistema ou o grupo de suporte técnico.";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> escanear relatório de diagnóstico";
+"bsod.cyber.collectingDiagnostics" = "coletando diagnósticos ";
+"bsod.cyber.percentComplete" = "% concluído";
+"bsod.cyber.dumpingCore" = "despejando núcleo";

@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "หยุดสักครู่ มองออกจากหน้าจอ และหายใจ กดปุ่มใดก็ได้หรือคลิกเพื่อปิด";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "คลิกซ้ายเพื่อเริ่ม คลิกขวาเพื่อตั้งค่า";
+
+/* Modern BSOD */
+"bsod.modern.body" = "อุปกรณ์ของคุณพบปัญหาและจำเป็นต้องรีสตาร์ท เรากำลังรวบรวมข้อมูลข้อผิดพลาด จากนั้นจะรีสตาร์ทให้คุณ";
+"bsod.modern.percentComplete" = "%d%% เสร็จสมบูรณ์";
+"bsod.modern.moreInfo" = "สำหรับข้อมูลเพิ่มเติมเกี่ยวกับปัญหานี้และวิธีแก้ไข โปรดเยี่ยมชมเว็บไซต์ของเรา";
+"bsod.modern.supportInfo" = "หากคุณโทรหาฝ่ายสนับสนุน โปรดแจ้งข้อมูลนี้:";
+"bsod.modern.stopCode" = "รหัสหยุดทำงาน: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "ตรวจพบปัญหาและ Winsome ถูกปิดลงเพื่อป้องกันความเสียหาย";
+"bsod.classic.toYourComputer" = "ต่อคอมพิวเตอร์ของคุณ";
+"bsod.classic.causedBy" = "ปัญหาดูเหมือนเกิดจากไฟล์ต่อไปนี้: %@";
+"bsod.classic.firstTime" = "หากนี่เป็นครั้งแรกที่คุณเห็นหน้าจอข้อผิดพลาดนี้";
+"bsod.classic.restartComputer" = "ให้รีสตาร์ทคอมพิวเตอร์ของคุณ หากหน้าจอนี้ปรากฏอีกครั้ง ให้ทำตาม";
+"bsod.classic.theseSteps" = "ขั้นตอนเหล่านี้:";
+"bsod.classic.checkHardware" = "ตรวจสอบให้แน่ใจว่าฮาร์ดแวร์หรือซอฟต์แวร์ใหม่ได้รับการติดตั้งอย่างถูกต้อง";
+"bsod.classic.newInstallation" = "หากเป็นการติดตั้งใหม่ โปรดสอบถามผู้ผลิตฮาร์ดแวร์หรือซอฟต์แวร์";
+"bsod.classic.updatesNeeded" = "เกี่ยวกับอัปเดต Winsome ที่คุณอาจต้องการ";
+"bsod.classic.continueProblems" = "หากปัญหายังคงอยู่ ให้ปิดใช้งานหรือถอดฮาร์ดแวร์ที่เพิ่งติดตั้ง";
+"bsod.classic.orSoftware" = "หรือซอฟต์แวร์ออก ปิดใช้งานตัวเลือกหน่วยความจำ BIOS เช่น การแคชหรือ shadowing";
+"bsod.classic.safeMode" = "หากคุณต้องการใช้ Safe Mode เพื่อลบหรือปิดใช้งานส่วนประกอบ ให้รีสตาร์ท";
+"bsod.classic.pressF8" = "คอมพิวเตอร์ของคุณ กด F8 เพื่อเลือกตัวเลือกการเริ่มต้นขั้นสูง จากนั้น";
+"bsod.classic.selectSafeMode" = "เลือก Safe Mode";
+"bsod.classic.techInfo" = "ข้อมูลทางเทคนิค:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "รีสตาร์ทและตั้งค่าตัวเลือกการกู้คืนในแผงควบคุมระบบ";
+"bsod.classicDump.recovery2" = "หรือตัวเลือกการเริ่มต้นระบบ /CRASHDEBUG หากข้อความนี้ปรากฏอีกครั้ง";
+"bsod.classicDump.recovery3" = "โปรดติดต่อผู้ดูแลระบบหรือกลุ่มสนับสนุนทางเทคนิค";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> สแกนเพื่อรายงานการวินิจฉัย";
+"bsod.cyber.collectingDiagnostics" = "กำลังรวบรวมข้อมูลวินิจฉัย ";
+"bsod.cyber.percentComplete" = "% เสร็จสมบูรณ์";
+"bsod.cyber.dumpingCore" = "กำลังดัมพ์คอร์";

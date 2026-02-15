@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "একটু থামুন, স্ক্রিন থেকে দূরে তাকান এবং শ্বাস নিন। বাতিল করতে যেকোনো কী চাপুন বা ক্লিক করুন।";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "ট্রিগার করতে বাম-ক্লিক, সেটিংসের জন্য ডান-ক্লিক করুন";
+
+/* Modern BSOD */
+"bsod.modern.body" = "আপনার ডিভাইসে একটি সমস্যা হয়েছে এবং পুনরায় চালু করা প্রয়োজন। আমরা কিছু ত্রুটির তথ্য সংগ্রহ করছি, এবং তারপর আমরা আপনার জন্য পুনরায় চালু করব।";
+"bsod.modern.percentComplete" = "%d%% সম্পন্ন";
+"bsod.modern.moreInfo" = "এই সমস্যা এবং সম্ভাব্য সমাধান সম্পর্কে আরও তথ্যের জন্য, আমাদের সাইটে যান";
+"bsod.modern.supportInfo" = "আপনি যদি কোনো সহায়তা ব্যক্তিকে কল করেন, তাকে এই তথ্য দিন:";
+"bsod.modern.stopCode" = "স্টপ কোড: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "একটি সমস্যা শনাক্ত হয়েছে এবং ক্ষতি রোধ করতে Winsome বন্ধ করা হয়েছে";
+"bsod.classic.toYourComputer" = "আপনার কম্পিউটারের।";
+"bsod.classic.causedBy" = "সমস্যাটি নিম্নলিখিত ফাইলের কারণে বলে মনে হচ্ছে: %@";
+"bsod.classic.firstTime" = "আপনি যদি এই স্টপ ত্রুটি স্ক্রিনটি প্রথমবার দেখে থাকেন,";
+"bsod.classic.restartComputer" = "আপনার কম্পিউটার পুনরায় চালু করুন। এই স্ক্রিন আবার দেখা দিলে, এই";
+"bsod.classic.theseSteps" = "পদক্ষেপগুলি অনুসরণ করুন:";
+"bsod.classic.checkHardware" = "নিশ্চিত করুন যে কোনো নতুন হার্ডওয়্যার বা সফটওয়্যার সঠিকভাবে ইনস্টল করা হয়েছে।";
+"bsod.classic.newInstallation" = "এটি একটি নতুন ইনস্টলেশন হলে, আপনার হার্ডওয়্যার বা সফটওয়্যার প্রস্তুতকারকের কাছে";
+"bsod.classic.updatesNeeded" = "প্রয়োজনীয় Winsome আপডেটের বিষয়ে জিজ্ঞাসা করুন।";
+"bsod.classic.continueProblems" = "সমস্যা অব্যাহত থাকলে, সম্প্রতি ইনস্টল করা যেকোনো হার্ডওয়্যার নিষ্ক্রিয় বা সরিয়ে ফেলুন";
+"bsod.classic.orSoftware" = "বা সফটওয়্যার। BIOS মেমোরি বিকল্পগুলি যেমন ক্যাশিং বা শ্যাডোইং নিষ্ক্রিয় করুন।";
+"bsod.classic.safeMode" = "কম্পোনেন্ট সরাতে বা নিষ্ক্রিয় করতে সেফ মোড ব্যবহার করতে হলে, আপনার";
+"bsod.classic.pressF8" = "কম্পিউটার পুনরায় চালু করুন, উন্নত স্টার্টআপ বিকল্প নির্বাচন করতে F8 চাপুন, এবং তারপর";
+"bsod.classic.selectSafeMode" = "সেফ মোড নির্বাচন করুন।";
+"bsod.classic.techInfo" = "প্রযুক্তিগত তথ্য:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "পুনরায় চালু করুন এবং সিস্টেম কন্ট্রোল প্যানেলে রিকভারি বিকল্প সেট করুন";
+"bsod.classicDump.recovery2" = "বা সিস্টেম স্টার্টআপ বিকল্প /CRASHDEBUG। এই বার্তা আবার দেখা দিলে";
+"bsod.classicDump.recovery3" = "আপনার সিস্টেম প্রশাসক বা প্রযুক্তিগত সহায়তা দলের সাথে যোগাযোগ করুন।";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> ডায়াগনস্টিক রিপোর্টের জন্য স্ক্যান করুন";
+"bsod.cyber.collectingDiagnostics" = "ডায়াগনস্টিক তথ্য সংগ্রহ হচ্ছে ";
+"bsod.cyber.percentComplete" = "% সম্পন্ন";
+"bsod.cyber.dumpingCore" = "কোর ডাম্পিং";

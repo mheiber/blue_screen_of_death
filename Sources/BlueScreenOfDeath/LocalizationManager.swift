@@ -13,6 +13,7 @@ final class LocalizationManager {
         ("bn",      "বাংলা",          "Bengali"),
         ("chr",     "ᏣᎳᎩ ᎦᏬᏂᎯᏍᏗ",  "Cherokee"),
         ("zh-Hans", "简体中文",        "Chinese (Simplified)"),
+        ("zh-Hant", "繁體中文",        "Chinese (Traditional)"),
         ("nl",      "Nederlands",     "Dutch"),
         ("en",      "English",        "English"),
         ("eo",      "Esperanto",      "Esperanto"),

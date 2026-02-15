@@ -65,10 +65,7 @@ struct BlueScreenStyleBuilder {
         yOffset -= sadFace.frame.height + 40
 
         // Body text
-        let bodyText = """
-            Your device ran into a problem and needs to restart. \
-            We're just collecting some error info, and then we'll restart for you.
-            """
+        let bodyText = L("bsod.modern.body")
         let bodyFontSize = min(18.0, frame.height * 0.025)
         let bodyLabel = NSTextField(wrappingLabelWithString: bodyText)
         bodyLabel.font = NSFont.systemFont(ofSize: bodyFontSize, weight: .light)
@@ -85,7 +82,7 @@ struct BlueScreenStyleBuilder {
         yOffset -= bodyLabel.frame.height + 30
 
         // Percentage complete
-        let pctLabel = NSTextField(labelWithString: "\(data.percentage)% complete")
+        let pctLabel = NSTextField(labelWithString: L("bsod.modern.percentComplete", data.percentage))
         pctLabel.font = NSFont.systemFont(ofSize: bodyFontSize, weight: .light)
         pctLabel.textColor = .white
         pctLabel.backgroundColor = .clear
@@ -116,18 +113,18 @@ struct BlueScreenStyleBuilder {
             let infoWidth = maxTextWidth - qrSize - 16
 
             let line1 = NSTextField(wrappingLabelWithString:
-                "For more information about this issue and possible fixes, visit our site")
+                L("bsod.modern.moreInfo"))
             configureSmallInfoLabel(line1, x: textX, width: infoWidth)
             line1.frame.origin.y = yOffset - line1.frame.height
             container.addSubview(line1)
 
             let line2 = NSTextField(wrappingLabelWithString:
-                "If you call a support person, give them this info:")
+                L("bsod.modern.supportInfo"))
             configureSmallInfoLabel(line2, x: textX, width: infoWidth)
             line2.frame.origin.y = line1.frame.origin.y - line1.frame.height - 16
             container.addSubview(line2)
 
-            let line3 = NSTextField(labelWithString: "Stop code: \(data.stopCode)")
+            let line3 = NSTextField(labelWithString: L("bsod.modern.stopCode", data.stopCode))
             configureSmallInfoLabel(line3, x: textX, width: infoWidth)
             line3.frame.origin.y = line2.frame.origin.y - line2.frame.height - 4
             container.addSubview(line3)

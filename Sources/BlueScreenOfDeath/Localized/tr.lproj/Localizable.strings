@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "Ekrandan uzağa bakıp nefes almak için bir an durun. Kapatmak için herhangi bir tuşa basın veya tıklayın.";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "Tetiklemek için sol tıklayın, ayarlar için sağ tıklayın";
+
+/* Modern BSOD */
+"bsod.modern.body" = "Cihazınız bir sorunla karşılaştı ve yeniden başlatılması gerekiyor. Hata bilgilerini topluyoruz, ardından sizin için yeniden başlatacağız.";
+"bsod.modern.percentComplete" = "%d%% tamamlandı";
+"bsod.modern.moreInfo" = "Bu sorun ve olası çözümler hakkında daha fazla bilgi için sitemizi ziyaret edin";
+"bsod.modern.supportInfo" = "Bir destek yetkilisini ararsanız, bu bilgileri iletin:";
+"bsod.modern.stopCode" = "Durdurma kodu: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "Bir sorun algılandı ve bilgisayarınıza zarar gelmesini önlemek için Winsome kapatıldı";
+"bsod.classic.toYourComputer" = ".";
+"bsod.classic.causedBy" = "Sorun şu dosyadan kaynaklanıyor olabilir: %@";
+"bsod.classic.firstTime" = "Bu Dur hatası ekranını ilk kez görüyorsanız,";
+"bsod.classic.restartComputer" = "bilgisayarınızı yeniden başlatın. Bu ekran tekrar görünürse";
+"bsod.classic.theseSteps" = "şu adımları izleyin:";
+"bsod.classic.checkHardware" = "Yeni donanım veya yazılımın düzgün yüklendiğinden emin olun.";
+"bsod.classic.newInstallation" = "Bu yeni bir yükleme ise, donanım veya yazılım üreticinizden";
+"bsod.classic.updatesNeeded" = "ihtiyacınız olabilecek Winsome güncellemelerini isteyin.";
+"bsod.classic.continueProblems" = "Sorunlar devam ederse, yeni yüklenen donanım veya yazılımı";
+"bsod.classic.orSoftware" = "devre dışı bırakın veya kaldırın. Önbelleğe alma veya gölgeleme gibi BIOS bellek seçeneklerini devre dışı bırakın.";
+"bsod.classic.safeMode" = "Bileşenleri kaldırmak veya devre dışı bırakmak için Güvenli Mod kullanmanız gerekiyorsa,";
+"bsod.classic.pressF8" = "bilgisayarınızı yeniden başlatın, Gelişmiş Başlangıç Seçenekleri'ni seçmek için F8 tuşuna basın";
+"bsod.classic.selectSafeMode" = "ve ardından Güvenli Mod'u seçin.";
+"bsod.classic.techInfo" = "Teknik bilgi:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "Yeniden başlatın ve sistem denetim masasında kurtarma seçeneklerini ayarlayın";
+"bsod.classicDump.recovery2" = "veya /CRASHDEBUG sistem başlangıç seçeneğini kullanın. Bu ileti tekrar görünürse";
+"bsod.classicDump.recovery3" = "sistem yöneticinize veya teknik destek ekibine başvurun.";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> tanılama raporu için tarama";
+"bsod.cyber.collectingDiagnostics" = "tanılama bilgileri toplanıyor ";
+"bsod.cyber.percentComplete" = "% tamamlandı";
+"bsod.cyber.dumpingCore" = "çekirdek dökümü alınıyor";

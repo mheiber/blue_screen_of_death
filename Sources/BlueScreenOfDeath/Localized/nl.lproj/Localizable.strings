@@ -77,3 +77,38 @@
 "a11y.overlay.hint" = "Neem even de tijd om uw blik van het scherm af te wenden en adem te halen. Druk op een toets of klik om te sluiten.";
 "a11y.statusItem.label" = "Blue Screen of Death";
 "a11y.statusItem.hint" = "Linksklik om te activeren, rechtsklik voor instellingen";
+
+/* Modern BSOD */
+"bsod.modern.body" = "Er is een probleem opgetreden op uw apparaat en het moet opnieuw worden opgestart. We verzamelen nog wat foutinformatie en starten daarna voor u opnieuw op.";
+"bsod.modern.percentComplete" = "%d%% voltooid";
+"bsod.modern.moreInfo" = "Ga naar onze website voor meer informatie over dit probleem en mogelijke oplossingen";
+"bsod.modern.supportInfo" = "Als u de ondersteuning belt, geef dan deze informatie door:";
+"bsod.modern.stopCode" = "Stopcode: %@";
+
+/* Classic BSOD */
+"bsod.classic.problemDetected" = "Er is een probleem gedetecteerd en Winsome is afgesloten om schade";
+"bsod.classic.toYourComputer" = "aan uw computer te voorkomen.";
+"bsod.classic.causedBy" = "Het probleem lijkt te worden veroorzaakt door het volgende bestand: %@";
+"bsod.classic.firstTime" = "Als dit de eerste keer is dat u dit stopfoutscherm ziet,";
+"bsod.classic.restartComputer" = "start dan uw computer opnieuw op. Als dit scherm opnieuw verschijnt,";
+"bsod.classic.theseSteps" = "volg dan deze stappen:";
+"bsod.classic.checkHardware" = "Controleer of nieuwe hardware of software correct is geïnstalleerd.";
+"bsod.classic.newInstallation" = "Als dit een nieuwe installatie is, neem dan contact op met uw hardware- of softwarefabrikant";
+"bsod.classic.updatesNeeded" = "voor eventuele Winsome-updates die u nodig heeft.";
+"bsod.classic.continueProblems" = "Als de problemen aanhouden, schakel dan recent geïnstalleerde hardware";
+"bsod.classic.orSoftware" = "of software uit of verwijder deze. Schakel BIOS-geheugenopties zoals caching of shadowing uit.";
+"bsod.classic.safeMode" = "Als u de Veilige modus moet gebruiken om onderdelen te verwijderen of uit te schakelen,";
+"bsod.classic.pressF8" = "start dan uw computer opnieuw op, druk op F8 om Geavanceerde opstartopties te selecteren,";
+"bsod.classic.selectSafeMode" = "en selecteer vervolgens Veilige modus.";
+"bsod.classic.techInfo" = "Technische informatie:";
+
+/* Classic Dump BSOD */
+"bsod.classicDump.recovery1" = "Start opnieuw op en stel de herstelopties in het systeemconfiguratiescherm";
+"bsod.classicDump.recovery2" = "of de systeemstartoptie /CRASHDEBUG in. Als dit bericht opnieuw verschijnt,";
+"bsod.classicDump.recovery3" = "neem dan contact op met uw systeembeheerder of technische ondersteuning.";
+
+/* CyberWin 2070 BSOD */
+"bsod.cyber.scanDiagnostic" = "> scannen naar diagnostisch rapport";
+"bsod.cyber.collectingDiagnostics" = "diagnostische gegevens verzamelen ";
+"bsod.cyber.percentComplete" = "% voltooid";
+"bsod.cyber.dumpingCore" = "kerngeheugen dumpen";
