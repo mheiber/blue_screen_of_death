@@ -113,6 +113,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Custom Schedule
         menu.addItem(NSMenuItem(title: "Custom Schedule...", action: #selector(openCustomSchedule), keyEquivalent: ""))
 
+        // Screen Share Suppression
+        let screenShareItem = NSMenuItem(
+            title: "Suppress During Screen Share",
+            action: #selector(toggleScreenShareSuppression),
+            keyEquivalent: ""
+        )
+        screenShareItem.state = prefs.suppressDuringScreenShare ? .on : .off
+        menu.addItem(screenShareItem)
+
         // Lunch Reminder (independent of interval)
         let lunchItem = NSMenuItem(
             title: "Lunch Reminder\(prefs.lunchReminderEnabled ? " (\(String(format: "%d:%02d", prefs.lunchReminderHour, prefs.lunchReminderMinute)))" : "")...",
@@ -186,6 +195,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.isReleasedWhenClosed = false
         window.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
+    }
+
+    @objc private func toggleScreenShareSuppression() {
+        Preferences.shared.suppressDuringScreenShare.toggle()
     }
 
     @objc private func openCustomSchedule() {

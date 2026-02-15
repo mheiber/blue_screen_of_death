@@ -7,7 +7,7 @@ enum ScreenStyle: String, CaseIterable, Identifiable {
     case classic = "classic"
     case classicDump = "classicDump"
     case mojibake = "mojibake"
-    case synthwave = "synthwave"
+    case cyberwin2070 = "cyberwin2070"
     case paperclips = "paperclips"
 
     var id: String { rawValue }
@@ -18,7 +18,7 @@ enum ScreenStyle: String, CaseIterable, Identifiable {
         case .classic: return "Classic"
         case .classicDump: return "Classic Dump"
         case .mojibake: return "Mojibake"
-        case .synthwave: return "Synthwave"
+        case .cyberwin2070: return "CyberWin 2070"
         case .paperclips: return "Paperclips"
         }
     }
@@ -83,6 +83,7 @@ final class Preferences: ObservableObject {
         static let lunchReminderEnabled = "lunchReminderEnabled"
         static let lunchReminderHour = "lunchReminderHour"
         static let lunchReminderMinute = "lunchReminderMinute"
+        static let suppressDuringScreenShare = "suppressDuringScreenShare"
     }
 
     @Published var isEnabled: Bool {
@@ -150,6 +151,11 @@ final class Preferences: ObservableObject {
         didSet { defaults.set(lunchReminderMinute, forKey: Keys.lunchReminderMinute) }
     }
 
+    /// Whether to suppress blue screen when screen sharing or conferencing apps are detected
+    @Published var suppressDuringScreenShare: Bool {
+        didSet { defaults.set(suppressDuringScreenShare, forKey: Keys.suppressDuringScreenShare) }
+    }
+
     /// Returns the selected style, or nil if "random"
     var selectedStyle: ScreenStyle? {
         ScreenStyle(rawValue: selectedStyleRaw)
@@ -195,6 +201,7 @@ final class Preferences: ObservableObject {
             Keys.lunchReminderEnabled: false,
             Keys.lunchReminderHour: 11,
             Keys.lunchReminderMinute: 55,
+            Keys.suppressDuringScreenShare: true,
         ])
 
         self.isEnabled = defaults.bool(forKey: Keys.isEnabled)
@@ -207,6 +214,7 @@ final class Preferences: ObservableObject {
         self.lunchReminderEnabled = defaults.bool(forKey: Keys.lunchReminderEnabled)
         self.lunchReminderHour = defaults.integer(forKey: Keys.lunchReminderHour)
         self.lunchReminderMinute = defaults.integer(forKey: Keys.lunchReminderMinute)
+        self.suppressDuringScreenShare = defaults.bool(forKey: Keys.suppressDuringScreenShare)
 
         if let weekdays = defaults.array(forKey: Keys.enabledWeekdays) as? [Int] {
             self.enabledWeekdays = Set(weekdays)

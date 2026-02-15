@@ -295,7 +295,7 @@ final class ScreenStyleTests: XCTestCase {
         XCTAssertEqual(ScreenStyle.classic.rawValue, "classic")
         XCTAssertEqual(ScreenStyle.classicDump.rawValue, "classicDump")
         XCTAssertEqual(ScreenStyle.mojibake.rawValue, "mojibake")
-        XCTAssertEqual(ScreenStyle.synthwave.rawValue, "synthwave")
+        XCTAssertEqual(ScreenStyle.cyberwin2070.rawValue, "cyberwin2070")
         XCTAssertEqual(ScreenStyle.paperclips.rawValue, "paperclips")
     }
 
@@ -304,7 +304,7 @@ final class ScreenStyleTests: XCTestCase {
         XCTAssertEqual(ScreenStyle.classic.displayName, "Classic")
         XCTAssertEqual(ScreenStyle.classicDump.displayName, "Classic Dump")
         XCTAssertEqual(ScreenStyle.mojibake.displayName, "Mojibake")
-        XCTAssertEqual(ScreenStyle.synthwave.displayName, "Synthwave")
+        XCTAssertEqual(ScreenStyle.cyberwin2070.displayName, "CyberWin 2070")
         XCTAssertEqual(ScreenStyle.paperclips.displayName, "Paperclips")
     }
 
@@ -319,7 +319,7 @@ final class ScreenStyleTests: XCTestCase {
         XCTAssertEqual(ScreenStyle(rawValue: "classic"), .classic)
         XCTAssertEqual(ScreenStyle(rawValue: "classicDump"), .classicDump)
         XCTAssertEqual(ScreenStyle(rawValue: "mojibake"), .mojibake)
-        XCTAssertEqual(ScreenStyle(rawValue: "synthwave"), .synthwave)
+        XCTAssertEqual(ScreenStyle(rawValue: "cyberwin2070"), .cyberwin2070)
         XCTAssertEqual(ScreenStyle(rawValue: "paperclips"), .paperclips)
         XCTAssertNil(ScreenStyle(rawValue: "invalid"))
     }
@@ -649,5 +649,163 @@ final class ScheduleManagerTests: XCTestCase {
         )
 
         prefs.isEnabled = originalEnabled
+    }
+}
+
+// MARK: - ScreenShareDetector Tests
+
+final class ScreenShareDetectorTests: XCTestCase {
+
+    // MARK: - Definite indicators (always suppress)
+
+    func testSuppressesWhenScreenSharingAppRunning() {
+        XCTAssertTrue(
+            ScreenShareDetector.shouldSuppress(
+                runningBundleIDs: ["com.apple.screensharing"],
+                runningProcessNames: [],
+                suppressDuringCalls: false
+            ),
+            "Should suppress when macOS Screen Sharing is running"
+        )
+    }
+
+    func testSuppressesWhenScreenCaptureUIRunning() {
+        XCTAssertTrue(
+            ScreenShareDetector.shouldSuppress(
+                runningBundleIDs: ["com.apple.screencaptureui"],
+                runningProcessNames: [],
+                suppressDuringCalls: false
+            ),
+            "Should suppress when screen capture UI is running"
+        )
+    }
+
+    // MARK: - Active sharing process names
+
+    func testSuppressesWhenZoomCptHostRunning() {
+        XCTAssertTrue(
+            ScreenShareDetector.shouldSuppress(
+                runningBundleIDs: [],
+                runningProcessNames: ["CptHost"],
+                suppressDuringCalls: false
+            ),
+            "Should suppress when Zoom's CptHost (screen sharing) is running"
+        )
+    }
+
+    // MARK: - Conferencing apps (suppressDuringCalls)
+
+    func testSuppressesZoomWhenSuppressDuringCallsEnabled() {
+        XCTAssertTrue(
+            ScreenShareDetector.shouldSuppress(
+                runningBundleIDs: ["us.zoom.xos"],
+                runningProcessNames: [],
+                suppressDuringCalls: true
+            ),
+            "Should suppress when Zoom is running and suppressDuringCalls is true"
+        )
+    }
+
+    func testDoesNotSuppressZoomWhenSuppressDuringCallsDisabled() {
+        XCTAssertFalse(
+            ScreenShareDetector.shouldSuppress(
+                runningBundleIDs: ["us.zoom.xos"],
+                runningProcessNames: [],
+                suppressDuringCalls: false
+            ),
+            "Should not suppress Zoom when suppressDuringCalls is false"
+        )
+    }
+
+    func testSuppressesTeamsWhenSuppressDuringCallsEnabled() {
+        XCTAssertTrue(
+            ScreenShareDetector.shouldSuppress(
+                runningBundleIDs: ["com.microsoft.teams2"],
+                runningProcessNames: [],
+                suppressDuringCalls: true
+            ),
+            "Should suppress when Teams is running and suppressDuringCalls is true"
+        )
+    }
+
+    // MARK: - No false positives
+
+    func testDoesNotSuppressWhenNoRelevantAppsRunning() {
+        XCTAssertFalse(
+            ScreenShareDetector.shouldSuppress(
+                runningBundleIDs: ["com.apple.finder", "com.apple.Terminal"],
+                runningProcessNames: ["Finder", "Terminal"],
+                suppressDuringCalls: true
+            ),
+            "Should not suppress when only normal apps are running"
+        )
+    }
+
+    func testDoesNotSuppressWhenEmpty() {
+        XCTAssertFalse(
+            ScreenShareDetector.shouldSuppress(
+                runningBundleIDs: [],
+                runningProcessNames: [],
+                suppressDuringCalls: true
+            ),
+            "Should not suppress when no apps are running"
+        )
+    }
+
+    // MARK: - Bundle ID lists
+
+    func testDefiniteIndicatorBundleIDsAreNonEmpty() {
+        XCTAssertFalse(ScreenShareDetector.definiteIndicatorBundleIDs.isEmpty)
+    }
+
+    func testConferencingBundleIDsAreNonEmpty() {
+        XCTAssertFalse(ScreenShareDetector.conferencingBundleIDs.isEmpty)
+    }
+
+    func testActiveSharingProcessNamesAreNonEmpty() {
+        XCTAssertFalse(ScreenShareDetector.activeSharingProcessNames.isEmpty)
+    }
+
+    // MARK: - All conferencing apps detected
+
+    func testAllConferencingAppsDetectedWhenSuppressDuringCallsEnabled() {
+        for bundleID in ScreenShareDetector.conferencingBundleIDs {
+            XCTAssertTrue(
+                ScreenShareDetector.shouldSuppress(
+                    runningBundleIDs: [bundleID],
+                    runningProcessNames: [],
+                    suppressDuringCalls: true
+                ),
+                "Should suppress for conferencing app \(bundleID)"
+            )
+        }
+    }
+
+    func testNoConferencingAppsSuppressedWhenSuppressDuringCallsDisabled() {
+        for bundleID in ScreenShareDetector.conferencingBundleIDs {
+            XCTAssertFalse(
+                ScreenShareDetector.shouldSuppress(
+                    runningBundleIDs: [bundleID],
+                    runningProcessNames: [],
+                    suppressDuringCalls: false
+                ),
+                "Should not suppress for \(bundleID) when suppressDuringCalls is false"
+            )
+        }
+    }
+
+    // MARK: - Definite indicators override suppressDuringCalls=false
+
+    func testDefiniteIndicatorsSuppressEvenWhenSuppressDuringCallsDisabled() {
+        for bundleID in ScreenShareDetector.definiteIndicatorBundleIDs {
+            XCTAssertTrue(
+                ScreenShareDetector.shouldSuppress(
+                    runningBundleIDs: [bundleID],
+                    runningProcessNames: [],
+                    suppressDuringCalls: false
+                ),
+                "Definite indicator \(bundleID) should suppress regardless of suppressDuringCalls"
+            )
+        }
     }
 }

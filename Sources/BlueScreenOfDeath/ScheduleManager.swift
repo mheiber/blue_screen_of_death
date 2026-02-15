@@ -64,7 +64,11 @@ final class ScheduleManager: ObservableObject {
         guard preferences.isEnabled else { return }
 
         if preferences.isWithinSchedule() {
-            onTrigger?()
+            let suppressed = preferences.suppressDuringScreenShare
+                && ScreenShareDetector.shouldSuppress(suppressDuringCalls: true)
+            if !suppressed {
+                onTrigger?()
+            }
         }
 
         // Schedule next (re-rolls random intervals each time)

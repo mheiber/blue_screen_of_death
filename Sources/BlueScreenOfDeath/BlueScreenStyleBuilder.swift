@@ -14,8 +14,8 @@ struct BlueScreenStyleBuilder {
         switch style {
         case .modern:
             return modernBlue
-        case .synthwave:
-            return SynthwaveStyleBuilder.darkBg
+        case .cyberwin2070:
+            return CyberWin2070StyleBuilder.darkBg
         case .paperclips:
             return NSColor(red: 0.106, green: 0.078, blue: 0.392, alpha: 1) // deep indigo
         default:
@@ -34,8 +34,8 @@ struct BlueScreenStyleBuilder {
             return buildClassicDumpView(frame: frame)
         case .mojibake:
             return buildMojibakeView(frame: frame)
-        case .synthwave:
-            return SynthwaveStyleBuilder.buildView(frame: frame)
+        case .cyberwin2070:
+            return CyberWin2070StyleBuilder.buildView(frame: frame)
         case .paperclips:
             return PaperclipsStyleBuilder.buildView(frame: frame)
         }
