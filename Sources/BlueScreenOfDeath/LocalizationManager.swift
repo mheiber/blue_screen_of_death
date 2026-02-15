@@ -84,14 +84,19 @@ final class LocalizationManager {
             return
         }
 
-        // Try to find the .lproj in our module bundle
-        if let path = Bundle.module.path(forResource: languageCode, ofType: "lproj"),
-           let bundle = Bundle(path: path) {
-            overrideBundle = bundle
-        } else {
-            // Fall back to base (English)
-            overrideBundle = nil
+        // Try to find the .lproj in our module bundle.
+        // SPM may lowercase directory names (e.g. zh-Hans -> zh-hans),
+        // so try both the original code and its lowercased form.
+        let candidates = [languageCode, languageCode.lowercased()]
+        for candidate in candidates {
+            if let path = Bundle.module.path(forResource: candidate, ofType: "lproj"),
+               let bundle = Bundle(path: path) {
+                overrideBundle = bundle
+                return
+            }
         }
+        // Fall back to base (English)
+        overrideBundle = nil
     }
 
     /// Look up a localized string.

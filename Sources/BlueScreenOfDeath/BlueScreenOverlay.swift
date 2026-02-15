@@ -15,6 +15,11 @@ final class BlueScreenOverlay {
         guard window == nil else { return }
         guard let screen = NSScreen.main else { return }
 
+        // Re-randomize language each time a BSOD is triggered in random mode
+        if LocalizationManager.shared.currentLanguage == "random" {
+            LocalizationManager.shared.loadRandomLanguage()
+        }
+
         let frame = screen.frame
         let style = Preferences.shared.resolveStyle()
         let bgColor = BlueScreenStyleBuilder.backgroundColor(for: style)

@@ -806,3 +806,140 @@ final class ScreenShareDetectorTests: XCTestCase {
         }
     }
 }
+
+// MARK: - Localization Coverage Tests
+
+final class LocalizationCoverageTests: XCTestCase {
+
+    /// All keys defined in the English base strings file.
+    private static let allKeys: [String] = [
+        // Menu
+        "menu.triggerNow", "menu.enabled", "menu.styleFormat", "menu.intervalFormat",
+        "menu.customSchedule", "menu.suppressScreenShare", "menu.lunchReminderFormat",
+        "menu.lunchReminder", "menu.nextFormat", "menu.about", "menu.quit", "menu.language",
+        // Styles
+        "style.modern", "style.classic", "style.classicDump", "style.mojibake",
+        "style.cyberwin2070", "style.random",
+        // Intervals
+        "interval.twentyMinutes", "interval.oneHour", "interval.twoHours", "interval.threeHours",
+        "interval.randomShort", "interval.randomLong", "interval.customFormat", "interval.custom",
+        "interval.everyNMinFormat",
+        // Custom Interval View
+        "customInterval.title", "customInterval.minutes", "customInterval.range", "customInterval.apply",
+        // Schedule
+        "schedule.title", "schedule.useCustom", "schedule.activeDays", "schedule.activeHours",
+        "schedule.from", "schedule.to", "schedule.helpText",
+        // Days
+        "day.monday", "day.tuesday", "day.wednesday", "day.thursday",
+        "day.friday", "day.saturday", "day.sunday",
+        // Lunch Reminder
+        "lunch.title", "lunch.enable", "lunch.time", "lunch.helpText",
+        // About
+        "about.title", "about.subtitle", "about.description", "about.versionFormat",
+        // Language
+        "language.system", "language.random",
+        // Accessibility
+        "a11y.overlay.label", "a11y.overlay.hint", "a11y.statusItem.label", "a11y.statusItem.hint",
+        // Modern BSOD
+        "bsod.modern.body", "bsod.modern.percentComplete", "bsod.modern.moreInfo",
+        "bsod.modern.supportInfo", "bsod.modern.stopCode",
+        // Classic BSOD
+        "bsod.classic.problemDetected", "bsod.classic.toYourComputer", "bsod.classic.causedBy",
+        "bsod.classic.firstTime", "bsod.classic.restartComputer", "bsod.classic.theseSteps",
+        "bsod.classic.checkHardware", "bsod.classic.newInstallation", "bsod.classic.updatesNeeded",
+        "bsod.classic.continueProblems", "bsod.classic.orSoftware", "bsod.classic.safeMode",
+        "bsod.classic.pressF8", "bsod.classic.selectSafeMode", "bsod.classic.techInfo",
+        // Classic Dump BSOD
+        "bsod.classicDump.recovery1", "bsod.classicDump.recovery2", "bsod.classicDump.recovery3",
+        // CyberWin 2070 BSOD
+        "bsod.cyber.scanDiagnostic", "bsod.cyber.collectingDiagnostics",
+        "bsod.cyber.percentComplete", "bsod.cyber.dumpingCore",
+    ]
+
+    /// All supported language codes (must match LocalizationManager.supportedLanguages).
+    private static let allLanguageCodes: [String] = LocalizationManager.supportedLanguages.map { $0.code }
+
+    func testAllLanguagesHaveAllKeys() {
+        for lang in Self.allLanguageCodes {
+            // SPM may lowercase lproj directory names, so try both
+            let candidates = [lang, lang.lowercased()]
+            var bundle: Bundle?
+            for candidate in candidates {
+                if let path = Bundle.module.path(forResource: candidate, ofType: "lproj") {
+                    bundle = Bundle(path: path)
+                    if bundle != nil { break }
+                }
+            }
+            guard let langBundle = bundle else {
+                XCTFail("Missing .lproj bundle for language: \(lang)")
+                continue
+            }
+
+            for key in Self.allKeys {
+                let value = langBundle.localizedString(forKey: key, value: "<<MISSING>>", table: nil)
+                XCTAssertNotEqual(
+                    value, "<<MISSING>>",
+                    "Language '\(lang)' is missing key '\(key)'"
+                )
+                XCTAssertNotEqual(
+                    value, key,
+                    "Language '\(lang)' has untranslated key '\(key)' (value equals key)"
+                )
+            }
+        }
+    }
+
+    func testEnglishBaseHasAllKeys() {
+        for key in Self.allKeys {
+            let value = Bundle.module.localizedString(forKey: key, value: "<<MISSING>>", table: nil)
+            XCTAssertNotEqual(
+                value, "<<MISSING>>",
+                "English base is missing key '\(key)'"
+            )
+        }
+    }
+
+    func testAllSupportedLanguagesHaveLprojBundles() {
+        for lang in Self.allLanguageCodes {
+            let candidates = [lang, lang.lowercased()]
+            let found = candidates.contains { Bundle.module.path(forResource: $0, ofType: "lproj") != nil }
+            XCTAssertTrue(found, "Missing .lproj bundle for language: \(lang)")
+        }
+    }
+
+    func testFormatSpecifiersPreserved() {
+        // Keys that contain format specifiers and what they should contain
+        let formatKeys: [(key: String, specifier: String)] = [
+            ("menu.styleFormat", "%@"),
+            ("menu.intervalFormat", "%@"),
+            ("menu.lunchReminderFormat", "%@"),
+            ("menu.nextFormat", "%@"),
+            ("about.versionFormat", "%@"),
+            ("interval.customFormat", "%d"),
+            ("interval.everyNMinFormat", "%d"),
+            ("bsod.modern.percentComplete", "%d"),
+            ("bsod.modern.stopCode", "%@"),
+            ("bsod.classic.causedBy", "%@"),
+        ]
+
+        for lang in Self.allLanguageCodes {
+            let candidates = [lang, lang.lowercased()]
+            var bundle: Bundle?
+            for candidate in candidates {
+                if let path = Bundle.module.path(forResource: candidate, ofType: "lproj") {
+                    bundle = Bundle(path: path)
+                    if bundle != nil { break }
+                }
+            }
+            guard let langBundle = bundle else { continue }
+
+            for (key, specifier) in formatKeys {
+                let value = langBundle.localizedString(forKey: key, value: nil, table: nil)
+                XCTAssertTrue(
+                    value.contains(specifier),
+                    "Language '\(lang)', key '\(key)': missing format specifier '\(specifier)' in value '\(value)'"
+                )
+            }
+        }
+    }
+}
