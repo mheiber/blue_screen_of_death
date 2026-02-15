@@ -32,7 +32,7 @@ struct LunchReminderView: View {
                     .frame(maxWidth: 200)
             }
 
-            Text("Get a friendly reminder to take a lunch break.")
+            Text("Blue screen will remind you when it is lunch time.")
                 .font(.caption)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
