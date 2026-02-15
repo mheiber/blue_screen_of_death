@@ -18,7 +18,13 @@ Inspired by the 20-20-20 rule recommended by eye care professionals — every 20
 
 ## Screenshots
 
-<!-- TODO: Add screenshots of menu bar, blue screen overlay, and preferences -->
+### Windows Modern (English)
+
+![Windows Modern style in English](screenshots/modern-english.png)
+
+### CyberWin 2070 (Japanese)
+
+![CyberWin 2070 style in Japanese](screenshots/cyber-japanese.png)
 
 ## Building
 

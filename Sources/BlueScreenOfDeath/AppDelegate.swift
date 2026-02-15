@@ -9,6 +9,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var cancellables = Set<AnyCancellable>()
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // Screenshot generation mode: --screenshot <style> <language> <output-path>
+        let args = CommandLine.arguments
+        if let idx = args.firstIndex(of: "--screenshot"),
+           idx + 3 < args.count {
+            let styleRaw = args[idx + 1]
+            let language = args[idx + 2]
+            let outputPath = args[idx + 3]
+            generateScreenshot(style: styleRaw, language: language, outputPath: outputPath)
+            NSApp.terminate(nil)
+            return
+        }
+
         NSApp.setActivationPolicy(.accessory)
 
         // Create status bar item
@@ -366,6 +378,57 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc private func quit() {
         NSApplication.shared.terminate(nil)
+    }
+
+    // MARK: - Screenshot Generation
+
+    private func generateScreenshot(style styleRaw: String, language: String, outputPath: String) {
+        // Set language
+        LocalizationManager.shared.currentLanguage = language
+
+        // Resolve style
+        guard let style = ScreenStyle(rawValue: styleRaw) else {
+            fputs("Unknown style: \(styleRaw)\n", stderr)
+            return
+        }
+
+        // Render at a 16:9 resolution
+        let width: CGFloat = 2560
+        let height: CGFloat = 1440
+        let frame = NSRect(x: 0, y: 0, width: width, height: height)
+
+        let view = BlueScreenStyleBuilder.buildView(for: style, frame: frame)
+        view.frame = frame
+
+        // Create a backing bitmap
+        guard let bitmapRep = view.bitmapImageRepForCachingDisplay(in: view.bounds) else {
+            fputs("Failed to create bitmap rep\n", stderr)
+            return
+        }
+        view.cacheDisplay(in: view.bounds, to: bitmapRep)
+
+        // The bitmapRep may have a blank background — draw the background color first
+        let finalImage = NSImage(size: frame.size)
+        finalImage.lockFocus()
+        BlueScreenStyleBuilder.backgroundColor(for: style).setFill()
+        NSRect(origin: .zero, size: frame.size).fill()
+        bitmapRep.draw(in: NSRect(origin: .zero, size: frame.size))
+        finalImage.unlockFocus()
+
+        // Convert to PNG
+        guard let tiffData = finalImage.tiffRepresentation,
+              let finalBitmap = NSBitmapImageRep(data: tiffData),
+              let pngData = finalBitmap.representation(using: .png, properties: [:]) else {
+            fputs("Failed to create PNG data\n", stderr)
+            return
+        }
+
+        do {
+            try pngData.write(to: URL(fileURLWithPath: outputPath))
+            fputs("Screenshot saved to \(outputPath)\n", stderr)
+        } catch {
+            fputs("Failed to write file: \(error)\n", stderr)
+        }
     }
 }
 
