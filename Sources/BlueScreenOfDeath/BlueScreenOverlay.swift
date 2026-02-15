@@ -66,7 +66,7 @@ final class BlueScreenOverlay {
         self.window = window
 
         // Monitor for any key press to dismiss
-        eventMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { [weak self] event in
+        eventMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { [weak self] _ in
             self?.dismiss()
             return nil // consume the event
         }

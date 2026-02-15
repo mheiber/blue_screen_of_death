@@ -142,7 +142,8 @@ struct CrashDumpGenerator {
         // Technical info
         lines.append("Technical information:")
         lines.append("")
-        lines.append("*** STOP: 0x\(hex(easterEggs[0])) (0x\(hex(easterEggs[1])), 0x\(hex(easterEggs[2])), 0x\(hex(easterEggs[3])), 0x\(hex(easterEggs[4])))")
+        let codes = (0...4).map { "0x\(hex(easterEggs[$0]))" }
+        lines.append("*** STOP: \(codes[0]) (\(codes[1]), \(codes[2]), \(codes[3]), \(codes[4]))")
         lines.append("")
         lines.append("***   \(module) - Address 0x\(hex(easterEggs[5])) base at 0x\(randomHex8())")
         lines.append("")
