@@ -13,6 +13,7 @@
 "menu.about" = "Tentang Blue Screen of Death";
 "menu.quit" = "Keluar";
 "menu.language" = "Bahasa";
+"menu.launchAtLogin" = "Jalankan saat masuk";
 
 /* Styles */
 "style.modern" = "Modern";

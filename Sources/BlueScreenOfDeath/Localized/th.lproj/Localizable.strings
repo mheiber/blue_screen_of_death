@@ -13,6 +13,7 @@
 "menu.about" = "เกี่ยวกับ Blue Screen of Death";
 "menu.quit" = "ออก";
 "menu.language" = "ภาษา";
+"menu.launchAtLogin" = "เปิดเมื่อเข้าสู่ระบบ";
 
 /* Styles */
 "style.modern" = "สมัยใหม่";

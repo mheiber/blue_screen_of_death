@@ -13,6 +13,7 @@
 "menu.about" = "ᏄᏍᏗᏓᏅᏖᏍᎬ Blue Screen of Death";
 "menu.quit" = "ᎠᏑᏰᏍᏗ";
 "menu.language" = "ᎦᏬᏂᎯᏍᏗ";
+"menu.launchAtLogin" = "ᎠᏓᎴᏂᏍᎬ ᎠᏑᏰᏍᎩ";
 
 /* Styles */
 "style.modern" = "ᎢᏤ ᎨᏒᎢ";

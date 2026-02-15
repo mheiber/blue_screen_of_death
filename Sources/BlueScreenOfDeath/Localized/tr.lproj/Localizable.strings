@@ -13,6 +13,7 @@
 "menu.about" = "Blue Screen of Death Hakkında";
 "menu.quit" = "Çıkış";
 "menu.language" = "Dil";
+"menu.launchAtLogin" = "Oturum açılınca başlat";
 
 /* Styles */
 "style.modern" = "Modern";

@@ -822,6 +822,7 @@ final class LocalizationCoverageTests: XCTestCase {
         "menu.triggerNow", "menu.enabled", "menu.styleFormat", "menu.intervalFormat",
         "menu.customSchedule", "menu.suppressScreenShare", "menu.lunchReminderFormat",
         "menu.lunchReminder", "menu.nextFormat", "menu.about", "menu.quit", "menu.language",
+        "menu.launchAtLogin",
         // Styles
         "style.modern", "style.classic", "style.classicDump", "style.mojibake",
         "style.cyberwin2070", "style.random",

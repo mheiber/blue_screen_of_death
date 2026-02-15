@@ -13,6 +13,7 @@
 "menu.about" = "Giới thiệu Blue Screen of Death";
 "menu.quit" = "Thoát";
 "menu.language" = "Ngôn ngữ";
+"menu.launchAtLogin" = "Khởi chạy khi đăng nhập";
 
 /* Styles */
 "style.modern" = "Hiện đại";

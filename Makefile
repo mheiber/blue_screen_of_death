@@ -1,4 +1,4 @@
-.PHONY: build test lint clean run bundle icon
+.PHONY: build test lint clean run bundle icon install
 
 APP_NAME = Blue Screen of Death
 BUNDLE_NAME = BlueScreenOfDeath
@@ -51,6 +51,14 @@ lint:
 	else \
 		echo "swiftlint not installed. Install with: brew install swiftlint"; \
 	fi
+
+# Install to /Applications (requires human interaction for copy and open)
+install: bundle
+	@-killall $(BUNDLE_NAME) 2>/dev/null; sleep 0.5
+	@echo "Copying $(APP_BUNDLE) to /Applications..."
+	cp -R "$(APP_BUNDLE)" "/Applications/$(BUNDLE_NAME).app"
+	@echo "Opening from /Applications..."
+	open "/Applications/$(BUNDLE_NAME).app"
 
 # Clean build artifacts
 clean:

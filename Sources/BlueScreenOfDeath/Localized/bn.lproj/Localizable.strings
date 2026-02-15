@@ -13,6 +13,7 @@
 "menu.about" = "Blue Screen of Death সম্পর্কে";
 "menu.quit" = "বন্ধ করুন";
 "menu.language" = "ভাষা";
+"menu.launchAtLogin" = "লগইনে চালু করুন";
 
 /* Styles */
 "style.modern" = "আধুনিক";

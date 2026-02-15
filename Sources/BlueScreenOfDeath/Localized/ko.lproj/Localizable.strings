@@ -13,6 +13,7 @@
 "menu.about" = "Blue Screen of Death에 관하여";
 "menu.quit" = "종료";
 "menu.language" = "언어";
+"menu.launchAtLogin" = "로그인 시 실행";
 
 /* Styles */
 "style.modern" = "모던";

@@ -13,6 +13,7 @@
 "menu.about" = "À propos de Blue Screen of Death";
 "menu.quit" = "Quitter";
 "menu.language" = "Langue";
+"menu.launchAtLogin" = "Lancer au démarrage";
 
 /* Styles */
 "style.modern" = "Moderne";

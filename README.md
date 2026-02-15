@@ -40,6 +40,9 @@ make bundle
 # Build and run the app
 make run
 
+# Build and install to /Applications (human-only: requires sudo/auth for copy, may prompt on open)
+make install
+
 # Run directly (faster iteration, dock icon may appear)
 make run-debug
 

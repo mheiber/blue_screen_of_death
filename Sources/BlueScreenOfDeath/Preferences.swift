@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import ServiceManagement
 
 /// Screen style options for the blue screen overlay
 enum ScreenStyle: String, CaseIterable, Identifiable {
@@ -114,7 +115,31 @@ final class Preferences: ObservableObject {
     }
 
     @Published var launchAtLogin: Bool {
-        didSet { defaults.set(launchAtLogin, forKey: Keys.launchAtLogin) }
+        didSet {
+            defaults.set(launchAtLogin, forKey: Keys.launchAtLogin)
+            updateLoginItem()
+        }
+    }
+
+    private func updateLoginItem() {
+        let service = SMAppService.mainApp
+        do {
+            if launchAtLogin {
+                try service.register()
+            } else {
+                try service.unregister()
+            }
+        } catch {
+            // If registration fails, revert the preference to match reality
+            let actuallyEnabled = service.status == .enabled
+            if actuallyEnabled != launchAtLogin {
+                defaults.set(actuallyEnabled, forKey: Keys.launchAtLogin)
+                // Avoid re-triggering didSet
+                DispatchQueue.main.async { [weak self] in
+                    self?.launchAtLogin = actuallyEnabled
+                }
+            }
+        }
     }
 
     @Published var useCustomSchedule: Bool {
@@ -225,7 +250,7 @@ final class Preferences: ObservableObject {
 
         self.isEnabled = defaults.bool(forKey: Keys.isEnabled)
         self.selectedIntervalRaw = defaults.string(forKey: Keys.selectedIntervalRaw) ?? TriggerInterval.oneHour.rawValue
-        self.launchAtLogin = defaults.bool(forKey: Keys.launchAtLogin)
+        self.launchAtLogin = SMAppService.mainApp.status == .enabled
         self.useCustomSchedule = defaults.bool(forKey: Keys.useCustomSchedule)
         self.selectedStyleRaw = defaults.string(forKey: Keys.selectedStyleRaw) ?? "modern"
         self.customMinutes = defaults.integer(forKey: Keys.customMinutes)

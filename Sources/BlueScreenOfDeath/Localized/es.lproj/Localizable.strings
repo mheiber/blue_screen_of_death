@@ -13,6 +13,7 @@
 "menu.about" = "Acerca de Blue Screen of Death";
 "menu.quit" = "Salir";
 "menu.language" = "Idioma";
+"menu.launchAtLogin" = "Abrir al iniciar sesión";
 
 /* Styles */
 "style.modern" = "Moderno";

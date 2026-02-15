@@ -13,6 +13,7 @@
 "menu.about" = "О приложении Blue Screen of Death";
 "menu.quit" = "Завершить";
 "menu.language" = "Язык";
+"menu.launchAtLogin" = "Запускать при входе";
 
 /* Styles */
 "style.modern" = "Современный";

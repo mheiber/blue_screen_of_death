@@ -13,6 +13,7 @@
 "menu.about" = "Over Blue Screen of Death";
 "menu.quit" = "Stop";
 "menu.language" = "Taal";
+"menu.launchAtLogin" = "Open bij inloggen";
 
 /* Styles */
 "style.modern" = "Modern";

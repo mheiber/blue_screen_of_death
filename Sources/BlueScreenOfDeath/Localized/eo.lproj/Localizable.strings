@@ -13,6 +13,7 @@
 "menu.about" = "Pri Blue Screen of Death";
 "menu.quit" = "Eliri";
 "menu.language" = "Lingvo";
+"menu.launchAtLogin" = "Lanĉi ĉe ensaluto";
 
 /* Styles */
 "style.modern" = "Moderna";

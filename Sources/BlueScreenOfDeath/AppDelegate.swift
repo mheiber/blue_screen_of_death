@@ -197,6 +197,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         addAlternate(to: menu, systemTitle: sysLunchTitle)
 
+        // Launch at Login
+        let launchItem = NSMenuItem(
+            title: L("menu.launchAtLogin"),
+            action: #selector(toggleLaunchAtLogin),
+            keyEquivalent: ""
+        )
+        launchItem.state = prefs.launchAtLogin ? .on : .off
+        menu.addItem(launchItem)
+        addAlternate(to: menu, systemTitle: SL("menu.launchAtLogin"))
+
         // Next trigger info
         if let next = scheduler.nextTriggerDate, prefs.isEnabled {
             let formatter = RelativeDateTimeFormatter()
@@ -329,6 +339,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc private func toggleScreenShareSuppression() {
         Preferences.shared.suppressDuringScreenShare.toggle()
+    }
+
+    @objc private func toggleLaunchAtLogin() {
+        Preferences.shared.launchAtLogin.toggle()
     }
 
     @objc private func openCustomSchedule() {

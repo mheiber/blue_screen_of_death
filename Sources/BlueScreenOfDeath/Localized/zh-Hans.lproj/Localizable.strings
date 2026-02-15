@@ -13,6 +13,7 @@
 "menu.about" = "关于 Blue Screen of Death";
 "menu.quit" = "退出";
 "menu.language" = "语言";
+"menu.launchAtLogin" = "登录时启动";
 
 /* Styles */
 "style.modern" = "现代";
