@@ -22,7 +22,7 @@ struct LunchReminderView: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            Text("\u{1F34E} Lunch Reminder")
+            Text("Lunch Reminder")
                 .font(.headline)
 
             Toggle("Enable Lunch Reminder", isOn: $preferences.lunchReminderEnabled)

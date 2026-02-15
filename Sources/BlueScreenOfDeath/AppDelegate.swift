@@ -115,7 +115,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         // Lunch Reminder (independent of interval)
         let lunchItem = NSMenuItem(
-            title: "🍎 Lunch Reminder\(prefs.lunchReminderEnabled ? " (\(String(format: "%d:%02d", prefs.lunchReminderHour, prefs.lunchReminderMinute)))" : "")...",
+            title: "Lunch Reminder\(prefs.lunchReminderEnabled ? " (\(String(format: "%d:%02d", prefs.lunchReminderHour, prefs.lunchReminderMinute)))" : "")...",
             action: #selector(openLunchReminder),
             keyEquivalent: ""
         )
