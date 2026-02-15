@@ -259,45 +259,89 @@ struct CrashDumpGenerator {
 
     // MARK: - Mojibake Style
 
+    /// All mojibake corruption characters combined into one pool.
+    private static let corruptionPool: [Character] = boxDrawing + katakana + cyrillic + accented + symbols
+
+    /// Generates mojibake by corrupting the localized classic BSOD text.
+    /// The base text comes from the user's current language, then characters
+    /// are randomly replaced with wrong-encoding equivalents — simulating
+    /// real mojibake (text displayed in the wrong character encoding).
     private static func generateMojibake() -> String {
-        let lineCount = Int.random(in: 40...60)
-        var lines: [String] = []
+        // Build the localized classic BSOD as the base text
+        let baseText = generateClassicAsBase()
 
-        for _ in 0..<lineCount {
-            let lineLen = Int.random(in: 10...90)
-            var chars: [Character] = []
+        // Corrupt approximately 55-70% of characters
+        let corruptionRate = Double.random(in: 0.55...0.70)
 
-            for _ in 0..<lineLen {
-                let charSet = Int.random(in: 0...5)
-                switch charSet {
-                case 0:
-                    chars.append(boxDrawing.randomElement()!)
-                case 1:
-                    chars.append(katakana.randomElement()!)
-                case 2:
-                    chars.append(cyrillic.randomElement()!)
-                case 3:
-                    chars.append(accented.randomElement()!)
-                case 4:
-                    chars.append(symbols.randomElement()!)
-                default:
-                    // Random ASCII printable (excluding space-heavy ranges)
-                    let ascii = Int.random(in: 33...126)
-                    chars.append(Character(UnicodeScalar(ascii)!))
+        var result: [Character] = []
+        for char in baseText {
+            if char == "\n" {
+                // Preserve line breaks to maintain structure
+                result.append(char)
+            } else if char == " " && Double.random(in: 0...1) < 0.3 {
+                // Sometimes corrupt spaces too
+                result.append(corruptionPool.randomElement()!)
+            } else if Double.random(in: 0...1) < corruptionRate {
+                // Replace with a random corruption character
+                result.append(corruptionPool.randomElement()!)
+                // Occasionally insert an extra garbled character
+                if Double.random(in: 0...1) < 0.15 {
+                    result.append(corruptionPool.randomElement()!)
                 }
+            } else {
+                result.append(char)
             }
-
-            // Occasionally insert gaps
-            if Bool.random() && chars.count > 20 {
-                let gapPos = Int.random(in: 5..<chars.count - 5)
-                let gapLen = Int.random(in: 2...6)
-                for offset in 0..<min(gapLen, chars.count - gapPos) {
-                    chars[gapPos + offset] = " "
-                }
-            }
-
-            lines.append(String(chars))
         }
+
+        // Pad to at least 40 lines with pure garbled text
+        var lines = String(result).components(separatedBy: "\n")
+        while lines.count < 40 {
+            let lineLen = Int.random(in: 20...80)
+            let garbledLine = (0..<lineLen).map { _ in corruptionPool.randomElement()! }
+            lines.append(String(garbledLine))
+        }
+
+        return lines.joined(separator: "\n")
+    }
+
+    /// Generates the classic BSOD text as a base for mojibake corruption.
+    /// Uses the current localized strings.
+    private static func generateClassicAsBase() -> String {
+        let driver = driverNames.randomElement()!
+        let stopCode = stopCodes.randomElement()!
+        let eggs = easterEggCodes.shuffled()
+
+        let stopHex = hex32(eggs[0])
+        let param1 = hex32(eggs[1])
+        let param2 = hex32(UInt64(UInt32.random(in: 0...1)))
+        let param3 = hex32(eggs[2])
+        let param4 = hex32(0)
+
+        var lines: [String] = []
+        lines.append(L("bsod.classic.problemDetected"))
+        lines.append(L("bsod.classic.toYourComputer"))
+        lines.append("")
+        lines.append(L("bsod.classic.causedBy", driver))
+        lines.append("")
+        lines.append(stopCode)
+        lines.append("")
+        lines.append(L("bsod.classic.firstTime"))
+        lines.append(L("bsod.classic.restartComputer"))
+        lines.append(L("bsod.classic.theseSteps"))
+        lines.append("")
+        lines.append(L("bsod.classic.checkHardware"))
+        lines.append(L("bsod.classic.newInstallation"))
+        lines.append(L("bsod.classic.updatesNeeded"))
+        lines.append("")
+        lines.append(L("bsod.classic.continueProblems"))
+        lines.append(L("bsod.classic.orSoftware"))
+        lines.append(L("bsod.classic.safeMode"))
+        lines.append(L("bsod.classic.pressF8"))
+        lines.append(L("bsod.classic.selectSafeMode"))
+        lines.append("")
+        lines.append(L("bsod.classic.techInfo"))
+        lines.append("")
+        lines.append("*** STOP: 0x\(stopHex) (0x\(param1),0x\(param2),0x\(param3),0x\(param4))")
 
         return lines.joined(separator: "\n")
     }

@@ -187,13 +187,18 @@ final class CrashDumpGeneratorTests: XCTestCase {
         )
     }
 
-    func testMojibakeContainsNoCommonEnglishWords() {
-        let result = CrashDumpGenerator.generate(style: .mojibake)
-        let commonWords = ["the ", "and ", "that ", "this ", "with ", "from ", "your "]
-        for word in commonWords {
-            XCTAssertFalse(
-                result.lowercased().contains(word),
-                "Mojibake should not contain common English word '\(word)'"
+    func testMojibakeIsHeavilyCorrupted() {
+        // Mojibake is based on localized text but heavily corrupted.
+        // At least 40% of non-whitespace characters should be from the
+        // corruption pool (non-ASCII), proving the garbling worked.
+        for _ in 0..<5 {
+            let result = CrashDumpGenerator.generate(style: .mojibake)
+            let nonWhitespace = result.filter { !$0.isWhitespace && !$0.isNewline }
+            let nonAscii = nonWhitespace.filter { !$0.isASCII }
+            let ratio = nonWhitespace.isEmpty ? 0 : Double(nonAscii.count) / Double(nonWhitespace.count)
+            XCTAssertGreaterThan(
+                ratio, 0.40,
+                "Mojibake should have >40% non-ASCII chars (got \(Int(ratio * 100))%)"
             )
         }
     }
