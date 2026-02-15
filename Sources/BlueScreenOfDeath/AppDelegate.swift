@@ -177,13 +177,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         languageMenu.addItem(.separator())
 
-        // All supported languages
+        // All supported languages (Option-key alternate shows system locale name)
+        let systemLocale = Locale.current
         for lang in LocalizationManager.supportedLanguages {
-            let title = lang.nativeName
-            let item = NSMenuItem(title: title, action: #selector(selectLanguage(_:)), keyEquivalent: "")
+            let isSelected = LocalizationManager.shared.currentLanguage == lang.code
+
+            // Normal item: native name only (e.g., "简体中文")
+            let item = NSMenuItem(title: lang.nativeName, action: #selector(selectLanguage(_:)), keyEquivalent: "")
             item.representedObject = lang.code
-            item.state = (LocalizationManager.shared.currentLanguage == lang.code) ? .on : .off
+            item.state = isSelected ? .on : .off
             languageMenu.addItem(item)
+
+            // Alternate item (shown when Option is held): native + system locale name
+            // e.g., "简体中文 — Chinese (Simplified)" for English users
+            let systemName = systemLocale.localizedString(forIdentifier: lang.code) ?? lang.englishName
+            let altTitle = "\(lang.nativeName) — \(systemName)"
+            let altItem = NSMenuItem(title: altTitle, action: #selector(selectLanguage(_:)), keyEquivalent: "")
+            altItem.representedObject = lang.code
+            altItem.state = isSelected ? .on : .off
+            altItem.isAlternate = true
+            altItem.keyEquivalentModifierMask = [.option]
+            languageMenu.addItem(altItem)
         }
 
         let languageMenuItem = NSMenuItem(
