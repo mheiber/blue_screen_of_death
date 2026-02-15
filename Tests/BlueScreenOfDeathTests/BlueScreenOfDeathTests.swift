@@ -323,24 +323,22 @@ final class ScreenStyleTests: XCTestCase {
 
 final class TriggerIntervalTests: XCTestCase {
 
+    func testAllCasesCount() {
+        XCTAssertEqual(TriggerInterval.allCases.count, 4)
+    }
+
     func testRawValues() {
-        XCTAssertEqual(TriggerInterval.twentyMinutes.rawValue, 1200)
-        XCTAssertEqual(TriggerInterval.thirtyMinutes.rawValue, 1800)
-        XCTAssertEqual(TriggerInterval.oneHour.rawValue, 3600)
-        XCTAssertEqual(TriggerInterval.twoHours.rawValue, 7200)
-        XCTAssertEqual(TriggerInterval.fourHours.rawValue, 14400)
+        XCTAssertEqual(TriggerInterval.twentyMinutes.rawValue, "twentyMinutes")
+        XCTAssertEqual(TriggerInterval.oneHour.rawValue, "oneHour")
+        XCTAssertEqual(TriggerInterval.randomShort.rawValue, "randomShort")
+        XCTAssertEqual(TriggerInterval.randomLong.rawValue, "randomLong")
     }
 
     func testDisplayNames() {
         XCTAssertEqual(TriggerInterval.twentyMinutes.displayName, "Every 20 minutes")
-        XCTAssertEqual(TriggerInterval.thirtyMinutes.displayName, "Every 30 minutes")
-        XCTAssertEqual(TriggerInterval.oneHour.displayName, "Every 1 hour")
-        XCTAssertEqual(TriggerInterval.twoHours.displayName, "Every 2 hours")
-        XCTAssertEqual(TriggerInterval.fourHours.displayName, "Every 4 hours")
-    }
-
-    func testAllCasesCount() {
-        XCTAssertEqual(TriggerInterval.allCases.count, 5)
+        XCTAssertEqual(TriggerInterval.oneHour.displayName, "Every hour")
+        XCTAssertTrue(TriggerInterval.randomShort.displayName.contains("1.5"))
+        XCTAssertTrue(TriggerInterval.randomLong.displayName.contains("3"))
     }
 
     func testIdentifiable() {
@@ -350,12 +348,32 @@ final class TriggerIntervalTests: XCTestCase {
     }
 
     func testInitFromRawValue() {
-        XCTAssertEqual(TriggerInterval(rawValue: 1200), .twentyMinutes)
-        XCTAssertEqual(TriggerInterval(rawValue: 1800), .thirtyMinutes)
-        XCTAssertEqual(TriggerInterval(rawValue: 3600), .oneHour)
-        XCTAssertEqual(TriggerInterval(rawValue: 7200), .twoHours)
-        XCTAssertEqual(TriggerInterval(rawValue: 14400), .fourHours)
-        XCTAssertNil(TriggerInterval(rawValue: 999), "Invalid raw value should return nil")
+        XCTAssertEqual(TriggerInterval(rawValue: "twentyMinutes"), .twentyMinutes)
+        XCTAssertEqual(TriggerInterval(rawValue: "oneHour"), .oneHour)
+        XCTAssertEqual(TriggerInterval(rawValue: "randomShort"), .randomShort)
+        XCTAssertEqual(TriggerInterval(rawValue: "randomLong"), .randomLong)
+        XCTAssertNil(TriggerInterval(rawValue: "invalid"))
+    }
+
+    func testFixedIntervalsReturnCorrectSeconds() {
+        XCTAssertEqual(TriggerInterval.twentyMinutes.intervalSeconds, 1200)
+        XCTAssertEqual(TriggerInterval.oneHour.intervalSeconds, 3600)
+    }
+
+    func testRandomShortInRange() {
+        for _ in 0..<20 {
+            let secs = TriggerInterval.randomShort.intervalSeconds
+            XCTAssertGreaterThanOrEqual(secs, 2700)  // 45 min
+            XCTAssertLessThanOrEqual(secs, 8100)     // 2 hr 15 min
+        }
+    }
+
+    func testRandomLongInRange() {
+        for _ in 0..<20 {
+            let secs = TriggerInterval.randomLong.intervalSeconds
+            XCTAssertGreaterThanOrEqual(secs, 5400)  // 1.5 hr
+            XCTAssertLessThanOrEqual(secs, 16200)    // 4.5 hr
+        }
     }
 }
 
@@ -370,28 +388,28 @@ final class PreferencesTests: XCTestCase {
 
     func testSelectedIntervalReturnsValidInterval() {
         let prefs = Preferences.shared
-        let original = prefs.intervalSeconds
+        let original = prefs.selectedIntervalRaw
 
-        prefs.intervalSeconds = TriggerInterval.oneHour.rawValue
+        prefs.selectedIntervalRaw = TriggerInterval.oneHour.rawValue
         XCTAssertEqual(prefs.selectedInterval, .oneHour)
 
-        prefs.intervalSeconds = TriggerInterval.thirtyMinutes.rawValue
-        XCTAssertEqual(prefs.selectedInterval, .thirtyMinutes)
+        prefs.selectedIntervalRaw = TriggerInterval.twentyMinutes.rawValue
+        XCTAssertEqual(prefs.selectedInterval, .twentyMinutes)
 
-        prefs.intervalSeconds = original
+        prefs.selectedIntervalRaw = original
     }
 
-    func testSelectedIntervalFallsBackToTwoHoursForInvalidValue() {
+    func testSelectedIntervalFallsBackToOneHourForInvalidValue() {
         let prefs = Preferences.shared
-        let original = prefs.intervalSeconds
+        let original = prefs.selectedIntervalRaw
 
-        prefs.intervalSeconds = 999
+        prefs.selectedIntervalRaw = "invalidValue"
         XCTAssertEqual(
-            prefs.selectedInterval, .twoHours,
-            "Invalid interval should fall back to twoHours"
+            prefs.selectedInterval, .oneHour,
+            "Invalid interval should fall back to oneHour"
         )
 
-        prefs.intervalSeconds = original
+        prefs.selectedIntervalRaw = original
     }
 
     func testResolveStyleReturnsSelectedStyle() {
@@ -429,19 +447,19 @@ final class PreferencesTests: XCTestCase {
         let prefs = Preferences.shared
         let origCustom = prefs.useCustomInterval
         let origMinutes = prefs.customMinutes
-        let origInterval = prefs.intervalSeconds
+        let origInterval = prefs.selectedIntervalRaw
 
         prefs.useCustomInterval = true
         prefs.customMinutes = 45
         XCTAssertEqual(prefs.effectiveIntervalSeconds, 45 * 60)
 
         prefs.useCustomInterval = false
-        prefs.intervalSeconds = TriggerInterval.oneHour.rawValue
+        prefs.selectedIntervalRaw = TriggerInterval.oneHour.rawValue
         XCTAssertEqual(prefs.effectiveIntervalSeconds, 3600)
 
         prefs.useCustomInterval = origCustom
         prefs.customMinutes = origMinutes
-        prefs.intervalSeconds = origInterval
+        prefs.selectedIntervalRaw = origInterval
     }
 
     func testCustomMinutesClampsToRange() {
