@@ -169,8 +169,6 @@ final class BlueScreenOverlay {
             container.addSubview(line3)
         }
 
-        addDismissHint(to: container, frame: frame)
-
         return container
     }
 
@@ -200,7 +198,6 @@ final class BlueScreenOverlay {
         textView.textColor = .white
 
         container.addSubview(textView)
-        addDismissHint(to: container, frame: frame)
         return container
     }
 
@@ -221,7 +218,6 @@ final class BlueScreenOverlay {
         )
 
         container.addSubview(textView)
-        addDismissHint(to: container, frame: frame)
         return container
     }
 
@@ -240,27 +236,7 @@ final class BlueScreenOverlay {
         textView.textColor = .white
 
         container.addSubview(textView)
-        addDismissHint(to: container, frame: frame)
         return container
-    }
-
-    // MARK: - Dismiss Hint
-
-    /// Adds a subtle "press any key or click to dismiss" hint at the bottom center of the overlay.
-    private func addDismissHint(to container: NSView, frame: NSRect) {
-        let hint = NSTextField(labelWithString: "Press any key or click anywhere to dismiss")
-        hint.font = NSFont.systemFont(ofSize: 12, weight: .light)
-        hint.textColor = NSColor.white.withAlphaComponent(0.5)
-        hint.backgroundColor = .clear
-        hint.isBezeled = false
-        hint.isEditable = false
-        hint.alignment = .center
-        hint.sizeToFit()
-        hint.frame.origin = NSPoint(
-            x: (frame.width - hint.frame.width) / 2,
-            y: 30
-        )
-        container.addSubview(hint)
     }
 
     // MARK: - Shared Helpers
