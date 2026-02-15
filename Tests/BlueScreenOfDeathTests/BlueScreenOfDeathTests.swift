@@ -287,7 +287,7 @@ final class CrashDumpGeneratorTests: XCTestCase {
 final class ScreenStyleTests: XCTestCase {
 
     func testAllCasesCount() {
-        XCTAssertEqual(ScreenStyle.allCases.count, 4)
+        XCTAssertEqual(ScreenStyle.allCases.count, 6)
     }
 
     func testCaseRawValues() {
@@ -295,6 +295,8 @@ final class ScreenStyleTests: XCTestCase {
         XCTAssertEqual(ScreenStyle.classic.rawValue, "classic")
         XCTAssertEqual(ScreenStyle.classicDump.rawValue, "classicDump")
         XCTAssertEqual(ScreenStyle.mojibake.rawValue, "mojibake")
+        XCTAssertEqual(ScreenStyle.synthwave.rawValue, "synthwave")
+        XCTAssertEqual(ScreenStyle.paperclips.rawValue, "paperclips")
     }
 
     func testDisplayNames() {
@@ -302,6 +304,8 @@ final class ScreenStyleTests: XCTestCase {
         XCTAssertEqual(ScreenStyle.classic.displayName, "Classic")
         XCTAssertEqual(ScreenStyle.classicDump.displayName, "Classic Dump")
         XCTAssertEqual(ScreenStyle.mojibake.displayName, "Mojibake")
+        XCTAssertEqual(ScreenStyle.synthwave.displayName, "Synthwave")
+        XCTAssertEqual(ScreenStyle.paperclips.displayName, "Paperclips")
     }
 
     func testIdentifiable() {
@@ -315,6 +319,8 @@ final class ScreenStyleTests: XCTestCase {
         XCTAssertEqual(ScreenStyle(rawValue: "classic"), .classic)
         XCTAssertEqual(ScreenStyle(rawValue: "classicDump"), .classicDump)
         XCTAssertEqual(ScreenStyle(rawValue: "mojibake"), .mojibake)
+        XCTAssertEqual(ScreenStyle(rawValue: "synthwave"), .synthwave)
+        XCTAssertEqual(ScreenStyle(rawValue: "paperclips"), .paperclips)
         XCTAssertNil(ScreenStyle(rawValue: "invalid"))
     }
 }
@@ -324,12 +330,14 @@ final class ScreenStyleTests: XCTestCase {
 final class TriggerIntervalTests: XCTestCase {
 
     func testAllCasesCount() {
-        XCTAssertEqual(TriggerInterval.allCases.count, 4)
+        XCTAssertEqual(TriggerInterval.allCases.count, 6)
     }
 
     func testRawValues() {
         XCTAssertEqual(TriggerInterval.twentyMinutes.rawValue, "twentyMinutes")
         XCTAssertEqual(TriggerInterval.oneHour.rawValue, "oneHour")
+        XCTAssertEqual(TriggerInterval.twoHours.rawValue, "twoHours")
+        XCTAssertEqual(TriggerInterval.threeHours.rawValue, "threeHours")
         XCTAssertEqual(TriggerInterval.randomShort.rawValue, "randomShort")
         XCTAssertEqual(TriggerInterval.randomLong.rawValue, "randomLong")
     }
@@ -337,6 +345,8 @@ final class TriggerIntervalTests: XCTestCase {
     func testDisplayNames() {
         XCTAssertEqual(TriggerInterval.twentyMinutes.displayName, "Every 20 minutes")
         XCTAssertEqual(TriggerInterval.oneHour.displayName, "Every hour")
+        XCTAssertEqual(TriggerInterval.twoHours.displayName, "Every 2 hours")
+        XCTAssertEqual(TriggerInterval.threeHours.displayName, "Every 3 hours")
         XCTAssertTrue(TriggerInterval.randomShort.displayName.contains("1.5"))
         XCTAssertTrue(TriggerInterval.randomLong.displayName.contains("3"))
     }
@@ -350,6 +360,8 @@ final class TriggerIntervalTests: XCTestCase {
     func testInitFromRawValue() {
         XCTAssertEqual(TriggerInterval(rawValue: "twentyMinutes"), .twentyMinutes)
         XCTAssertEqual(TriggerInterval(rawValue: "oneHour"), .oneHour)
+        XCTAssertEqual(TriggerInterval(rawValue: "twoHours"), .twoHours)
+        XCTAssertEqual(TriggerInterval(rawValue: "threeHours"), .threeHours)
         XCTAssertEqual(TriggerInterval(rawValue: "randomShort"), .randomShort)
         XCTAssertEqual(TriggerInterval(rawValue: "randomLong"), .randomLong)
         XCTAssertNil(TriggerInterval(rawValue: "invalid"))
@@ -358,6 +370,8 @@ final class TriggerIntervalTests: XCTestCase {
     func testFixedIntervalsReturnCorrectSeconds() {
         XCTAssertEqual(TriggerInterval.twentyMinutes.intervalSeconds, 1200)
         XCTAssertEqual(TriggerInterval.oneHour.intervalSeconds, 3600)
+        XCTAssertEqual(TriggerInterval.twoHours.intervalSeconds, 7200)
+        XCTAssertEqual(TriggerInterval.threeHours.intervalSeconds, 10800)
     }
 
     func testRandomShortInRange() {

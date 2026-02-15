@@ -7,6 +7,8 @@ enum ScreenStyle: String, CaseIterable, Identifiable {
     case classic = "classic"
     case classicDump = "classicDump"
     case mojibake = "mojibake"
+    case synthwave = "synthwave"
+    case paperclips = "paperclips"
 
     var id: String { rawValue }
 
@@ -16,27 +18,47 @@ enum ScreenStyle: String, CaseIterable, Identifiable {
         case .classic: return "Classic"
         case .classicDump: return "Classic Dump"
         case .mojibake: return "Mojibake"
+        case .synthwave: return "Synthwave"
+        case .paperclips: return "Paperclips"
         }
     }
 }
 
 /// Interval options for automatic blue screen triggers
-enum TriggerInterval: Int, CaseIterable, Identifiable {
-    case twentyMinutes = 1200
-    case thirtyMinutes = 1800
-    case oneHour = 3600
-    case twoHours = 7200
-    case fourHours = 14400
+enum TriggerInterval: String, CaseIterable, Identifiable {
+    case twentyMinutes = "twentyMinutes"
+    case oneHour = "oneHour"
+    case twoHours = "twoHours"
+    case threeHours = "threeHours"
+    case randomShort = "randomShort"
+    case randomLong = "randomLong"
 
-    var id: Int { rawValue }
+    var id: String { rawValue }
 
     var displayName: String {
         switch self {
         case .twentyMinutes: return "Every 20 minutes"
-        case .thirtyMinutes: return "Every 30 minutes"
-        case .oneHour: return "Every 1 hour"
+        case .oneHour: return "Every hour"
         case .twoHours: return "Every 2 hours"
-        case .fourHours: return "Every 4 hours"
+        case .threeHours: return "Every 3 hours"
+        case .randomShort: return "Random (~1.5 hours)"
+        case .randomLong: return "Random (~3 hours)"
+        }
+    }
+
+    /// Returns the interval in seconds. Random options return a randomized value.
+    var intervalSeconds: Int {
+        switch self {
+        case .twentyMinutes: return 1200
+        case .oneHour: return 3600
+        case .twoHours: return 7200
+        case .threeHours: return 10800
+        case .randomShort:
+            // Random between 45 min and 2 hr 15 min (mean ~1.5 hr)
+            return Int.random(in: 2700...8100)
+        case .randomLong:
+            // Random between 1.5 hr and 4.5 hr (mean ~3 hr)
+            return Int.random(in: 5400...16200)
         }
     }
 }
@@ -49,7 +71,7 @@ final class Preferences: ObservableObject {
 
     private enum Keys {
         static let isEnabled = "isEnabled"
-        static let intervalSeconds = "intervalSeconds"
+        static let selectedIntervalRaw = "selectedIntervalRaw"
         static let launchAtLogin = "launchAtLogin"
         static let enabledWeekdays = "enabledWeekdays"
         static let startHour = "startHour"
@@ -58,14 +80,17 @@ final class Preferences: ObservableObject {
         static let selectedStyleRaw = "selectedStyleRaw"
         static let customMinutes = "customMinutes"
         static let useCustomInterval = "useCustomInterval"
+        static let lunchReminderEnabled = "lunchReminderEnabled"
+        static let lunchReminderHour = "lunchReminderHour"
+        static let lunchReminderMinute = "lunchReminderMinute"
     }
 
     @Published var isEnabled: Bool {
         didSet { defaults.set(isEnabled, forKey: Keys.isEnabled) }
     }
 
-    @Published var intervalSeconds: Int {
-        didSet { defaults.set(intervalSeconds, forKey: Keys.intervalSeconds) }
+    @Published var selectedIntervalRaw: String {
+        didSet { defaults.set(selectedIntervalRaw, forKey: Keys.selectedIntervalRaw) }
     }
 
     @Published var launchAtLogin: Bool {
@@ -110,6 +135,21 @@ final class Preferences: ObservableObject {
         didSet { defaults.set(useCustomInterval, forKey: Keys.useCustomInterval) }
     }
 
+    /// Whether the lunch reminder is enabled (independent of main timer)
+    @Published var lunchReminderEnabled: Bool {
+        didSet { defaults.set(lunchReminderEnabled, forKey: Keys.lunchReminderEnabled) }
+    }
+
+    /// Lunch reminder hour (0-23), default 11
+    @Published var lunchReminderHour: Int {
+        didSet { defaults.set(lunchReminderHour, forKey: Keys.lunchReminderHour) }
+    }
+
+    /// Lunch reminder minute (0-59), default 55
+    @Published var lunchReminderMinute: Int {
+        didSet { defaults.set(lunchReminderMinute, forKey: Keys.lunchReminderMinute) }
+    }
+
     /// Returns the selected style, or nil if "random"
     var selectedStyle: ScreenStyle? {
         ScreenStyle(rawValue: selectedStyleRaw)
@@ -121,15 +161,15 @@ final class Preferences: ObservableObject {
     }
 
     var selectedInterval: TriggerInterval {
-        TriggerInterval(rawValue: intervalSeconds) ?? .twoHours
+        TriggerInterval(rawValue: selectedIntervalRaw) ?? .oneHour
     }
 
-    /// Effective interval in seconds, accounting for custom interval
+    /// Effective interval in seconds, accounting for custom interval and random options
     var effectiveIntervalSeconds: Int {
         if useCustomInterval {
             return customMinutes * 60
         }
-        return intervalSeconds
+        return selectedInterval.intervalSeconds
     }
 
     /// Display name for the current interval setting
@@ -143,7 +183,7 @@ final class Preferences: ObservableObject {
     private init() {
         defaults.register(defaults: [
             Keys.isEnabled: true,
-            Keys.intervalSeconds: TriggerInterval.twoHours.rawValue,
+            Keys.selectedIntervalRaw: TriggerInterval.oneHour.rawValue,
             Keys.launchAtLogin: false,
             Keys.useCustomSchedule: false,
             Keys.enabledWeekdays: [2, 3, 4, 5, 6],
@@ -152,15 +192,21 @@ final class Preferences: ObservableObject {
             Keys.selectedStyleRaw: "modern",
             Keys.customMinutes: 20,
             Keys.useCustomInterval: false,
+            Keys.lunchReminderEnabled: false,
+            Keys.lunchReminderHour: 11,
+            Keys.lunchReminderMinute: 55,
         ])
 
         self.isEnabled = defaults.bool(forKey: Keys.isEnabled)
-        self.intervalSeconds = defaults.integer(forKey: Keys.intervalSeconds)
+        self.selectedIntervalRaw = defaults.string(forKey: Keys.selectedIntervalRaw) ?? TriggerInterval.oneHour.rawValue
         self.launchAtLogin = defaults.bool(forKey: Keys.launchAtLogin)
         self.useCustomSchedule = defaults.bool(forKey: Keys.useCustomSchedule)
         self.selectedStyleRaw = defaults.string(forKey: Keys.selectedStyleRaw) ?? "modern"
         self.customMinutes = defaults.integer(forKey: Keys.customMinutes)
         self.useCustomInterval = defaults.bool(forKey: Keys.useCustomInterval)
+        self.lunchReminderEnabled = defaults.bool(forKey: Keys.lunchReminderEnabled)
+        self.lunchReminderHour = defaults.integer(forKey: Keys.lunchReminderHour)
+        self.lunchReminderMinute = defaults.integer(forKey: Keys.lunchReminderMinute)
 
         if let weekdays = defaults.array(forKey: Keys.enabledWeekdays) as? [Int] {
             self.enabledWeekdays = Set(weekdays)

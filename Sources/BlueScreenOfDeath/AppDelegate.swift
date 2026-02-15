@@ -26,6 +26,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self?.overlay.show()
         }
         ScheduleManager.shared.start()
+
+        // Start the lunch reminder scheduler
+        LunchReminderScheduler.shared.onTrigger = { [weak self] in
+            self?.overlay.show()
+        }
+        LunchReminderScheduler.shared.start()
     }
 
     @objc private func statusItemClicked(_ sender: NSStatusBarButton) {
@@ -107,6 +113,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Custom Schedule
         menu.addItem(NSMenuItem(title: "Custom Schedule...", action: #selector(openCustomSchedule), keyEquivalent: ""))
 
+        // Lunch Reminder (independent of interval)
+        let lunchItem = NSMenuItem(
+            title: "🍎 Lunch Reminder\(prefs.lunchReminderEnabled ? " (\(String(format: "%d:%02d", prefs.lunchReminderHour, prefs.lunchReminderMinute)))" : "")...",
+            action: #selector(openLunchReminder),
+            keyEquivalent: ""
+        )
+        lunchItem.state = prefs.lunchReminderEnabled ? .on : .off
+        menu.addItem(lunchItem)
+
         // Next trigger info
         if let next = scheduler.nextTriggerDate, prefs.isEnabled {
             let formatter = RelativeDateTimeFormatter()
@@ -182,6 +197,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         )
         window.title = "Custom Schedule"
         window.contentView = NSHostingView(rootView: CustomScheduleView())
+        window.center()
+        window.isReleasedWhenClosed = false
+        window.makeKeyAndOrderFront(nil)
+        NSApp.activate(ignoringOtherApps: true)
+    }
+
+    @objc private func openLunchReminder() {
+        let window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 280, height: 180),
+            styleMask: [.titled, .closable],
+            backing: .buffered,
+            defer: false
+        )
+        window.title = "Lunch Reminder"
+        window.contentView = NSHostingView(rootView: LunchReminderView())
         window.center()
         window.isReleasedWhenClosed = false
         window.makeKeyAndOrderFront(nil)

@@ -11,7 +11,16 @@ struct BlueScreenStyleBuilder {
 
     /// Returns the background color for a given style.
     static func backgroundColor(for style: ScreenStyle) -> NSColor {
-        style == .modern ? modernBlue : classicBlue
+        switch style {
+        case .modern:
+            return modernBlue
+        case .synthwave:
+            return SynthwaveStyleBuilder.darkBg
+        case .paperclips:
+            return NSColor(red: 0.106, green: 0.078, blue: 0.392, alpha: 1) // deep indigo
+        default:
+            return classicBlue
+        }
     }
 
     /// Build the view for a given style at the given frame.
@@ -25,6 +34,10 @@ struct BlueScreenStyleBuilder {
             return buildClassicDumpView(frame: frame)
         case .mojibake:
             return buildMojibakeView(frame: frame)
+        case .synthwave:
+            return SynthwaveStyleBuilder.buildView(frame: frame)
+        case .paperclips:
+            return PaperclipsStyleBuilder.buildView(frame: frame)
         }
     }
 
