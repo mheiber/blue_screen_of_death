@@ -8,7 +8,6 @@ enum ScreenStyle: String, CaseIterable, Identifiable {
     case classicDump = "classicDump"
     case mojibake = "mojibake"
     case cyberwin2070 = "cyberwin2070"
-    case paperclips = "paperclips"
 
     var id: String { rawValue }
 
@@ -19,7 +18,6 @@ enum ScreenStyle: String, CaseIterable, Identifiable {
         case .classicDump: return "Classic Dump"
         case .mojibake: return "Mojibake"
         case .cyberwin2070: return "CyberWin 2070"
-        case .paperclips: return "Paperclips"
         }
     }
 }

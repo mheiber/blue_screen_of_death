@@ -16,8 +16,6 @@ struct BlueScreenStyleBuilder {
             return modernBlue
         case .cyberwin2070:
             return CyberWin2070StyleBuilder.darkBg
-        case .paperclips:
-            return NSColor(red: 0.106, green: 0.078, blue: 0.392, alpha: 1) // deep indigo
         default:
             return classicBlue
         }
@@ -36,8 +34,6 @@ struct BlueScreenStyleBuilder {
             return buildMojibakeView(frame: frame)
         case .cyberwin2070:
             return CyberWin2070StyleBuilder.buildView(frame: frame)
-        case .paperclips:
-            return PaperclipsStyleBuilder.buildView(frame: frame)
         }
     }
 

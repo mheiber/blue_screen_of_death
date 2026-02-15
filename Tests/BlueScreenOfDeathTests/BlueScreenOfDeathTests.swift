@@ -287,7 +287,7 @@ final class CrashDumpGeneratorTests: XCTestCase {
 final class ScreenStyleTests: XCTestCase {
 
     func testAllCasesCount() {
-        XCTAssertEqual(ScreenStyle.allCases.count, 6)
+        XCTAssertEqual(ScreenStyle.allCases.count, 5)
     }
 
     func testCaseRawValues() {
@@ -296,7 +296,6 @@ final class ScreenStyleTests: XCTestCase {
         XCTAssertEqual(ScreenStyle.classicDump.rawValue, "classicDump")
         XCTAssertEqual(ScreenStyle.mojibake.rawValue, "mojibake")
         XCTAssertEqual(ScreenStyle.cyberwin2070.rawValue, "cyberwin2070")
-        XCTAssertEqual(ScreenStyle.paperclips.rawValue, "paperclips")
     }
 
     func testDisplayNames() {
@@ -305,7 +304,6 @@ final class ScreenStyleTests: XCTestCase {
         XCTAssertEqual(ScreenStyle.classicDump.displayName, "Classic Dump")
         XCTAssertEqual(ScreenStyle.mojibake.displayName, "Mojibake")
         XCTAssertEqual(ScreenStyle.cyberwin2070.displayName, "CyberWin 2070")
-        XCTAssertEqual(ScreenStyle.paperclips.displayName, "Paperclips")
     }
 
     func testIdentifiable() {
@@ -320,7 +318,6 @@ final class ScreenStyleTests: XCTestCase {
         XCTAssertEqual(ScreenStyle(rawValue: "classicDump"), .classicDump)
         XCTAssertEqual(ScreenStyle(rawValue: "mojibake"), .mojibake)
         XCTAssertEqual(ScreenStyle(rawValue: "cyberwin2070"), .cyberwin2070)
-        XCTAssertEqual(ScreenStyle(rawValue: "paperclips"), .paperclips)
         XCTAssertNil(ScreenStyle(rawValue: "invalid"))
     }
 }

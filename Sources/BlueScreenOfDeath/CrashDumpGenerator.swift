@@ -122,7 +122,7 @@ struct CrashDumpGenerator {
             return generateClassicDump()
         case .mojibake:
             return generateMojibake()
-        case .cyberwin2070, .paperclips:
+        case .cyberwin2070:
             // These styles handle their own text generation
             let data = generateModernData()
             return "Stop code: \(data.stopCode)\n\(data.percentage)% complete"
