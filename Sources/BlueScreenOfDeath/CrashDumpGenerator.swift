@@ -22,7 +22,7 @@ struct CrashDumpGenerator {
         0xFACEFEED,
         0xD15EA5E,
         0xBADCAFE,
-        0xDEFEC8ED,
+        0xACCE55ED,
         0xC0DED00D,
         0xACEDB00C,
     ]
