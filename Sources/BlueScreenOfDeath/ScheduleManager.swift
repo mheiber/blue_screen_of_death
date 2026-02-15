@@ -1,0 +1,69 @@
+import Foundation
+import Combine
+
+/// Manages the timer that triggers blue screen displays at the configured interval
+final class ScheduleManager: ObservableObject {
+    static let shared = ScheduleManager()
+
+    private var timer: Timer?
+    private var cancellables = Set<AnyCancellable>()
+    private let preferences = Preferences.shared
+
+    /// Called when a blue screen should be triggered
+    var onTrigger: (() -> Void)?
+
+    @Published private(set) var nextTriggerDate: Date?
+
+    private init() {
+        // React to preference changes
+        preferences.$isEnabled
+            .combineLatest(preferences.$intervalSeconds)
+            .sink { [weak self] _ in
+                self?.reschedule()
+            }
+            .store(in: &cancellables)
+    }
+
+    func start() {
+        reschedule()
+    }
+
+    func stop() {
+        timer?.invalidate()
+        timer = nil
+        nextTriggerDate = nil
+    }
+
+    func reschedule() {
+        timer?.invalidate()
+        timer = nil
+
+        guard preferences.isEnabled else {
+            nextTriggerDate = nil
+            return
+        }
+
+        let interval = TimeInterval(preferences.intervalSeconds)
+        nextTriggerDate = Date().addingTimeInterval(interval)
+
+        timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { [weak self] _ in
+            self?.fire()
+        }
+    }
+
+    private func fire() {
+        guard preferences.isEnabled else { return }
+
+        if preferences.isWithinSchedule() {
+            onTrigger?()
+        }
+
+        // Update next trigger date
+        nextTriggerDate = Date().addingTimeInterval(TimeInterval(preferences.intervalSeconds))
+    }
+
+    /// Trigger immediately (manual trigger from menu)
+    func triggerNow() {
+        onTrigger?()
+    }
+}
