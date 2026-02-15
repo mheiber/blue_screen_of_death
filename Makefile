@@ -33,6 +33,7 @@ bundle: build icon
 
 # Run the app (as a bundle so LSUIElement works)
 run: bundle
+	@-pkill -x BlueScreenOfDeath 2>/dev/null; sleep 0.5
 	@open "$(APP_BUNDLE)"
 
 # Run the executable directly (for quick testing, dock icon may appear)

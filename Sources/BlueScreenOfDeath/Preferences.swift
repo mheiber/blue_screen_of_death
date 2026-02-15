@@ -203,7 +203,7 @@ final class Preferences: ObservableObject {
             Keys.enabledWeekdays: [2, 3, 4, 5, 6], // Mon-Fri
             Keys.startHour: 9,
             Keys.endHour: 17,
-            Keys.selectedStyleRaw: "random",
+            Keys.selectedStyleRaw: "modern",
             Keys.customMinutes: 20,
             Keys.useCustomInterval: false,
             Keys.hotkeyCharacter: "",
