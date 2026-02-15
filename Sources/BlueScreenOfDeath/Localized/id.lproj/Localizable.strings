@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "Bawaan Sistem";
+"language.random" = "Acak";
 
 /* Accessibility */
 "a11y.overlay.label" = "Pengingat layar biru";

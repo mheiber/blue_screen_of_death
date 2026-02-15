@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "跟随系统";
+"language.random" = "随机";
 
 /* Accessibility */
 "a11y.overlay.label" = "蓝屏提醒";

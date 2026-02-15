@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "Domyślny systemowy";
+"language.random" = "Losowy";
 
 /* Accessibility */
 "a11y.overlay.label" = "Przypomnienie — niebieski ekran";

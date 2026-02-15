@@ -53,6 +53,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Config Menu (right-click)
 
     private func showConfigMenu() {
+        // Re-randomize language each time menu opens in random mode
+        if LocalizationManager.shared.currentLanguage == "random" {
+            LocalizationManager.shared.loadRandomLanguage()
+        }
+
         let menu = NSMenu()
         let prefs = Preferences.shared
         let scheduler = ScheduleManager.shared
@@ -163,6 +168,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         systemItem.representedObject = "system"
         systemItem.state = (LocalizationManager.shared.currentLanguage == "system") ? .on : .off
         languageMenu.addItem(systemItem)
+
+        // Random option
+        let randomLangItem = NSMenuItem(title: L("language.random"), action: #selector(selectLanguage(_:)), keyEquivalent: "")
+        randomLangItem.representedObject = "random"
+        randomLangItem.state = (LocalizationManager.shared.currentLanguage == "random") ? .on : .off
+        languageMenu.addItem(randomLangItem)
+
         languageMenu.addItem(.separator())
 
         // All supported languages

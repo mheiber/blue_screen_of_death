@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "Predefinito di sistema";
+"language.random" = "Casuale";
 
 /* Accessibility */
 "a11y.overlay.label" = "Promemoria schermata blu";

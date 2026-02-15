@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "সিস্টেম ডিফল্ট";
+"language.random" = "এলোমেলো";
 
 /* Accessibility */
 "a11y.overlay.label" = "ব্লু স্ক্রিন স্মারক";

@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "Системна мова";
+"language.random" = "Випадковий";
 
 /* Accessibility */
 "a11y.overlay.label" = "Нагадування «синій екран»";

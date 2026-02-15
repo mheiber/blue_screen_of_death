@@ -36,12 +36,16 @@ final class LocalizationManager {
 
     private var overrideBundle: Bundle?
 
-    /// The current language code, or "system" for system default.
+    /// The current language code, "system" for system default, or "random" for random each activation.
     var currentLanguage: String {
         get { UserDefaults.standard.string(forKey: "selectedLanguage") ?? "system" }
         set {
             UserDefaults.standard.set(newValue, forKey: "selectedLanguage")
-            loadBundle(for: newValue)
+            if newValue == "random" {
+                loadRandomLanguage()
+            } else {
+                loadBundle(for: newValue)
+            }
         }
     }
 
@@ -50,6 +54,9 @@ final class LocalizationManager {
         if currentLanguage == "system" {
             return string("language.system")
         }
+        if currentLanguage == "random" {
+            return string("language.random")
+        }
         for lang in Self.supportedLanguages where lang.code == currentLanguage {
             return lang.nativeName
         }
@@ -57,7 +64,18 @@ final class LocalizationManager {
     }
 
     private init() {
-        loadBundle(for: currentLanguage)
+        let lang = currentLanguage
+        if lang == "random" {
+            loadRandomLanguage()
+        } else {
+            loadBundle(for: lang)
+        }
+    }
+
+    /// Pick a random language from the supported list and load its bundle.
+    func loadRandomLanguage() {
+        let code = Self.supportedLanguages.randomElement()!.code
+        loadBundle(for: code)
     }
 
     private func loadBundle(for languageCode: String) {

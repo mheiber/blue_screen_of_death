@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "Padrão do sistema";
+"language.random" = "Aleatório";
 
 /* Accessibility */
 "a11y.overlay.label" = "Lembrete de tela azul";

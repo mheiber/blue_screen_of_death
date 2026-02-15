@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "Sistema defaŭlto";
+"language.random" = "Hazarda";
 
 /* Accessibility */
 "a11y.overlay.label" = "Blua ekrana rememorigo";

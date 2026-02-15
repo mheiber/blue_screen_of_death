@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "Mặc định hệ thống";
+"language.random" = "Ngẫu nhiên";
 
 /* Accessibility */
 "a11y.overlay.label" = "Nhắc nhở màn hình xanh";

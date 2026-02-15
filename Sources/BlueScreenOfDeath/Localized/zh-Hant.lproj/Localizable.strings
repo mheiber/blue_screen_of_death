@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "系統預設";
+"language.random" = "隨機";
 
 /* Accessibility */
 "a11y.overlay.label" = "藍色畫面提醒";

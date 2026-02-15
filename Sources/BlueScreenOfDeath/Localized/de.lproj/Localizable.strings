@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "Systemstandard";
+"language.random" = "Zufällig";
 
 /* Accessibility */
 "a11y.overlay.label" = "Bluescreen-Erinnerung";

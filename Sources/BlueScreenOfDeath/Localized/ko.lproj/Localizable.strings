@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "시스템 기본값";
+"language.random" = "무작위";
 
 /* Accessibility */
 "a11y.overlay.label" = "블루스크린 알림";

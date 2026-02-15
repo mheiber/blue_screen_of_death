@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "सिस्टम डिफ़ॉल्ट";
+"language.random" = "यादृच्छिक";
 
 /* Accessibility */
 "a11y.overlay.label" = "ब्लू स्क्रीन अनुस्मारक";

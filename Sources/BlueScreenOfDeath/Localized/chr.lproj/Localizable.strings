@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "ᎠᏍᏆᏗᏍᏗ ᎤᏙᏢᏒᎢ";
+"language.random" = "ᎤᏙᏢᏒᎢ";
 
 /* Accessibility */
 "a11y.overlay.label" = "ᏌᎪᏂᎨ ᎠᏍᏓᏩᏛᏍᏗ ᎠᏅᏓᏗᏍᏗ";

@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "Réglage système";
+"language.random" = "Aléatoire";
 
 /* Accessibility */
 "a11y.overlay.label" = "Rappel d'écran bleu";

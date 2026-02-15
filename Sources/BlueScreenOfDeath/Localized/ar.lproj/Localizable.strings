@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "الإعداد الافتراضي للنظام";
+"language.random" = "عشوائي";
 
 /* Accessibility */
 "a11y.overlay.label" = "تذكير الشاشة الزرقاء";

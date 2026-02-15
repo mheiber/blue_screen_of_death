@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "Systeemstandaard";
+"language.random" = "Willekeurig";
 
 /* Accessibility */
 "a11y.overlay.label" = "Blauw scherm-herinnering";

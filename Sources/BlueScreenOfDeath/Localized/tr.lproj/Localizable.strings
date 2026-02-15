@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "Sistem Varsayılanı";
+"language.random" = "Rastgele";
 
 /* Accessibility */
 "a11y.overlay.label" = "Mavi ekran hatırlatıcısı";

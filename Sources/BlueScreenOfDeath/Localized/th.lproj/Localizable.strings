@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "ค่าเริ่มต้นของระบบ";
+"language.random" = "สุ่ม";
 
 /* Accessibility */
 "a11y.overlay.label" = "การเตือนจอฟ้า";

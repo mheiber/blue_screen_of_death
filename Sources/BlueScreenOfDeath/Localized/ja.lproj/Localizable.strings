@@ -71,6 +71,7 @@
 
 /* Language */
 "language.system" = "システムのデフォルト";
+"language.random" = "ランダム";
 
 /* Accessibility */
 "a11y.overlay.label" = "ブルースクリーンリマインダー";
