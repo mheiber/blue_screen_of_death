@@ -4,6 +4,7 @@ import Combine
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     private let overlay = BlueScreenOverlay()
+    private let stylePreviewController = StylePreviewController()
     private var statusItem: NSStatusItem!
     private var cancellables = Set<AnyCancellable>()
 
@@ -68,6 +69,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         randomItem.representedObject = "random"
         randomItem.state = (prefs.selectedStyleRaw == "random") ? .on : .off
         styleMenu.addItem(randomItem)
+        styleMenu.delegate = self
 
         let styleMenuItem = NSMenuItem(title: "Style: \(styleDisplayName(prefs))", action: nil, keyEquivalent: "")
         styleMenuItem.submenu = styleMenu
@@ -81,8 +83,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 action: #selector(selectInterval(_:)),
                 keyEquivalent: ""
             )
-            item.tag = interval.rawValue
-            item.state = (!prefs.useCustomInterval && prefs.intervalSeconds == interval.rawValue) ? .on : .off
+            item.representedObject = interval.rawValue
+            item.state = (!prefs.useCustomInterval && prefs.selectedIntervalRaw == interval.rawValue) ? .on : .off
             intervalMenu.addItem(item)
         }
         intervalMenu.addItem(.separator())
@@ -121,6 +123,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(quit), keyEquivalent: "q"))
 
         // Show the menu
+        menu.delegate = self
         statusItem.menu = menu
         statusItem.button?.performClick(nil)
         // Clear menu so left-click works again next time
@@ -150,8 +153,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc private func selectInterval(_ sender: NSMenuItem) {
+        guard let raw = sender.representedObject as? String else { return }
         Preferences.shared.useCustomInterval = false
-        Preferences.shared.intervalSeconds = sender.tag
+        Preferences.shared.selectedIntervalRaw = raw
     }
 
     @objc private func openCustomInterval() {
@@ -201,5 +205,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc private func quit() {
         NSApplication.shared.terminate(nil)
+    }
+}
+
+// MARK: - NSMenuDelegate (style preview on hover)
+
+extension AppDelegate: NSMenuDelegate {
+    func menu(_ menu: NSMenu, willHighlight item: NSMenuItem?) {
+        guard let item = item,
+              let rawValue = item.representedObject as? String else {
+            // Mouse left all items or moved to a separator/non-style item
+            stylePreviewController.hidePreview()
+            return
+        }
+
+        if let style = ScreenStyle(rawValue: rawValue) {
+            stylePreviewController.showPreview(for: style)
+        } else if rawValue == "random" {
+            stylePreviewController.showPreview(for: nil)
+        }
+    }
+
+    func menuDidClose(_ menu: NSMenu) {
+        stylePreviewController.hidePreview()
     }
 }
