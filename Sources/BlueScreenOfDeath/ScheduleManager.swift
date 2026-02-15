@@ -18,7 +18,7 @@ final class ScheduleManager: ObservableObject {
         // React to preference changes
         preferences.$isEnabled
             .combineLatest(
-                preferences.$intervalSeconds,
+                preferences.$selectedIntervalRaw,
                 preferences.$useCustomInterval,
                 preferences.$customMinutes
             )
@@ -47,10 +47,15 @@ final class ScheduleManager: ObservableObject {
             return
         }
 
+        scheduleNext()
+    }
+
+    /// Schedule the next trigger. For random intervals, each fire picks a new random delay.
+    private func scheduleNext() {
         let interval = TimeInterval(preferences.effectiveIntervalSeconds)
         nextTriggerDate = Date().addingTimeInterval(interval)
 
-        timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { [weak self] _ in
+        timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: false) { [weak self] _ in
             self?.fire()
         }
     }
@@ -62,8 +67,8 @@ final class ScheduleManager: ObservableObject {
             onTrigger?()
         }
 
-        // Update next trigger date
-        nextTriggerDate = Date().addingTimeInterval(TimeInterval(preferences.effectiveIntervalSeconds))
+        // Schedule next (re-rolls random intervals each time)
+        scheduleNext()
     }
 
     /// Trigger immediately (manual trigger from menu)
