@@ -20,6 +20,16 @@ enum ScreenStyle: String, CaseIterable, Identifiable {
         case .cyberwin2070: return L("style.cyberwin2070")
         }
     }
+
+    var systemDisplayName: String {
+        switch self {
+        case .modern: return SL("style.modern")
+        case .classic: return SL("style.classic")
+        case .classicDump: return SL("style.classicDump")
+        case .mojibake: return SL("style.mojibake")
+        case .cyberwin2070: return SL("style.cyberwin2070")
+        }
+    }
 }
 
 /// Interval options for automatic blue screen triggers
@@ -41,6 +51,17 @@ enum TriggerInterval: String, CaseIterable, Identifiable {
         case .threeHours: return L("interval.threeHours")
         case .randomShort: return L("interval.randomShort")
         case .randomLong: return L("interval.randomLong")
+        }
+    }
+
+    var systemDisplayName: String {
+        switch self {
+        case .twentyMinutes: return SL("interval.twentyMinutes")
+        case .oneHour: return SL("interval.oneHour")
+        case .twoHours: return SL("interval.twoHours")
+        case .threeHours: return SL("interval.threeHours")
+        case .randomShort: return SL("interval.randomShort")
+        case .randomLong: return SL("interval.randomLong")
         }
     }
 

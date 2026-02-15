@@ -52,6 +52,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     // MARK: - Config Menu (right-click)
 
+    /// Adds an Option-key alternate after the last item in the menu.
+    /// When the user holds Option, the alternate shows both the translated
+    /// title and the system-locale title side by side.
+    private func addAlternate(to menu: NSMenu, systemTitle: String) {
+        guard let item = menu.items.last else { return }
+        // Skip if the translated and system titles are identical
+        guard item.title != systemTitle else { return }
+        let altItem = NSMenuItem(
+            title: "\(item.title) — \(systemTitle)",
+            action: item.action,
+            keyEquivalent: item.keyEquivalent
+        )
+        altItem.state = item.state
+        altItem.representedObject = item.representedObject
+        altItem.isEnabled = item.isEnabled
+        altItem.isAlternate = true
+        altItem.keyEquivalentModifierMask = [.option]
+        menu.addItem(altItem)
+    }
+
     private func showConfigMenu() {
         // Re-randomize language each time menu opens in random mode
         if LocalizationManager.shared.currentLanguage == "random" {
@@ -64,6 +84,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         // Trigger Now (also available via right-click menu)
         menu.addItem(NSMenuItem(title: L("menu.triggerNow"), action: #selector(triggerNow), keyEquivalent: ""))
+        addAlternate(to: menu, systemTitle: SL("menu.triggerNow"))
 
         menu.addItem(.separator())
 
@@ -71,6 +92,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let enabledItem = NSMenuItem(title: L("menu.enabled"), action: #selector(toggleEnabled), keyEquivalent: "")
         enabledItem.state = prefs.isEnabled ? .on : .off
         menu.addItem(enabledItem)
+        addAlternate(to: menu, systemTitle: SL("menu.enabled"))
 
         // Screen Style submenu
         let styleMenu = NSMenu()
@@ -79,12 +101,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             item.representedObject = style.rawValue
             item.state = (prefs.selectedStyleRaw == style.rawValue) ? .on : .off
             styleMenu.addItem(item)
+            addAlternate(to: styleMenu, systemTitle: style.systemDisplayName)
         }
         styleMenu.addItem(.separator())
         let randomItem = NSMenuItem(title: L("style.random"), action: #selector(selectStyle(_:)), keyEquivalent: "")
         randomItem.representedObject = "random"
         randomItem.state = (prefs.selectedStyleRaw == "random") ? .on : .off
         styleMenu.addItem(randomItem)
+        addAlternate(to: styleMenu, systemTitle: SL("style.random"))
         styleMenu.delegate = self
 
         let styleMenuItem = NSMenuItem(title: L("menu.styleFormat", styleDisplayName(prefs)), action: nil, keyEquivalent: "")
@@ -102,6 +126,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             item.representedObject = interval.rawValue
             item.state = (!prefs.useCustomInterval && prefs.selectedIntervalRaw == interval.rawValue) ? .on : .off
             intervalMenu.addItem(item)
+            addAlternate(to: intervalMenu, systemTitle: interval.systemDisplayName)
         }
         intervalMenu.addItem(.separator())
         let customIntervalItem = NSMenuItem(
@@ -111,6 +136,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         )
         customIntervalItem.state = prefs.useCustomInterval ? .on : .off
         intervalMenu.addItem(customIntervalItem)
+        let sysCustomTitle = prefs.useCustomInterval ? SL("interval.customFormat", prefs.customMinutes) : SL("interval.custom")
+        addAlternate(to: intervalMenu, systemTitle: sysCustomTitle)
 
         let intervalMenuItem = NSMenuItem(
             title: L("menu.intervalFormat", prefs.intervalDisplayName),
@@ -122,6 +149,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         // Custom Schedule
         menu.addItem(NSMenuItem(title: L("menu.customSchedule"), action: #selector(openCustomSchedule), keyEquivalent: ""))
+        addAlternate(to: menu, systemTitle: SL("menu.customSchedule"))
 
         // Screen Share Suppression
         let screenShareItem = NSMenuItem(
@@ -131,6 +159,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         )
         screenShareItem.state = prefs.suppressDuringScreenShare ? .on : .off
         menu.addItem(screenShareItem)
+        addAlternate(to: menu, systemTitle: SL("menu.suppressScreenShare"))
 
         // Lunch Reminder (independent of interval)
         let lunchTitle: String
@@ -147,6 +176,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         )
         lunchItem.state = prefs.lunchReminderEnabled ? .on : .off
         menu.addItem(lunchItem)
+        let sysLunchTitle: String
+        if prefs.lunchReminderEnabled {
+            let timeStr = String(format: "%d:%02d", prefs.lunchReminderHour, prefs.lunchReminderMinute)
+            sysLunchTitle = SL("menu.lunchReminderFormat", timeStr)
+        } else {
+            sysLunchTitle = SL("menu.lunchReminder")
+        }
+        addAlternate(to: menu, systemTitle: sysLunchTitle)
 
         // Next trigger info
         if let next = scheduler.nextTriggerDate, prefs.isEnabled {
@@ -156,6 +193,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let infoItem = NSMenuItem(title: L("menu.nextFormat", relative), action: nil, keyEquivalent: "")
             infoItem.isEnabled = false
             menu.addItem(infoItem)
+            addAlternate(to: menu, systemTitle: SL("menu.nextFormat", relative))
         }
 
         menu.addItem(.separator())
@@ -215,7 +253,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(.separator())
 
         menu.addItem(NSMenuItem(title: L("menu.about"), action: #selector(openAbout), keyEquivalent: ""))
+        addAlternate(to: menu, systemTitle: SL("menu.about"))
         menu.addItem(NSMenuItem(title: L("menu.quit"), action: #selector(quit), keyEquivalent: "q"))
+        addAlternate(to: menu, systemTitle: SL("menu.quit"))
 
         // Show the menu
         menu.delegate = self

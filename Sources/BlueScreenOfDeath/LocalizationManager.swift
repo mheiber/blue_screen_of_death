@@ -114,6 +114,17 @@ final class LocalizationManager {
         let format = string(key)
         return String(format: format, arguments: args)
     }
+
+    /// Look up a string using the system locale, ignoring any per-app override.
+    func systemString(_ key: String) -> String {
+        Bundle.module.localizedString(forKey: key, value: nil, table: nil)
+    }
+
+    /// Look up a system-locale format string and apply arguments.
+    func systemString(_ key: String, _ args: CVarArg...) -> String {
+        let format = systemString(key)
+        return String(format: format, arguments: args)
+    }
 }
 
 /// Convenience global function for localized string lookup.
@@ -124,5 +135,16 @@ func L(_ key: String) -> String {
 /// Convenience global function for localized format string lookup.
 func L(_ key: String, _ args: CVarArg...) -> String {
     let format = LocalizationManager.shared.string(key)
+    return String(format: format, arguments: args)
+}
+
+/// Convenience global function for system-locale string lookup (ignores per-app override).
+func SL(_ key: String) -> String {
+    LocalizationManager.shared.systemString(key)
+}
+
+/// Convenience global function for system-locale format string lookup.
+func SL(_ key: String, _ args: CVarArg...) -> String {
+    let format = LocalizationManager.shared.systemString(key)
     return String(format: format, arguments: args)
 }
