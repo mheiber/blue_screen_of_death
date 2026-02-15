@@ -1,0 +1,79 @@
+/* Ukrainian (uk) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Показати зараз";
+"menu.enabled" = "Увімкнено";
+"menu.styleFormat" = "Стиль: %@";
+"menu.intervalFormat" = "Інтервал: %@";
+"menu.customSchedule" = "Розклад…";
+"menu.suppressScreenShare" = "Не показувати під час демонстрації екрана";
+"menu.lunchReminderFormat" = "Нагадування про обід (%@)…";
+"menu.lunchReminder" = "Нагадування про обід…";
+"menu.nextFormat" = "Наступний: %@";
+"menu.about" = "Про Blue Screen of Death";
+"menu.quit" = "Завершити";
+"menu.language" = "Мова";
+
+/* Styles */
+"style.modern" = "Сучасний";
+"style.classic" = "Класичний";
+"style.classicDump" = "Класичний дамп";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Випадковий";
+
+/* Intervals */
+"interval.twentyMinutes" = "Кожні 20 хвилин";
+"interval.oneHour" = "Щогодини";
+"interval.twoHours" = "Кожні 2 години";
+"interval.threeHours" = "Кожні 3 години";
+"interval.randomShort" = "Випадково (~1,5 години)";
+"interval.randomLong" = "Випадково (~3 години)";
+"interval.customFormat" = "Власний (%d хв)…";
+"interval.custom" = "Власний…";
+"interval.everyNMinFormat" = "Кожні %d хв";
+
+/* Custom Interval View */
+"customInterval.title" = "Власний інтервал";
+"customInterval.minutes" = "Хвилини:";
+"customInterval.range" = "Діапазон: 1–240 хвилин";
+"customInterval.apply" = "Застосувати";
+
+/* Schedule */
+"schedule.title" = "Розклад";
+"schedule.useCustom" = "Використовувати розклад";
+"schedule.activeDays" = "Активні дні";
+"schedule.activeHours" = "Активні години";
+"schedule.from" = "Від";
+"schedule.to" = "До";
+"schedule.helpText" = "Синій екран з'являтиметься лише у вибрані дні та години.";
+
+/* Days */
+"day.monday" = "Понеділок";
+"day.tuesday" = "Вівторок";
+"day.wednesday" = "Середа";
+"day.thursday" = "Четвер";
+"day.friday" = "П'ятниця";
+"day.saturday" = "Субота";
+"day.sunday" = "Неділя";
+
+/* Lunch Reminder */
+"lunch.title" = "Нагадування про обід";
+"lunch.enable" = "Увімкнути нагадування про обід";
+"lunch.time" = "Час:";
+"lunch.helpText" = "Синій екран нагадає вам, коли настане час обіду.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "Сучасний дзвін усвідомленості";
+"about.description" = "Бережіть зір і розвивайте усвідомленість. Кожні кілька годин м'яке нагадування у вигляді синього екрана пропонує вам відвести погляд від монітора, сфокусуватися на чомусь вдалині та зробити усвідомлений вдих.\n\nНатхненно ностальгією за класичними комп'ютерами, переосмислено як інструмент цифрового добробуту.";
+"about.versionFormat" = "Версія %@";
+
+/* Language */
+"language.system" = "Системна мова";
+
+/* Accessibility */
+"a11y.overlay.label" = "Нагадування «синій екран»";
+"a11y.overlay.hint" = "Відведіть погляд від екрана та зробіть вдих. Натисніть будь-яку клавішу або клацніть мишею, щоб закрити.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Лівий клік — показати, правий клік — налаштування";

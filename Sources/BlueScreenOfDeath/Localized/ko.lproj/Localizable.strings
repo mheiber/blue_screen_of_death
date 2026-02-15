@@ -1,0 +1,79 @@
+/* Korean (ko) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "지금 표시";
+"menu.enabled" = "활성화됨";
+"menu.styleFormat" = "스타일: %@";
+"menu.intervalFormat" = "간격: %@";
+"menu.customSchedule" = "사용자 지정 일정…";
+"menu.suppressScreenShare" = "화면 공유 중 일시 중지";
+"menu.lunchReminderFormat" = "점심 알림 (%@)…";
+"menu.lunchReminder" = "점심 알림…";
+"menu.nextFormat" = "다음: %@";
+"menu.about" = "Blue Screen of Death에 관하여";
+"menu.quit" = "종료";
+"menu.language" = "언어";
+
+/* Styles */
+"style.modern" = "모던";
+"style.classic" = "클래식";
+"style.classicDump" = "클래식 덤프";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "랜덤";
+
+/* Intervals */
+"interval.twentyMinutes" = "20분마다";
+"interval.oneHour" = "1시간마다";
+"interval.twoHours" = "2시간마다";
+"interval.threeHours" = "3시간마다";
+"interval.randomShort" = "랜덤 (~1.5시간)";
+"interval.randomLong" = "랜덤 (~3시간)";
+"interval.customFormat" = "사용자 지정 (%d분)…";
+"interval.custom" = "사용자 지정…";
+"interval.everyNMinFormat" = "%d분마다";
+
+/* Custom Interval View */
+"customInterval.title" = "사용자 지정 간격";
+"customInterval.minutes" = "분:";
+"customInterval.range" = "범위: 1~240분";
+"customInterval.apply" = "적용";
+
+/* Schedule */
+"schedule.title" = "사용자 지정 일정";
+"schedule.useCustom" = "사용자 지정 일정 사용";
+"schedule.activeDays" = "활성 요일";
+"schedule.activeHours" = "활성 시간대";
+"schedule.from" = "시작";
+"schedule.to" = "종료";
+"schedule.helpText" = "블루스크린 알림은 선택한 요일과 시간대에만 표시됩니다.";
+
+/* Days */
+"day.monday" = "월요일";
+"day.tuesday" = "화요일";
+"day.wednesday" = "수요일";
+"day.thursday" = "목요일";
+"day.friday" = "금요일";
+"day.saturday" = "토요일";
+"day.sunday" = "일요일";
+
+/* Lunch Reminder */
+"lunch.title" = "점심 알림";
+"lunch.enable" = "점심 알림 활성화";
+"lunch.time" = "시간:";
+"lunch.helpText" = "점심시간이 되면 블루스크린이 알려드립니다.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "현대의 마음챙김 종";
+"about.description" = "시력을 보호하고 마음챙김을 실천하세요. 몇 시간마다 부드러운 블루스크린이 나타나 화면에서 눈을 떼고, 먼 곳을 바라보며, 깊게 숨을 쉬도록 안내합니다.\n\n클래식 컴퓨터의 향수에서 영감을 받아 디지털 웰빙 도구로 새롭게 탄생했습니다.";
+"about.versionFormat" = "버전 %@";
+
+/* Language */
+"language.system" = "시스템 기본값";
+
+/* Accessibility */
+"a11y.overlay.label" = "블루스크린 알림";
+"a11y.overlay.hint" = "잠시 화면에서 눈을 떼고 심호흡하세요. 아무 키를 누르거나 클릭하면 닫힙니다.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "왼쪽 클릭으로 표시, 오른쪽 클릭으로 설정";

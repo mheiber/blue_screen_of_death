@@ -1,0 +1,79 @@
+/* Indonesian (Bahasa Indonesia) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Jalankan Sekarang";
+"menu.enabled" = "Aktif";
+"menu.styleFormat" = "Gaya: %@";
+"menu.intervalFormat" = "Interval: %@";
+"menu.customSchedule" = "Jadwal Kustom…";
+"menu.suppressScreenShare" = "Nonaktifkan Saat Berbagi Layar";
+"menu.lunchReminderFormat" = "Pengingat Makan Siang (%@)…";
+"menu.lunchReminder" = "Pengingat Makan Siang…";
+"menu.nextFormat" = "Berikutnya: %@";
+"menu.about" = "Tentang Blue Screen of Death";
+"menu.quit" = "Keluar";
+"menu.language" = "Bahasa";
+
+/* Styles */
+"style.modern" = "Modern";
+"style.classic" = "Klasik";
+"style.classicDump" = "Klasik Dump";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Acak";
+
+/* Intervals */
+"interval.twentyMinutes" = "Setiap 20 menit";
+"interval.oneHour" = "Setiap jam";
+"interval.twoHours" = "Setiap 2 jam";
+"interval.threeHours" = "Setiap 3 jam";
+"interval.randomShort" = "Acak (~1,5 jam)";
+"interval.randomLong" = "Acak (~3 jam)";
+"interval.customFormat" = "Kustom (%d mnt)…";
+"interval.custom" = "Kustom…";
+"interval.everyNMinFormat" = "Setiap %d mnt";
+
+/* Custom Interval View */
+"customInterval.title" = "Interval Kustom";
+"customInterval.minutes" = "Menit:";
+"customInterval.range" = "Rentang: 1–240 menit";
+"customInterval.apply" = "Terapkan";
+
+/* Schedule */
+"schedule.title" = "Jadwal Kustom";
+"schedule.useCustom" = "Gunakan Jadwal Kustom";
+"schedule.activeDays" = "Hari Aktif";
+"schedule.activeHours" = "Jam Aktif";
+"schedule.from" = "Dari";
+"schedule.to" = "Sampai";
+"schedule.helpText" = "Pengingat layar biru hanya akan muncul pada hari dan jam yang dipilih.";
+
+/* Days */
+"day.monday" = "Senin";
+"day.tuesday" = "Selasa";
+"day.wednesday" = "Rabu";
+"day.thursday" = "Kamis";
+"day.friday" = "Jumat";
+"day.saturday" = "Sabtu";
+"day.sunday" = "Minggu";
+
+/* Lunch Reminder */
+"lunch.title" = "Pengingat Makan Siang";
+"lunch.enable" = "Aktifkan Pengingat Makan Siang";
+"lunch.time" = "Waktu:";
+"lunch.helpText" = "Layar biru akan mengingatkan Anda saat waktunya makan siang.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "Lonceng Kesadaran Modern";
+"about.description" = "Lindungi kesehatan mata Anda dan kembangkan kesadaran diri. Setiap beberapa jam, pengingat layar biru yang lembut mengajak Anda untuk mengalihkan pandangan dari layar, memfokuskan mata pada sesuatu yang jauh, dan mengambil napas dengan penuh kesadaran.\n\nTerinspirasi dari nostalgia komputasi klasik, dirancang ulang sebagai alat untuk kesejahteraan digital.";
+"about.versionFormat" = "Versi %@";
+
+/* Language */
+"language.system" = "Bawaan Sistem";
+
+/* Accessibility */
+"a11y.overlay.label" = "Pengingat layar biru";
+"a11y.overlay.hint" = "Luangkan waktu sejenak untuk melihat jauh dari layar dan bernapas. Tekan tombol apa saja atau klik untuk menutup.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Klik kiri untuk menjalankan, klik kanan untuk pengaturan";

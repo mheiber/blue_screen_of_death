@@ -1,0 +1,79 @@
+/* Turkish (Türkçe) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Şimdi Tetikle";
+"menu.enabled" = "Etkin";
+"menu.styleFormat" = "Stil: %@";
+"menu.intervalFormat" = "Aralık: %@";
+"menu.customSchedule" = "Özel Zamanlama…";
+"menu.suppressScreenShare" = "Ekran Paylaşımında Duraklat";
+"menu.lunchReminderFormat" = "Öğle Hatırlatıcısı (%@)…";
+"menu.lunchReminder" = "Öğle Hatırlatıcısı…";
+"menu.nextFormat" = "Sonraki: %@";
+"menu.about" = "Blue Screen of Death Hakkında";
+"menu.quit" = "Çıkış";
+"menu.language" = "Dil";
+
+/* Styles */
+"style.modern" = "Modern";
+"style.classic" = "Klasik";
+"style.classicDump" = "Klasik Döküm";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Rastgele";
+
+/* Intervals */
+"interval.twentyMinutes" = "Her 20 dakikada";
+"interval.oneHour" = "Her saat";
+"interval.twoHours" = "Her 2 saatte";
+"interval.threeHours" = "Her 3 saatte";
+"interval.randomShort" = "Rastgele (~1,5 saat)";
+"interval.randomLong" = "Rastgele (~3 saat)";
+"interval.customFormat" = "Özel (%d dk)…";
+"interval.custom" = "Özel…";
+"interval.everyNMinFormat" = "Her %d dk";
+
+/* Custom Interval View */
+"customInterval.title" = "Özel Aralık";
+"customInterval.minutes" = "Dakika:";
+"customInterval.range" = "Aralık: 1–240 dakika";
+"customInterval.apply" = "Uygula";
+
+/* Schedule */
+"schedule.title" = "Özel Zamanlama";
+"schedule.useCustom" = "Özel Zamanlama Kullan";
+"schedule.activeDays" = "Etkin Günler";
+"schedule.activeHours" = "Etkin Saatler";
+"schedule.from" = "Başlangıç";
+"schedule.to" = "Bitiş";
+"schedule.helpText" = "Mavi ekran hatırlatıcıları yalnızca seçili gün ve saatlerde görünür.";
+
+/* Days */
+"day.monday" = "Pazartesi";
+"day.tuesday" = "Salı";
+"day.wednesday" = "Çarşamba";
+"day.thursday" = "Perşembe";
+"day.friday" = "Cuma";
+"day.saturday" = "Cumartesi";
+"day.sunday" = "Pazar";
+
+/* Lunch Reminder */
+"lunch.title" = "Öğle Hatırlatıcısı";
+"lunch.enable" = "Öğle Hatırlatıcısını Etkinleştir";
+"lunch.time" = "Saat:";
+"lunch.helpText" = "Mavi ekran, öğle yemeği zamanı geldiğinde sizi hatırlatır.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "Modern Bir Farkındalık Çanı";
+"about.description" = "Göz sağlığınızı koruyun ve farkındalığınızı geliştirin. Birkaç saatte bir, nazik bir mavi ekran hatırlatıcısı sizi ekrandan uzağa bakmaya, gözlerinizi uzaktaki bir noktaya odaklamaya ve bilinçli bir nefes almaya teşvik eder.\n\nKlasik bilgisayar nostaljisinden ilham alınarak dijital sağlık için yeniden tasarlandı.";
+"about.versionFormat" = "Sürüm %@";
+
+/* Language */
+"language.system" = "Sistem Varsayılanı";
+
+/* Accessibility */
+"a11y.overlay.label" = "Mavi ekran hatırlatıcısı";
+"a11y.overlay.hint" = "Ekrandan uzağa bakıp nefes almak için bir an durun. Kapatmak için herhangi bir tuşa basın veya tıklayın.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Tetiklemek için sol tıklayın, ayarlar için sağ tıklayın";

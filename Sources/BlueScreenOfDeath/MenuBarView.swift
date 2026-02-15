@@ -8,24 +8,25 @@ struct CustomIntervalView: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            Text("Custom Interval")
+            Text(L("customInterval.title"))
                 .font(.headline)
 
             HStack {
-                Text("Minutes:")
+                Text(L("customInterval.minutes"))
                 TextField("20", text: $minutesText)
                     .textFieldStyle(.roundedBorder)
                     .frame(width: 80)
                     .onAppear {
                         minutesText = "\(preferences.customMinutes)"
                     }
+                    .accessibilityLabel(L("customInterval.minutes"))
             }
 
-            Text("Range: 1–240 minutes")
+            Text(L("customInterval.range"))
                 .font(.caption)
                 .foregroundColor(.secondary)
 
-            Button("Apply") {
+            Button(L("customInterval.apply")) {
                 if let mins = Int(minutesText), mins >= 1, mins <= 240 {
                     preferences.customMinutes = mins
                     preferences.useCustomInterval = true
@@ -33,6 +34,7 @@ struct CustomIntervalView: View {
                 NSApp.keyWindow?.close()
             }
             .keyboardShortcut(.defaultAction)
+            .accessibilityHint(L("customInterval.range"))
         }
         .padding(20)
         .frame(width: 280)

@@ -22,17 +22,17 @@ struct LunchReminderView: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            Text("Lunch Reminder")
+            Text(L("lunch.title"))
                 .font(.headline)
 
-            Toggle("Enable Lunch Reminder", isOn: $preferences.lunchReminderEnabled)
+            Toggle(L("lunch.enable"), isOn: $preferences.lunchReminderEnabled)
 
             if preferences.lunchReminderEnabled {
-                DatePicker("Time:", selection: timeBinding, displayedComponents: .hourAndMinute)
+                DatePicker(L("lunch.time"), selection: timeBinding, displayedComponents: .hourAndMinute)
                     .frame(maxWidth: 200)
             }
 
-            Text("Blue screen will remind you when it is lunch time.")
+            Text(L("lunch.helpText"))
                 .font(.caption)
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)

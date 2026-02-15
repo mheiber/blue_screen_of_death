@@ -1,0 +1,79 @@
+/* Japanese (ja) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "今すぐ表示";
+"menu.enabled" = "有効";
+"menu.styleFormat" = "スタイル: %@";
+"menu.intervalFormat" = "間隔: %@";
+"menu.customSchedule" = "カスタムスケジュール…";
+"menu.suppressScreenShare" = "画面共有中は停止";
+"menu.lunchReminderFormat" = "ランチリマインダー (%@)…";
+"menu.lunchReminder" = "ランチリマインダー…";
+"menu.nextFormat" = "次回: %@";
+"menu.about" = "Blue Screen of Death について";
+"menu.quit" = "終了";
+"menu.language" = "言語";
+
+/* Styles */
+"style.modern" = "モダン";
+"style.classic" = "クラシック";
+"style.classicDump" = "クラシックダンプ";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "ランダム";
+
+/* Intervals */
+"interval.twentyMinutes" = "20分ごと";
+"interval.oneHour" = "1時間ごと";
+"interval.twoHours" = "2時間ごと";
+"interval.threeHours" = "3時間ごと";
+"interval.randomShort" = "ランダム (~1.5時間)";
+"interval.randomLong" = "ランダム (~3時間)";
+"interval.customFormat" = "カスタム (%d分)…";
+"interval.custom" = "カスタム…";
+"interval.everyNMinFormat" = "%d分ごと";
+
+/* Custom Interval View */
+"customInterval.title" = "カスタム間隔";
+"customInterval.minutes" = "分:";
+"customInterval.range" = "範囲: 1〜240分";
+"customInterval.apply" = "適用";
+
+/* Schedule */
+"schedule.title" = "カスタムスケジュール";
+"schedule.useCustom" = "カスタムスケジュールを使用";
+"schedule.activeDays" = "有効な曜日";
+"schedule.activeHours" = "有効な時間帯";
+"schedule.from" = "開始";
+"schedule.to" = "終了";
+"schedule.helpText" = "ブルースクリーンのリマインダーは、選択した曜日と時間帯にのみ表示されます。";
+
+/* Days */
+"day.monday" = "月曜日";
+"day.tuesday" = "火曜日";
+"day.wednesday" = "水曜日";
+"day.thursday" = "木曜日";
+"day.friday" = "金曜日";
+"day.saturday" = "土曜日";
+"day.sunday" = "日曜日";
+
+/* Lunch Reminder */
+"lunch.title" = "ランチリマインダー";
+"lunch.enable" = "ランチリマインダーを有効にする";
+"lunch.time" = "時刻:";
+"lunch.helpText" = "お昼の時間になると、ブルースクリーンがお知らせします。";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "現代のマインドフルネスベル";
+"about.description" = "目を守り、マインドフルネスを育みましょう。数時間ごとに、穏やかなブルースクリーンが画面から目を離し、遠くを見つめ、深呼吸することを促します。\n\n懐かしいコンピューターの世界からインスピレーションを受け、デジタルウェルビーイングのためのツールとして生まれ変わりました。";
+"about.versionFormat" = "バージョン %@";
+
+/* Language */
+"language.system" = "システムのデフォルト";
+
+/* Accessibility */
+"a11y.overlay.label" = "ブルースクリーンリマインダー";
+"a11y.overlay.hint" = "画面から目を離して、深呼吸しましょう。任意のキーを押すかクリックで閉じます。";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "左クリックで表示、右クリックで設定";

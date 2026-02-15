@@ -1,0 +1,79 @@
+/* Esperanto — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Ekigi nun";
+"menu.enabled" = "Ŝaltita";
+"menu.styleFormat" = "Stilo: %@";
+"menu.intervalFormat" = "Intervalo: %@";
+"menu.customSchedule" = "Propra horaro…";
+"menu.suppressScreenShare" = "Kaŝi dum ekrankunhavigo";
+"menu.lunchReminderFormat" = "Tagmanĝa rememorigo (%@)…";
+"menu.lunchReminder" = "Tagmanĝa rememorigo…";
+"menu.nextFormat" = "Sekva: %@";
+"menu.about" = "Pri Blue Screen of Death";
+"menu.quit" = "Eliri";
+"menu.language" = "Lingvo";
+
+/* Styles */
+"style.modern" = "Moderna";
+"style.classic" = "Klasika";
+"style.classicDump" = "Klasika rubejo";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Hazarda";
+
+/* Intervals */
+"interval.twentyMinutes" = "Ĉiujn 20 minutojn";
+"interval.oneHour" = "Ĉiun horon";
+"interval.twoHours" = "Ĉiujn 2 horojn";
+"interval.threeHours" = "Ĉiujn 3 horojn";
+"interval.randomShort" = "Hazarde (~1,5 horoj)";
+"interval.randomLong" = "Hazarde (~3 horoj)";
+"interval.customFormat" = "Propra (%d min)…";
+"interval.custom" = "Propra…";
+"interval.everyNMinFormat" = "Ĉiujn %d min";
+
+/* Custom Interval View */
+"customInterval.title" = "Propra intervalo";
+"customInterval.minutes" = "Minutoj:";
+"customInterval.range" = "Amplekso: 1–240 minutoj";
+"customInterval.apply" = "Apliki";
+
+/* Schedule */
+"schedule.title" = "Propra horaro";
+"schedule.useCustom" = "Uzi propran horaron";
+"schedule.activeDays" = "Aktivaj tagoj";
+"schedule.activeHours" = "Aktivaj horoj";
+"schedule.from" = "De";
+"schedule.to" = "Ĝis";
+"schedule.helpText" = "Blua ekrano rememorigoj aktiviĝos nur dum la elektitaj tagoj kaj horoj.";
+
+/* Days */
+"day.monday" = "Lundo";
+"day.tuesday" = "Mardo";
+"day.wednesday" = "Merkredo";
+"day.thursday" = "Ĵaŭdo";
+"day.friday" = "Vendredo";
+"day.saturday" = "Sabato";
+"day.sunday" = "Dimanĉo";
+
+/* Lunch Reminder */
+"lunch.title" = "Tagmanĝa rememorigo";
+"lunch.enable" = "Ŝalti tagmanĝan rememodigon";
+"lunch.time" = "Horo:";
+"lunch.helpText" = "Blua ekrano rememorigos vin kiam estas tagmanĝa tempo.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "Moderna sonorilo de konscieco";
+"about.description" = "Protektu viajn okulojn kaj kultivu konscion. Ĉiujn kelkajn horojn, milda blua ekrano instigas vin forrigardi de la ekrano, fokusigi viajn okulojn al io malproksima kaj fari konsciplenan spiron.\n\nInspirita de klasika komputika nostalgio, reimagita kiel ilo por cifereca bonfarto.";
+"about.versionFormat" = "Versio %@";
+
+/* Language */
+"language.system" = "Sistema defaŭlto";
+
+/* Accessibility */
+"a11y.overlay.label" = "Blua ekrana rememorigo";
+"a11y.overlay.hint" = "Prenu momenton por forrigardi de la ekrano kaj spiri. Premu iun ajn klavon aŭ klaku por fermi.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Maldekstra klako por ekigi, dekstra klako por agordoj";

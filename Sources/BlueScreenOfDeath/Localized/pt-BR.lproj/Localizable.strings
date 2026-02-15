@@ -1,0 +1,79 @@
+/* Português (Brasil) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Ativar agora";
+"menu.enabled" = "Ativado";
+"menu.styleFormat" = "Estilo: %@";
+"menu.intervalFormat" = "Intervalo: %@";
+"menu.customSchedule" = "Horário personalizado…";
+"menu.suppressScreenShare" = "Pausar durante compartilhamento de tela";
+"menu.lunchReminderFormat" = "Lembrete de almoço (%@)…";
+"menu.lunchReminder" = "Lembrete de almoço…";
+"menu.nextFormat" = "Próximo: %@";
+"menu.about" = "Sobre o Blue Screen of Death";
+"menu.quit" = "Encerrar";
+"menu.language" = "Idioma";
+
+/* Styles */
+"style.modern" = "Moderno";
+"style.classic" = "Clássico";
+"style.classicDump" = "Clássico (dump)";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Aleatório";
+
+/* Intervals */
+"interval.twentyMinutes" = "A cada 20 minutos";
+"interval.oneHour" = "A cada hora";
+"interval.twoHours" = "A cada 2 horas";
+"interval.threeHours" = "A cada 3 horas";
+"interval.randomShort" = "Aleatório (~1,5 horas)";
+"interval.randomLong" = "Aleatório (~3 horas)";
+"interval.customFormat" = "Personalizado (%d min)…";
+"interval.custom" = "Personalizado…";
+"interval.everyNMinFormat" = "A cada %d min";
+
+/* Custom Interval View */
+"customInterval.title" = "Intervalo personalizado";
+"customInterval.minutes" = "Minutos:";
+"customInterval.range" = "Faixa: 1–240 minutos";
+"customInterval.apply" = "Aplicar";
+
+/* Schedule */
+"schedule.title" = "Horário personalizado";
+"schedule.useCustom" = "Usar horário personalizado";
+"schedule.activeDays" = "Dias ativos";
+"schedule.activeHours" = "Horários ativos";
+"schedule.from" = "De";
+"schedule.to" = "Até";
+"schedule.helpText" = "Os lembretes de tela azul serão ativados apenas nos dias e horários selecionados.";
+
+/* Days */
+"day.monday" = "Segunda-feira";
+"day.tuesday" = "Terça-feira";
+"day.wednesday" = "Quarta-feira";
+"day.thursday" = "Quinta-feira";
+"day.friday" = "Sexta-feira";
+"day.saturday" = "Sábado";
+"day.sunday" = "Domingo";
+
+/* Lunch Reminder */
+"lunch.title" = "Lembrete de almoço";
+"lunch.enable" = "Ativar lembrete de almoço";
+"lunch.time" = "Horário:";
+"lunch.helpText" = "A tela azul vai lembrar você quando for hora do almoço.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "Um sino moderno de atenção plena";
+"about.description" = "Proteja sua visão e cultive a atenção plena. A cada poucas horas, um suave lembrete de tela azul convida você a desviar o olhar da tela, focar os olhos em algo distante e fazer uma respiração consciente.\n\nInspirado pela nostalgia da computação clássica, reimaginado como uma ferramenta para o bem-estar digital.";
+"about.versionFormat" = "Versão %@";
+
+/* Language */
+"language.system" = "Padrão do sistema";
+
+/* Accessibility */
+"a11y.overlay.label" = "Lembrete de tela azul";
+"a11y.overlay.hint" = "Tire um momento para desviar o olhar da tela e respirar. Pressione qualquer tecla ou clique para fechar.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Clique esquerdo para ativar, clique direito para configurações";

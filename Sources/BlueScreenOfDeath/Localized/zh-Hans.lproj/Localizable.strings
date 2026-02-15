@@ -1,0 +1,79 @@
+/* Chinese Simplified (zh-Hans) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "立即触发";
+"menu.enabled" = "已启用";
+"menu.styleFormat" = "样式: %@";
+"menu.intervalFormat" = "间隔: %@";
+"menu.customSchedule" = "自定义日程…";
+"menu.suppressScreenShare" = "屏幕共享时暂停";
+"menu.lunchReminderFormat" = "午餐提醒 (%@)…";
+"menu.lunchReminder" = "午餐提醒…";
+"menu.nextFormat" = "下次: %@";
+"menu.about" = "关于 Blue Screen of Death";
+"menu.quit" = "退出";
+"menu.language" = "语言";
+
+/* Styles */
+"style.modern" = "现代";
+"style.classic" = "经典";
+"style.classicDump" = "经典转储";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "随机";
+
+/* Intervals */
+"interval.twentyMinutes" = "每 20 分钟";
+"interval.oneHour" = "每小时";
+"interval.twoHours" = "每 2 小时";
+"interval.threeHours" = "每 3 小时";
+"interval.randomShort" = "随机 (~1.5 小时)";
+"interval.randomLong" = "随机 (~3 小时)";
+"interval.customFormat" = "自定义 (%d 分钟)…";
+"interval.custom" = "自定义…";
+"interval.everyNMinFormat" = "每 %d 分钟";
+
+/* Custom Interval View */
+"customInterval.title" = "自定义间隔";
+"customInterval.minutes" = "分钟:";
+"customInterval.range" = "范围: 1–240 分钟";
+"customInterval.apply" = "应用";
+
+/* Schedule */
+"schedule.title" = "自定义日程";
+"schedule.useCustom" = "使用自定义日程";
+"schedule.activeDays" = "活跃日";
+"schedule.activeHours" = "活跃时段";
+"schedule.from" = "从";
+"schedule.to" = "到";
+"schedule.helpText" = "蓝屏提醒仅在所选日期和时段内触发。";
+
+/* Days */
+"day.monday" = "星期一";
+"day.tuesday" = "星期二";
+"day.wednesday" = "星期三";
+"day.thursday" = "星期四";
+"day.friday" = "星期五";
+"day.saturday" = "星期六";
+"day.sunday" = "星期日";
+
+/* Lunch Reminder */
+"lunch.title" = "午餐提醒";
+"lunch.enable" = "启用午餐提醒";
+"lunch.time" = "时间:";
+"lunch.helpText" = "到了午餐时间，蓝屏会提醒你。";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "一面现代的正念之钟";
+"about.description" = "保护视力，培养正念。每隔几小时，一个温和的蓝屏提醒会鼓励你将目光从屏幕上移开，注视远方，深呼吸片刻。\n\n灵感源自经典计算机的怀旧风格，重新构想为一款数字健康工具。";
+"about.versionFormat" = "版本 %@";
+
+/* Language */
+"language.system" = "跟随系统";
+
+/* Accessibility */
+"a11y.overlay.label" = "蓝屏提醒";
+"a11y.overlay.hint" = "请将目光从屏幕上移开，深呼吸。按任意键或点击关闭。";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "左键点击触发，右键点击打开设置";

@@ -4,40 +4,40 @@ struct CustomScheduleView: View {
     @ObservedObject private var preferences = Preferences.shared
 
     private let weekdays: [(Int, String)] = [
-        (2, "Monday"),
-        (3, "Tuesday"),
-        (4, "Wednesday"),
-        (5, "Thursday"),
-        (6, "Friday"),
-        (7, "Saturday"),
-        (1, "Sunday")
+        (2, "day.monday"),
+        (3, "day.tuesday"),
+        (4, "day.wednesday"),
+        (5, "day.thursday"),
+        (6, "day.friday"),
+        (7, "day.saturday"),
+        (1, "day.sunday")
     ]
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Toggle("Use Custom Schedule", isOn: $preferences.useCustomSchedule)
+            Toggle(L("schedule.useCustom"), isOn: $preferences.useCustomSchedule)
                 .font(.headline)
 
             if preferences.useCustomSchedule {
-                GroupBox("Active Days") {
+                GroupBox(L("schedule.activeDays")) {
                     VStack(alignment: .leading, spacing: 6) {
                         ForEach(weekdays, id: \.0) { day in
-                            Toggle(day.1, isOn: weekdayBinding(for: day.0))
+                            Toggle(L(day.1), isOn: weekdayBinding(for: day.0))
                         }
                     }
                     .padding(4)
                 }
 
-                GroupBox("Active Hours") {
+                GroupBox(L("schedule.activeHours")) {
                     HStack {
-                        Picker("From", selection: $preferences.startHour) {
+                        Picker(L("schedule.from"), selection: $preferences.startHour) {
                             ForEach(0..<24, id: \.self) { hour in
                                 Text(formatHour(hour)).tag(hour)
                             }
                         }
                         .frame(maxWidth: 140)
 
-                        Picker("To", selection: $preferences.endHour) {
+                        Picker(L("schedule.to"), selection: $preferences.endHour) {
                             ForEach(0..<24, id: \.self) { hour in
                                 Text(formatHour(hour)).tag(hour)
                             }
@@ -47,7 +47,7 @@ struct CustomScheduleView: View {
                     .padding(4)
                 }
 
-                Text("Blue screen reminders will only trigger during the selected days and hours.")
+                Text(L("schedule.helpText"))
                     .font(.caption)
                     .foregroundColor(.secondary)
             }

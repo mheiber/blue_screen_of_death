@@ -1,0 +1,79 @@
+/* ᏣᎳᎩ ᎦᏬᏂᎯᏍᏗ (Cherokee) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "ᎪᎯ ᎠᎴᏂᏙᎲ";
+"menu.enabled" = "ᎠᏁᏍᎩᎾ";
+"menu.styleFormat" = "ᎠᏓᏅᏖᏗ: %@";
+"menu.intervalFormat" = "ᎠᏟᎶᏍᏗ: %@";
+"menu.customSchedule" = "ᎤᏙᏢᏒ ᎠᏟᎶᏍᏗ…";
+"menu.suppressScreenShare" = "ᎠᏍᏚᎢᏓ ᎠᏍᏓᏩᏛᏍᏗ ᎠᏓᏅᏖᏍᎬᎢ";
+"menu.lunchReminderFormat" = "ᎠᎵᏍᏓᏴᏗ ᎠᏅᏓᏗᏍᏗ (%@)…";
+"menu.lunchReminder" = "ᎠᎵᏍᏓᏴᏗ ᎠᏅᏓᏗᏍᏗ…";
+"menu.nextFormat" = "ᏔᎵᏁ: %@";
+"menu.about" = "ᏄᏍᏗᏓᏅᏖᏍᎬ Blue Screen of Death";
+"menu.quit" = "ᎠᏑᏰᏍᏗ";
+"menu.language" = "ᎦᏬᏂᎯᏍᏗ";
+
+/* Styles */
+"style.modern" = "ᎢᏤ ᎨᏒᎢ";
+"style.classic" = "ᎡᎶᎯ ᎨᏒᎢ";
+"style.classicDump" = "ᎡᎶᎯ ᎠᏍᏓᏩᏛᏍᏗ";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "ᎤᏙᏢᏒᎢ";
+
+/* Intervals */
+"interval.twentyMinutes" = "ᏔᎵᏁ ᏍᎪᎯ ᎢᏳᏟᎶᏛ ᏗᎧᎸᎬ";
+"interval.oneHour" = "ᏐᏈᎢ ᏑᏟᎶᏓ ᏗᎧᎸᎬ";
+"interval.twoHours" = "ᏔᎵ ᏑᏟᎶᏓ ᏗᎧᎸᎬ";
+"interval.threeHours" = "ᏦᎢ ᏑᏟᎶᏓ ᏗᎧᎸᎬ";
+"interval.randomShort" = "ᎤᏙᏢᏒᎢ (~1.5 ᏑᏟᎶᏓ)";
+"interval.randomLong" = "ᎤᏙᏢᏒᎢ (~3 ᏑᏟᎶᏓ)";
+"interval.customFormat" = "ᎤᏙᏢᏒ (%d ᎢᏯᏃ)…";
+"interval.custom" = "ᎤᏙᏢᏒ…";
+"interval.everyNMinFormat" = "ᏗᎧᎸᎬ %d ᎢᏯᏃ";
+
+/* Custom Interval View */
+"customInterval.title" = "ᎤᏙᏢᏒ ᎠᏟᎶᏍᏗ";
+"customInterval.minutes" = "ᎢᏯᏔᏬᏍᏔᏅ:";
+"customInterval.range" = "ᎠᏍᏆᏂᎪᏗ: 1–240 ᎢᏯᏔᏬᏍᏔᏅ";
+"customInterval.apply" = "ᎠᎸᏉᏗ";
+
+/* Schedule */
+"schedule.title" = "ᎤᏙᏢᏒ ᎠᏟᎶᏍᏗ";
+"schedule.useCustom" = "ᎤᏙᏢᏒ ᎠᏟᎶᏍᏗ ᎤᏲᏉ";
+"schedule.activeDays" = "ᎤᏂᎩᏗᏳ ᏅᏙ ᏫᎨᏒᎢ";
+"schedule.activeHours" = "ᎤᏂᎩᏗᏳ ᏑᏟᎶᏓ";
+"schedule.from" = "ᎠᏓᎴᏂᏍᎬ";
+"schedule.to" = "ᎬᏗ";
+"schedule.helpText" = "ᏌᎪᏂᎨ ᎠᏍᏓᏩᏛᏍᏗ ᎠᏅᏓᏗᏍᏙᏗ ᎠᏁᏍᎨᏍᏗ ᎾᏍᎩ ᎤᏙᏢᏒ ᏅᏙ ᏫᎨᏒᎢ ᎠᎴ ᏑᏟᎶᏓ ᎢᏳᏍᏗ.";
+
+/* Days */
+"day.monday" = "ᎤᎾᏙᏓᏉᏅᎢ";
+"day.tuesday" = "ᏔᎵᏁᎢᎦ";
+"day.wednesday" = "ᏦᎢᏁᎢᎦ";
+"day.thursday" = "ᏅᎩᏁᎢᎦ";
+"day.friday" = "ᏧᎾᎩᎶᏍᏗ";
+"day.saturday" = "ᎤᎾᏙᏓᏈᏕᎾ";
+"day.sunday" = "ᎤᎾᏙᏓᏆᏍᎬᎢ";
+
+/* Lunch Reminder */
+"lunch.title" = "ᎠᎵᏍᏓᏴᏗ ᎠᏅᏓᏗᏍᏗ";
+"lunch.enable" = "ᎠᎵᏍᏓᏴᏗ ᎠᏅᏓᏗᏍᏗ ᎠᏁᏍᎩᎾ";
+"lunch.time" = "ᎠᏟᎶᏍᏗ:";
+"lunch.helpText" = "ᏌᎪᏂᎨ ᎠᏍᏓᏩᏛᏍᏗ ᎬᏅᏓᏗᏍᏙᏗ ᎾᏍᎩ ᎠᎵᏍᏓᏴᏗ ᎨᏒᎢ.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "ᎢᏤ ᎨᏒᎢ ᎠᏓᏅᏖᏍᎬ ᎠᎵᏏᎾᎯᏍᏗ";
+"about.description" = "ᏕᏣᏚᎪᏔ ᏫᏓᏎᎸᎩ ᎠᎴ ᎤᏙᎯᏳᎯᏍᏗ ᏕᎦᎶᏗ. ᏐᏈᎢ ᏔᎵ ᏑᏟᎶᏓ ᏗᎧᎸᎬ, ᏌᎪᏂᎨ ᎠᏍᏓᏩᏛᏍᏗ ᎠᏅᏓᏗᏍᏗ ᏫᏣᏓᏅᏖᏍᏗ ᎠᏍᏓᏩᏛᏍᏗ ᏂᏗᎬᏪᎳᏁᎸ ᎢᏗ, ᎣᏏ ᏂᏗᎬᏪᎳᏁᎸ ᎢᏅ ᏥᏄᏍᏗ, ᎠᎴ ᎤᏙᎯᏳᎯᏍᏗ ᎠᏓᏄᎸᏍᏗ.\n\nᎡᎶᎯ ᎠᏍᏆᏗᏍᏗ ᎧᏁᏉᏍᏗ ᎨᏒᎢ, ᎢᏤ ᎠᏓᏅᏖᏍᎬ ᎢᎬᏱ ᏗᎦᏓᏄᎸ ᎪᎱᏍᏗ.";
+"about.versionFormat" = "ᎤᏙᎯᏳᎯ %@";
+
+/* Language */
+"language.system" = "ᎠᏍᏆᏗᏍᏗ ᎤᏙᏢᏒᎢ";
+
+/* Accessibility */
+"a11y.overlay.label" = "ᏌᎪᏂᎨ ᎠᏍᏓᏩᏛᏍᏗ ᎠᏅᏓᏗᏍᏗ";
+"a11y.overlay.hint" = "ᏫᏣᏓᏅᏖᏍᏗ ᎠᏍᏓᏩᏛᏍᏗ ᏂᏗᎬᏪᎳᏁᎸ ᎢᏗ ᎠᎴ ᎠᏓᏄᎸᏍᏗ. ᎦᏙᎯ ᏗᏍᏚᎢᏍᏗ ᏗᎦᎳᏅᏓ ᎠᎴᏃ ᏗᏍᏚᎢᏍᏗ ᎠᏁᏢᏔᏅᎢ.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "ᎠᎦᏍᎦᏂ ᏗᏍᏚᎢᏍᏗ ᎠᎴᏂᏙᎲ, ᎠᎦᏘᏏ ᏗᏍᏚᎢᏍᏗ ᎠᏓᏅᏖᏍᏗ";

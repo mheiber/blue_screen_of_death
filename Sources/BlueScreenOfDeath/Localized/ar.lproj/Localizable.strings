@@ -1,0 +1,79 @@
+/* Arabic (العربية) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "تشغيل الآن";
+"menu.enabled" = "مفعّل";
+"menu.styleFormat" = "النمط: %@";
+"menu.intervalFormat" = "الفاصل الزمني: %@";
+"menu.customSchedule" = "جدول مخصص…";
+"menu.suppressScreenShare" = "إيقاف أثناء مشاركة الشاشة";
+"menu.lunchReminderFormat" = "تذكير الغداء (%@)…";
+"menu.lunchReminder" = "تذكير الغداء…";
+"menu.nextFormat" = "التالي: %@";
+"menu.about" = "حول Blue Screen of Death";
+"menu.quit" = "إنهاء";
+"menu.language" = "اللغة";
+
+/* Styles */
+"style.modern" = "حديث";
+"style.classic" = "كلاسيكي";
+"style.classicDump" = "كلاسيكي مفصّل";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "عشوائي";
+
+/* Intervals */
+"interval.twentyMinutes" = "كل ٢٠ دقيقة";
+"interval.oneHour" = "كل ساعة";
+"interval.twoHours" = "كل ساعتين";
+"interval.threeHours" = "كل ٣ ساعات";
+"interval.randomShort" = "عشوائي (~١٫٥ ساعة)";
+"interval.randomLong" = "عشوائي (~٣ ساعات)";
+"interval.customFormat" = "مخصص (%d د)…";
+"interval.custom" = "مخصص…";
+"interval.everyNMinFormat" = "كل %d د";
+
+/* Custom Interval View */
+"customInterval.title" = "فاصل زمني مخصص";
+"customInterval.minutes" = "الدقائق:";
+"customInterval.range" = "النطاق: ١–٢٤٠ دقيقة";
+"customInterval.apply" = "تطبيق";
+
+/* Schedule */
+"schedule.title" = "جدول مخصص";
+"schedule.useCustom" = "استخدام جدول مخصص";
+"schedule.activeDays" = "الأيام النشطة";
+"schedule.activeHours" = "الساعات النشطة";
+"schedule.from" = "من";
+"schedule.to" = "إلى";
+"schedule.helpText" = "ستظهر تذكيرات الشاشة الزرقاء فقط خلال الأيام والساعات المحددة.";
+
+/* Days */
+"day.monday" = "الإثنين";
+"day.tuesday" = "الثلاثاء";
+"day.wednesday" = "الأربعاء";
+"day.thursday" = "الخميس";
+"day.friday" = "الجمعة";
+"day.saturday" = "السبت";
+"day.sunday" = "الأحد";
+
+/* Lunch Reminder */
+"lunch.title" = "تذكير الغداء";
+"lunch.enable" = "تفعيل تذكير الغداء";
+"lunch.time" = "الوقت:";
+"lunch.helpText" = "ستذكّرك الشاشة الزرقاء عندما يحين وقت الغداء.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "جرس وعي عصري";
+"about.description" = "احمِ بصرك وعزّز يقظتك الذهنية. كل بضع ساعات، يظهر تذكير لطيف بشاشة زرقاء يشجّعك على النظر بعيدًا عن الشاشة، وتركيز عينيك على شيء في الأفق، وأخذ نفس عميق بوعي.\n\nمستوحى من حنين الحوسبة الكلاسيكية، أُعيد تصوّره كأداة للرفاهية الرقمية.";
+"about.versionFormat" = "الإصدار %@";
+
+/* Language */
+"language.system" = "الإعداد الافتراضي للنظام";
+
+/* Accessibility */
+"a11y.overlay.label" = "تذكير الشاشة الزرقاء";
+"a11y.overlay.hint" = "خذ لحظة للنظر بعيدًا عن الشاشة والتنفس. اضغط أي مفتاح أو انقر للإغلاق.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "انقر بالزر الأيسر للتشغيل، وبالزر الأيمن للإعدادات";

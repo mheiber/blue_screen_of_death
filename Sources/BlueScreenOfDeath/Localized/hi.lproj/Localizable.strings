@@ -1,0 +1,79 @@
+/* Hindi (hi) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "अभी चालू करें";
+"menu.enabled" = "सक्रिय";
+"menu.styleFormat" = "शैली: %@";
+"menu.intervalFormat" = "अंतराल: %@";
+"menu.customSchedule" = "कस्टम शेड्यूल…";
+"menu.suppressScreenShare" = "स्क्रीन शेयर के दौरान रोकें";
+"menu.lunchReminderFormat" = "दोपहर के भोजन का अनुस्मारक (%@)…";
+"menu.lunchReminder" = "दोपहर के भोजन का अनुस्मारक…";
+"menu.nextFormat" = "अगला: %@";
+"menu.about" = "Blue Screen of Death के बारे में";
+"menu.quit" = "बंद करें";
+"menu.language" = "भाषा";
+
+/* Styles */
+"style.modern" = "आधुनिक";
+"style.classic" = "क्लासिक";
+"style.classicDump" = "क्लासिक डम्प";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "यादृच्छिक";
+
+/* Intervals */
+"interval.twentyMinutes" = "हर 20 मिनट";
+"interval.oneHour" = "हर घंटे";
+"interval.twoHours" = "हर 2 घंटे";
+"interval.threeHours" = "हर 3 घंटे";
+"interval.randomShort" = "यादृच्छिक (~1.5 घंटे)";
+"interval.randomLong" = "यादृच्छिक (~3 घंटे)";
+"interval.customFormat" = "कस्टम (%d मिनट)…";
+"interval.custom" = "कस्टम…";
+"interval.everyNMinFormat" = "हर %d मिनट";
+
+/* Custom Interval View */
+"customInterval.title" = "कस्टम अंतराल";
+"customInterval.minutes" = "मिनट:";
+"customInterval.range" = "सीमा: 1–240 मिनट";
+"customInterval.apply" = "लागू करें";
+
+/* Schedule */
+"schedule.title" = "कस्टम शेड्यूल";
+"schedule.useCustom" = "कस्टम शेड्यूल का उपयोग करें";
+"schedule.activeDays" = "सक्रिय दिन";
+"schedule.activeHours" = "सक्रिय घंटे";
+"schedule.from" = "से";
+"schedule.to" = "तक";
+"schedule.helpText" = "ब्लू स्क्रीन अनुस्मारक केवल चयनित दिनों और घंटों के दौरान सक्रिय होंगे।";
+
+/* Days */
+"day.monday" = "सोमवार";
+"day.tuesday" = "मंगलवार";
+"day.wednesday" = "बुधवार";
+"day.thursday" = "गुरुवार";
+"day.friday" = "शुक्रवार";
+"day.saturday" = "शनिवार";
+"day.sunday" = "रविवार";
+
+/* Lunch Reminder */
+"lunch.title" = "दोपहर के भोजन का अनुस्मारक";
+"lunch.enable" = "दोपहर के भोजन का अनुस्मारक सक्रिय करें";
+"lunch.time" = "समय:";
+"lunch.helpText" = "दोपहर के भोजन के समय ब्लू स्क्रीन आपको याद दिलाएगी।";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "जागरूकता की एक आधुनिक घंटी";
+"about.description" = "अपनी आँखों की रक्षा करें और सजगता विकसित करें। हर कुछ घंटों में, एक हल्का ब्लू स्क्रीन अनुस्मारक आपको स्क्रीन से दूर देखने, दूर की किसी चीज़ पर नज़र केंद्रित करने और एक सजग साँस लेने के लिए प्रोत्साहित करता है।\n\nक्लासिक कम्प्यूटिंग की यादों से प्रेरित, डिजिटल कल्याण के एक उपकरण के रूप में पुनर्कल्पित।";
+"about.versionFormat" = "संस्करण %@";
+
+/* Language */
+"language.system" = "सिस्टम डिफ़ॉल्ट";
+
+/* Accessibility */
+"a11y.overlay.label" = "ब्लू स्क्रीन अनुस्मारक";
+"a11y.overlay.hint" = "एक पल रुकें, स्क्रीन से दूर देखें और साँस लें। बंद करने के लिए कोई भी कुंजी दबाएँ या क्लिक करें।";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "ट्रिगर करने के लिए बायाँ-क्लिक, सेटिंग्स के लिए दायाँ-क्लिक करें";

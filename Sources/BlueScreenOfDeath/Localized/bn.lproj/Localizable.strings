@@ -1,0 +1,79 @@
+/* Bengali (bn) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "এখনই চালু করুন";
+"menu.enabled" = "সক্রিয়";
+"menu.styleFormat" = "শৈলী: %@";
+"menu.intervalFormat" = "ব্যবধান: %@";
+"menu.customSchedule" = "কাস্টম সময়সূচি…";
+"menu.suppressScreenShare" = "স্ক্রিন শেয়ারের সময় বন্ধ রাখুন";
+"menu.lunchReminderFormat" = "দুপুরের খাবারের স্মারক (%@)…";
+"menu.lunchReminder" = "দুপুরের খাবারের স্মারক…";
+"menu.nextFormat" = "পরবর্তী: %@";
+"menu.about" = "Blue Screen of Death সম্পর্কে";
+"menu.quit" = "বন্ধ করুন";
+"menu.language" = "ভাষা";
+
+/* Styles */
+"style.modern" = "আধুনিক";
+"style.classic" = "ক্লাসিক";
+"style.classicDump" = "ক্লাসিক ডাম্প";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "এলোমেলো";
+
+/* Intervals */
+"interval.twentyMinutes" = "প্রতি ২০ মিনিটে";
+"interval.oneHour" = "প্রতি ঘণ্টায়";
+"interval.twoHours" = "প্রতি ২ ঘণ্টায়";
+"interval.threeHours" = "প্রতি ৩ ঘণ্টায়";
+"interval.randomShort" = "এলোমেলো (~১.৫ ঘণ্টা)";
+"interval.randomLong" = "এলোমেলো (~৩ ঘণ্টা)";
+"interval.customFormat" = "কাস্টম (%d মিনিট)…";
+"interval.custom" = "কাস্টম…";
+"interval.everyNMinFormat" = "প্রতি %d মিনিটে";
+
+/* Custom Interval View */
+"customInterval.title" = "কাস্টম ব্যবধান";
+"customInterval.minutes" = "মিনিট:";
+"customInterval.range" = "পরিসর: ১–২৪০ মিনিট";
+"customInterval.apply" = "প্রয়োগ করুন";
+
+/* Schedule */
+"schedule.title" = "কাস্টম সময়সূচি";
+"schedule.useCustom" = "কাস্টম সময়সূচি ব্যবহার করুন";
+"schedule.activeDays" = "সক্রিয় দিনগুলি";
+"schedule.activeHours" = "সক্রিয় সময়";
+"schedule.from" = "থেকে";
+"schedule.to" = "পর্যন্ত";
+"schedule.helpText" = "ব্লু স্ক্রিন স্মারক শুধুমাত্র নির্বাচিত দিন ও সময়ে সক্রিয় হবে।";
+
+/* Days */
+"day.monday" = "সোমবার";
+"day.tuesday" = "মঙ্গলবার";
+"day.wednesday" = "বুধবার";
+"day.thursday" = "বৃহস্পতিবার";
+"day.friday" = "শুক্রবার";
+"day.saturday" = "শনিবার";
+"day.sunday" = "রবিবার";
+
+/* Lunch Reminder */
+"lunch.title" = "দুপুরের খাবারের স্মারক";
+"lunch.enable" = "দুপুরের খাবারের স্মারক সক্রিয় করুন";
+"lunch.time" = "সময়:";
+"lunch.helpText" = "দুপুরের খাবারের সময় হলে ব্লু স্ক্রিন আপনাকে মনে করিয়ে দেবে।";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "সচেতনতার একটি আধুনিক ঘণ্টা";
+"about.description" = "আপনার দৃষ্টিশক্তি রক্ষা করুন এবং মননশীলতা গড়ে তুলুন। প্রতি কয়েক ঘণ্টায়, একটি মৃদু ব্লু স্ক্রিন স্মারক আপনাকে স্ক্রিন থেকে দৃষ্টি সরাতে, দূরের কোনো কিছুতে চোখ ফেলতে এবং একটি সচেতন শ্বাস নিতে উৎসাহিত করে।\n\nক্লাসিক কম্পিউটিংয়ের নস্টালজিয়া থেকে অনুপ্রাণিত, ডিজিটাল সুস্থতার একটি হাতিয়ার হিসেবে পুনর্কল্পিত।";
+"about.versionFormat" = "সংস্করণ %@";
+
+/* Language */
+"language.system" = "সিস্টেম ডিফল্ট";
+
+/* Accessibility */
+"a11y.overlay.label" = "ব্লু স্ক্রিন স্মারক";
+"a11y.overlay.hint" = "একটু থামুন, স্ক্রিন থেকে দূরে তাকান এবং শ্বাস নিন। বাতিল করতে যেকোনো কী চাপুন বা ক্লিক করুন।";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "ট্রিগার করতে বাম-ক্লিক, সেটিংসের জন্য ডান-ক্লিক করুন";

@@ -1,0 +1,79 @@
+/* French (fr) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Déclencher maintenant";
+"menu.enabled" = "Activé";
+"menu.styleFormat" = "Style : %@";
+"menu.intervalFormat" = "Intervalle : %@";
+"menu.customSchedule" = "Horaire personnalisé…";
+"menu.suppressScreenShare" = "Suspendre pendant le partage d'écran";
+"menu.lunchReminderFormat" = "Rappel déjeuner (%@)…";
+"menu.lunchReminder" = "Rappel déjeuner…";
+"menu.nextFormat" = "Prochain : %@";
+"menu.about" = "À propos de Blue Screen of Death";
+"menu.quit" = "Quitter";
+"menu.language" = "Langue";
+
+/* Styles */
+"style.modern" = "Moderne";
+"style.classic" = "Classique";
+"style.classicDump" = "Classique Dump";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Aléatoire";
+
+/* Intervals */
+"interval.twentyMinutes" = "Toutes les 20 minutes";
+"interval.oneHour" = "Toutes les heures";
+"interval.twoHours" = "Toutes les 2 heures";
+"interval.threeHours" = "Toutes les 3 heures";
+"interval.randomShort" = "Aléatoire (~1,5 heures)";
+"interval.randomLong" = "Aléatoire (~3 heures)";
+"interval.customFormat" = "Personnalisé (%d min)…";
+"interval.custom" = "Personnalisé…";
+"interval.everyNMinFormat" = "Toutes les %d min";
+
+/* Custom Interval View */
+"customInterval.title" = "Intervalle personnalisé";
+"customInterval.minutes" = "Minutes :";
+"customInterval.range" = "Plage : 1–240 minutes";
+"customInterval.apply" = "Appliquer";
+
+/* Schedule */
+"schedule.title" = "Horaire personnalisé";
+"schedule.useCustom" = "Utiliser un horaire personnalisé";
+"schedule.activeDays" = "Jours actifs";
+"schedule.activeHours" = "Heures actives";
+"schedule.from" = "De";
+"schedule.to" = "À";
+"schedule.helpText" = "Les rappels d'écran bleu ne se déclencheront que pendant les jours et heures sélectionnés.";
+
+/* Days */
+"day.monday" = "Lundi";
+"day.tuesday" = "Mardi";
+"day.wednesday" = "Mercredi";
+"day.thursday" = "Jeudi";
+"day.friday" = "Vendredi";
+"day.saturday" = "Samedi";
+"day.sunday" = "Dimanche";
+
+/* Lunch Reminder */
+"lunch.title" = "Rappel déjeuner";
+"lunch.enable" = "Activer le rappel déjeuner";
+"lunch.time" = "Heure :";
+"lunch.helpText" = "L'écran bleu vous rappellera quand c'est l'heure de déjeuner.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "Une cloche de pleine conscience moderne";
+"about.description" = "Protégez votre vue et cultivez la pleine conscience. Toutes les quelques heures, un doux rappel sous forme d'écran bleu vous invite à détourner le regard de l'écran, à fixer un point au loin et à prendre une respiration consciente.\n\nInspiré par la nostalgie de l'informatique classique, réinventé comme outil de bien-être numérique.";
+"about.versionFormat" = "Version %@";
+
+/* Language */
+"language.system" = "Réglage système";
+
+/* Accessibility */
+"a11y.overlay.label" = "Rappel d'écran bleu";
+"a11y.overlay.hint" = "Prenez un moment pour détourner le regard de l'écran et respirer. Appuyez sur une touche ou cliquez pour fermer.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Clic gauche pour déclencher, clic droit pour les réglages";

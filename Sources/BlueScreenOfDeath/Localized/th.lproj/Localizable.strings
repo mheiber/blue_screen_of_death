@@ -1,0 +1,79 @@
+/* Thai (th) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "เริ่มเดี๋ยวนี้";
+"menu.enabled" = "เปิดใช้งาน";
+"menu.styleFormat" = "รูปแบบ: %@";
+"menu.intervalFormat" = "ช่วงเวลา: %@";
+"menu.customSchedule" = "ตารางเวลาที่กำหนดเอง…";
+"menu.suppressScreenShare" = "ระงับขณะแชร์หน้าจอ";
+"menu.lunchReminderFormat" = "เตือนมื้อกลางวัน (%@)…";
+"menu.lunchReminder" = "เตือนมื้อกลางวัน…";
+"menu.nextFormat" = "ครั้งถัดไป: %@";
+"menu.about" = "เกี่ยวกับ Blue Screen of Death";
+"menu.quit" = "ออก";
+"menu.language" = "ภาษา";
+
+/* Styles */
+"style.modern" = "สมัยใหม่";
+"style.classic" = "คลาสสิก";
+"style.classicDump" = "คลาสสิกดัมพ์";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "สุ่ม";
+
+/* Intervals */
+"interval.twentyMinutes" = "ทุก 20 นาที";
+"interval.oneHour" = "ทุกชั่วโมง";
+"interval.twoHours" = "ทุก 2 ชั่วโมง";
+"interval.threeHours" = "ทุก 3 ชั่วโมง";
+"interval.randomShort" = "สุ่ม (~1.5 ชั่วโมง)";
+"interval.randomLong" = "สุ่ม (~3 ชั่วโมง)";
+"interval.customFormat" = "กำหนดเอง (%d นาที)…";
+"interval.custom" = "กำหนดเอง…";
+"interval.everyNMinFormat" = "ทุก %d นาที";
+
+/* Custom Interval View */
+"customInterval.title" = "ช่วงเวลาที่กำหนดเอง";
+"customInterval.minutes" = "นาที:";
+"customInterval.range" = "ช่วง: 1–240 นาที";
+"customInterval.apply" = "นำไปใช้";
+
+/* Schedule */
+"schedule.title" = "ตารางเวลาที่กำหนดเอง";
+"schedule.useCustom" = "ใช้ตารางเวลาที่กำหนดเอง";
+"schedule.activeDays" = "วันที่ใช้งาน";
+"schedule.activeHours" = "ช่วงเวลาที่ใช้งาน";
+"schedule.from" = "ตั้งแต่";
+"schedule.to" = "ถึง";
+"schedule.helpText" = "การเตือนจอฟ้าจะทำงานเฉพาะในวันและเวลาที่เลือกไว้เท่านั้น";
+
+/* Days */
+"day.monday" = "วันจันทร์";
+"day.tuesday" = "วันอังคาร";
+"day.wednesday" = "วันพุธ";
+"day.thursday" = "วันพฤหัสบดี";
+"day.friday" = "วันศุกร์";
+"day.saturday" = "วันเสาร์";
+"day.sunday" = "วันอาทิตย์";
+
+/* Lunch Reminder */
+"lunch.title" = "เตือนมื้อกลางวัน";
+"lunch.enable" = "เปิดการเตือนมื้อกลางวัน";
+"lunch.time" = "เวลา:";
+"lunch.helpText" = "จอฟ้าจะเตือนคุณเมื่อถึงเวลามื้อกลางวัน";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "ระฆังแห่งสติสมัยใหม่";
+"about.description" = "ปกป้องสายตาและฝึกสติของคุณ ทุกสองสามชั่วโมง การเตือนจอฟ้าอย่างนุ่มนวลจะกระตุ้นให้คุณมองออกจากหน้าจอ โฟกัสสายตาไปที่สิ่งที่อยู่ไกลออกไป และหายใจอย่างมีสติ\n\nได้แรงบันดาลใจจากความทรงจำของคอมพิวเตอร์ยุคคลาสสิก ถูกรังสรรค์ขึ้นใหม่เป็นเครื่องมือเพื่อสุขภาวะดิจิทัล";
+"about.versionFormat" = "เวอร์ชัน %@";
+
+/* Language */
+"language.system" = "ค่าเริ่มต้นของระบบ";
+
+/* Accessibility */
+"a11y.overlay.label" = "การเตือนจอฟ้า";
+"a11y.overlay.hint" = "หยุดสักครู่ มองออกจากหน้าจอ และหายใจ กดปุ่มใดก็ได้หรือคลิกเพื่อปิด";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "คลิกซ้ายเพื่อเริ่ม คลิกขวาเพื่อตั้งค่า";

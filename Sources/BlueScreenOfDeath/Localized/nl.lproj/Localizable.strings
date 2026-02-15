@@ -1,0 +1,79 @@
+/* Dutch (nl) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Nu activeren";
+"menu.enabled" = "Ingeschakeld";
+"menu.styleFormat" = "Stijl: %@";
+"menu.intervalFormat" = "Interval: %@";
+"menu.customSchedule" = "Aangepast schema…";
+"menu.suppressScreenShare" = "Onderdrukken bij schermdeling";
+"menu.lunchReminderFormat" = "Lunchherinnering (%@)…";
+"menu.lunchReminder" = "Lunchherinnering…";
+"menu.nextFormat" = "Volgende: %@";
+"menu.about" = "Over Blue Screen of Death";
+"menu.quit" = "Stop";
+"menu.language" = "Taal";
+
+/* Styles */
+"style.modern" = "Modern";
+"style.classic" = "Klassiek";
+"style.classicDump" = "Klassiek Dump";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Willekeurig";
+
+/* Intervals */
+"interval.twentyMinutes" = "Elke 20 minuten";
+"interval.oneHour" = "Elk uur";
+"interval.twoHours" = "Elke 2 uur";
+"interval.threeHours" = "Elke 3 uur";
+"interval.randomShort" = "Willekeurig (~1,5 uur)";
+"interval.randomLong" = "Willekeurig (~3 uur)";
+"interval.customFormat" = "Aangepast (%d min.)…";
+"interval.custom" = "Aangepast…";
+"interval.everyNMinFormat" = "Elke %d min.";
+
+/* Custom Interval View */
+"customInterval.title" = "Aangepast interval";
+"customInterval.minutes" = "Minuten:";
+"customInterval.range" = "Bereik: 1–240 minuten";
+"customInterval.apply" = "Toepassen";
+
+/* Schedule */
+"schedule.title" = "Aangepast schema";
+"schedule.useCustom" = "Aangepast schema gebruiken";
+"schedule.activeDays" = "Actieve dagen";
+"schedule.activeHours" = "Actieve uren";
+"schedule.from" = "Van";
+"schedule.to" = "Tot";
+"schedule.helpText" = "Blauw scherm-herinneringen worden alleen geactiveerd op de geselecteerde dagen en uren.";
+
+/* Days */
+"day.monday" = "Maandag";
+"day.tuesday" = "Dinsdag";
+"day.wednesday" = "Woensdag";
+"day.thursday" = "Donderdag";
+"day.friday" = "Vrijdag";
+"day.saturday" = "Zaterdag";
+"day.sunday" = "Zondag";
+
+/* Lunch Reminder */
+"lunch.title" = "Lunchherinnering";
+"lunch.enable" = "Lunchherinnering inschakelen";
+"lunch.time" = "Tijd:";
+"lunch.helpText" = "Het blauwe scherm herinnert u eraan wanneer het lunchtijd is.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "Een moderne bel van bewustzijn";
+"about.description" = "Bescherm uw ogen en bevorder mindfulness. Om de paar uur nodigt een zachte blauw scherm-herinnering u uit om uw blik van het scherm af te wenden, uw ogen op iets in de verte te richten en een bewuste ademhaling te nemen.\n\nGeïnspireerd door de nostalgie van klassieke computers, opnieuw vormgegeven als hulpmiddel voor digitaal welzijn.";
+"about.versionFormat" = "Versie %@";
+
+/* Language */
+"language.system" = "Systeemstandaard";
+
+/* Accessibility */
+"a11y.overlay.label" = "Blauw scherm-herinnering";
+"a11y.overlay.hint" = "Neem even de tijd om uw blik van het scherm af te wenden en adem te halen. Druk op een toets of klik om te sluiten.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Linksklik om te activeren, rechtsklik voor instellingen";

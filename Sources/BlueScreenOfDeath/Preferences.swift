@@ -13,11 +13,11 @@ enum ScreenStyle: String, CaseIterable, Identifiable {
 
     var displayName: String {
         switch self {
-        case .modern: return "Modern"
-        case .classic: return "Classic"
-        case .classicDump: return "Classic Dump"
-        case .mojibake: return "Mojibake"
-        case .cyberwin2070: return "CyberWin 2070"
+        case .modern: return L("style.modern")
+        case .classic: return L("style.classic")
+        case .classicDump: return L("style.classicDump")
+        case .mojibake: return L("style.mojibake")
+        case .cyberwin2070: return L("style.cyberwin2070")
         }
     }
 }
@@ -35,12 +35,12 @@ enum TriggerInterval: String, CaseIterable, Identifiable {
 
     var displayName: String {
         switch self {
-        case .twentyMinutes: return "Every 20 minutes"
-        case .oneHour: return "Every hour"
-        case .twoHours: return "Every 2 hours"
-        case .threeHours: return "Every 3 hours"
-        case .randomShort: return "Random (~1.5 hours)"
-        case .randomLong: return "Random (~3 hours)"
+        case .twentyMinutes: return L("interval.twentyMinutes")
+        case .oneHour: return L("interval.oneHour")
+        case .twoHours: return L("interval.twoHours")
+        case .threeHours: return L("interval.threeHours")
+        case .randomShort: return L("interval.randomShort")
+        case .randomLong: return L("interval.randomLong")
         }
     }
 
@@ -179,7 +179,7 @@ final class Preferences: ObservableObject {
     /// Display name for the current interval setting
     var intervalDisplayName: String {
         if useCustomInterval {
-            return "Every \(customMinutes) min"
+            return L("interval.everyNMinFormat", customMinutes)
         }
         return selectedInterval.displayName
     }

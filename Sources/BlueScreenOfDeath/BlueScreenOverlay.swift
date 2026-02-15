@@ -31,6 +31,11 @@ final class BlueScreenOverlay {
         window.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
         window.isReleasedWhenClosed = false
 
+        // Accessibility: describe the overlay for screen readers
+        window.setAccessibilityRole(.popover)
+        window.setAccessibilityLabel(L("a11y.overlay.label"))
+        window.setAccessibilityHelp(L("a11y.overlay.hint"))
+
         window.contentView = BlueScreenStyleBuilder.buildView(for: style, frame: frame)
 
         window.makeKeyAndOrderFront(nil)
@@ -44,6 +49,19 @@ final class BlueScreenOverlay {
         ) { [weak self] _ in
             self?.dismiss()
             return nil
+        }
+
+        // VoiceOver announcement: tell screen reader users the purpose
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            let announcement = L("a11y.overlay.hint")
+            NSAccessibility.post(
+                element: NSApp as Any,
+                notification: .announcementRequested,
+                userInfo: [
+                    .announcement: announcement,
+                    .priority: NSAccessibilityPriorityLevel.high.rawValue,
+                ]
+            )
         }
     }
 

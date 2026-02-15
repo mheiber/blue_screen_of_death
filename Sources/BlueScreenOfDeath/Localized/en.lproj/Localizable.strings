@@ -1,0 +1,79 @@
+/* English (Base Language) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Trigger Now";
+"menu.enabled" = "Enabled";
+"menu.styleFormat" = "Style: %@";
+"menu.intervalFormat" = "Interval: %@";
+"menu.customSchedule" = "Custom Schedule…";
+"menu.suppressScreenShare" = "Suppress During Screen Share";
+"menu.lunchReminderFormat" = "Lunch Reminder (%@)…";
+"menu.lunchReminder" = "Lunch Reminder…";
+"menu.nextFormat" = "Next: %@";
+"menu.about" = "About Blue Screen of Death";
+"menu.quit" = "Quit";
+"menu.language" = "Language";
+
+/* Styles */
+"style.modern" = "Modern";
+"style.classic" = "Classic";
+"style.classicDump" = "Classic Dump";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Random";
+
+/* Intervals */
+"interval.twentyMinutes" = "Every 20 minutes";
+"interval.oneHour" = "Every hour";
+"interval.twoHours" = "Every 2 hours";
+"interval.threeHours" = "Every 3 hours";
+"interval.randomShort" = "Random (~1.5 hours)";
+"interval.randomLong" = "Random (~3 hours)";
+"interval.customFormat" = "Custom (%d min)…";
+"interval.custom" = "Custom…";
+"interval.everyNMinFormat" = "Every %d min";
+
+/* Custom Interval View */
+"customInterval.title" = "Custom Interval";
+"customInterval.minutes" = "Minutes:";
+"customInterval.range" = "Range: 1–240 minutes";
+"customInterval.apply" = "Apply";
+
+/* Schedule */
+"schedule.title" = "Custom Schedule";
+"schedule.useCustom" = "Use Custom Schedule";
+"schedule.activeDays" = "Active Days";
+"schedule.activeHours" = "Active Hours";
+"schedule.from" = "From";
+"schedule.to" = "To";
+"schedule.helpText" = "Blue screen reminders will only trigger during the selected days and hours.";
+
+/* Days */
+"day.monday" = "Monday";
+"day.tuesday" = "Tuesday";
+"day.wednesday" = "Wednesday";
+"day.thursday" = "Thursday";
+"day.friday" = "Friday";
+"day.saturday" = "Saturday";
+"day.sunday" = "Sunday";
+
+/* Lunch Reminder */
+"lunch.title" = "Lunch Reminder";
+"lunch.enable" = "Enable Lunch Reminder";
+"lunch.time" = "Time:";
+"lunch.helpText" = "Blue screen will remind you when it is lunch time.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "A Modern Bell of Awareness";
+"about.description" = "Protect your eyesight and cultivate mindfulness. Every few hours, a gentle blue screen reminder encourages you to look away from the screen, focus your eyes on something in the distance, and take a mindful breath.\n\nInspired by classic computing nostalgia, reimagined as a tool for digital wellbeing.";
+"about.versionFormat" = "Version %@";
+
+/* Language */
+"language.system" = "System Default";
+
+/* Accessibility */
+"a11y.overlay.label" = "Blue screen reminder";
+"a11y.overlay.hint" = "Take a moment to look away from the screen and breathe. Press any key or click to dismiss.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Left-click to trigger, right-click for settings";

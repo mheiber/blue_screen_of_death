@@ -1,0 +1,79 @@
+/* Polish (pl) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Pokaż teraz";
+"menu.enabled" = "Włączone";
+"menu.styleFormat" = "Styl: %@";
+"menu.intervalFormat" = "Interwał: %@";
+"menu.customSchedule" = "Harmonogram…";
+"menu.suppressScreenShare" = "Wyłącz podczas udostępniania ekranu";
+"menu.lunchReminderFormat" = "Przypomnienie o obiedzie (%@)…";
+"menu.lunchReminder" = "Przypomnienie o obiedzie…";
+"menu.nextFormat" = "Następny: %@";
+"menu.about" = "O Blue Screen of Death";
+"menu.quit" = "Zakończ";
+"menu.language" = "Język";
+
+/* Styles */
+"style.modern" = "Nowoczesny";
+"style.classic" = "Klasyczny";
+"style.classicDump" = "Klasyczny zrzut";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Losowy";
+
+/* Intervals */
+"interval.twentyMinutes" = "Co 20 minut";
+"interval.oneHour" = "Co godzinę";
+"interval.twoHours" = "Co 2 godziny";
+"interval.threeHours" = "Co 3 godziny";
+"interval.randomShort" = "Losowo (~1,5 godz.)";
+"interval.randomLong" = "Losowo (~3 godz.)";
+"interval.customFormat" = "Własny (%d min)…";
+"interval.custom" = "Własny…";
+"interval.everyNMinFormat" = "Co %d min";
+
+/* Custom Interval View */
+"customInterval.title" = "Własny interwał";
+"customInterval.minutes" = "Minuty:";
+"customInterval.range" = "Zakres: 1–240 minut";
+"customInterval.apply" = "Zastosuj";
+
+/* Schedule */
+"schedule.title" = "Harmonogram";
+"schedule.useCustom" = "Użyj harmonogramu";
+"schedule.activeDays" = "Aktywne dni";
+"schedule.activeHours" = "Aktywne godziny";
+"schedule.from" = "Od";
+"schedule.to" = "Do";
+"schedule.helpText" = "Niebieski ekran będzie się pojawiać tylko w wybrane dni i godziny.";
+
+/* Days */
+"day.monday" = "Poniedziałek";
+"day.tuesday" = "Wtorek";
+"day.wednesday" = "Środa";
+"day.thursday" = "Czwartek";
+"day.friday" = "Piątek";
+"day.saturday" = "Sobota";
+"day.sunday" = "Niedziela";
+
+/* Lunch Reminder */
+"lunch.title" = "Przypomnienie o obiedzie";
+"lunch.enable" = "Włącz przypomnienie o obiedzie";
+"lunch.time" = "Godzina:";
+"lunch.helpText" = "Niebieski ekran przypomni ci, gdy nadejdzie pora obiadu.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "Współczesny dzwon uważności";
+"about.description" = "Chroń wzrok i rozwijaj uważność. Co kilka godzin delikatne przypomnienie w postaci niebieskiego ekranu zachęca do oderwania wzroku od monitora, skupienia go na czymś w oddali i wzięcia świadomego oddechu.\n\nZainspirowane nostalgią za klasycznymi komputerami, na nowo wyobrażone jako narzędzie cyfrowego dobrostanu.";
+"about.versionFormat" = "Wersja %@";
+
+/* Language */
+"language.system" = "Domyślny systemowy";
+
+/* Accessibility */
+"a11y.overlay.label" = "Przypomnienie — niebieski ekran";
+"a11y.overlay.hint" = "Oderwij wzrok od ekranu i weź oddech. Naciśnij dowolny klawisz lub kliknij, aby zamknąć.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Lewy klik — pokaż, prawy klik — ustawienia";

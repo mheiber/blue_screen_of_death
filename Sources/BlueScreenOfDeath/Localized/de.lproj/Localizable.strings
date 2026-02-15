@@ -1,0 +1,79 @@
+/* German (de) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Jetzt auslösen";
+"menu.enabled" = "Aktiviert";
+"menu.styleFormat" = "Stil: %@";
+"menu.intervalFormat" = "Intervall: %@";
+"menu.customSchedule" = "Eigener Zeitplan…";
+"menu.suppressScreenShare" = "Bei Bildschirmfreigabe unterdrücken";
+"menu.lunchReminderFormat" = "Mittagserinnerung (%@)…";
+"menu.lunchReminder" = "Mittagserinnerung…";
+"menu.nextFormat" = "Nächste: %@";
+"menu.about" = "Über Blue Screen of Death";
+"menu.quit" = "Beenden";
+"menu.language" = "Sprache";
+
+/* Styles */
+"style.modern" = "Modern";
+"style.classic" = "Klassisch";
+"style.classicDump" = "Klassisch Dump";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Zufällig";
+
+/* Intervals */
+"interval.twentyMinutes" = "Alle 20 Minuten";
+"interval.oneHour" = "Jede Stunde";
+"interval.twoHours" = "Alle 2 Stunden";
+"interval.threeHours" = "Alle 3 Stunden";
+"interval.randomShort" = "Zufällig (~1,5 Stunden)";
+"interval.randomLong" = "Zufällig (~3 Stunden)";
+"interval.customFormat" = "Eigenes (%d Min.)…";
+"interval.custom" = "Eigenes…";
+"interval.everyNMinFormat" = "Alle %d Min.";
+
+/* Custom Interval View */
+"customInterval.title" = "Eigenes Intervall";
+"customInterval.minutes" = "Minuten:";
+"customInterval.range" = "Bereich: 1–240 Minuten";
+"customInterval.apply" = "Anwenden";
+
+/* Schedule */
+"schedule.title" = "Eigener Zeitplan";
+"schedule.useCustom" = "Eigenen Zeitplan verwenden";
+"schedule.activeDays" = "Aktive Tage";
+"schedule.activeHours" = "Aktive Stunden";
+"schedule.from" = "Von";
+"schedule.to" = "Bis";
+"schedule.helpText" = "Bluescreen-Erinnerungen werden nur an den ausgewählten Tagen und Uhrzeiten ausgelöst.";
+
+/* Days */
+"day.monday" = "Montag";
+"day.tuesday" = "Dienstag";
+"day.wednesday" = "Mittwoch";
+"day.thursday" = "Donnerstag";
+"day.friday" = "Freitag";
+"day.saturday" = "Samstag";
+"day.sunday" = "Sonntag";
+
+/* Lunch Reminder */
+"lunch.title" = "Mittagserinnerung";
+"lunch.enable" = "Mittagserinnerung aktivieren";
+"lunch.time" = "Uhrzeit:";
+"lunch.helpText" = "Der Bluescreen erinnert Sie daran, wenn es Mittagszeit ist.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "Eine moderne Achtsamkeitsglocke";
+"about.description" = "Schützen Sie Ihre Augen und fördern Sie Achtsamkeit. Alle paar Stunden lädt eine sanfte Bluescreen-Erinnerung dazu ein, den Blick vom Bildschirm abzuwenden, die Augen auf etwas in der Ferne zu richten und einen bewussten Atemzug zu nehmen.\n\nInspiriert von der Nostalgie klassischer Computer, neu gedacht als Werkzeug für digitales Wohlbefinden.";
+"about.versionFormat" = "Version %@";
+
+/* Language */
+"language.system" = "Systemstandard";
+
+/* Accessibility */
+"a11y.overlay.label" = "Bluescreen-Erinnerung";
+"a11y.overlay.hint" = "Nehmen Sie sich einen Moment, um den Blick vom Bildschirm abzuwenden und zu atmen. Drücken Sie eine beliebige Taste oder klicken Sie, um zu schließen.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Linksklick zum Auslösen, Rechtsklick für Einstellungen";

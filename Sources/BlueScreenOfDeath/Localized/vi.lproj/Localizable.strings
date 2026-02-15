@@ -1,0 +1,79 @@
+/* Vietnamese (vi) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Kích hoạt ngay";
+"menu.enabled" = "Đã bật";
+"menu.styleFormat" = "Kiểu: %@";
+"menu.intervalFormat" = "Khoảng cách: %@";
+"menu.customSchedule" = "Lịch tùy chỉnh…";
+"menu.suppressScreenShare" = "Tạm dừng khi chia sẻ màn hình";
+"menu.lunchReminderFormat" = "Nhắc ăn trưa (%@)…";
+"menu.lunchReminder" = "Nhắc ăn trưa…";
+"menu.nextFormat" = "Tiếp theo: %@";
+"menu.about" = "Giới thiệu Blue Screen of Death";
+"menu.quit" = "Thoát";
+"menu.language" = "Ngôn ngữ";
+
+/* Styles */
+"style.modern" = "Hiện đại";
+"style.classic" = "Cổ điển";
+"style.classicDump" = "Cổ điển chi tiết";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Ngẫu nhiên";
+
+/* Intervals */
+"interval.twentyMinutes" = "Mỗi 20 phút";
+"interval.oneHour" = "Mỗi giờ";
+"interval.twoHours" = "Mỗi 2 giờ";
+"interval.threeHours" = "Mỗi 3 giờ";
+"interval.randomShort" = "Ngẫu nhiên (~1,5 giờ)";
+"interval.randomLong" = "Ngẫu nhiên (~3 giờ)";
+"interval.customFormat" = "Tùy chỉnh (%d phút)…";
+"interval.custom" = "Tùy chỉnh…";
+"interval.everyNMinFormat" = "Mỗi %d phút";
+
+/* Custom Interval View */
+"customInterval.title" = "Khoảng cách tùy chỉnh";
+"customInterval.minutes" = "Phút:";
+"customInterval.range" = "Phạm vi: 1–240 phút";
+"customInterval.apply" = "Áp dụng";
+
+/* Schedule */
+"schedule.title" = "Lịch tùy chỉnh";
+"schedule.useCustom" = "Sử dụng lịch tùy chỉnh";
+"schedule.activeDays" = "Ngày hoạt động";
+"schedule.activeHours" = "Giờ hoạt động";
+"schedule.from" = "Từ";
+"schedule.to" = "Đến";
+"schedule.helpText" = "Nhắc nhở màn hình xanh chỉ xuất hiện vào những ngày và giờ đã chọn.";
+
+/* Days */
+"day.monday" = "Thứ Hai";
+"day.tuesday" = "Thứ Ba";
+"day.wednesday" = "Thứ Tư";
+"day.thursday" = "Thứ Năm";
+"day.friday" = "Thứ Sáu";
+"day.saturday" = "Thứ Bảy";
+"day.sunday" = "Chủ Nhật";
+
+/* Lunch Reminder */
+"lunch.title" = "Nhắc ăn trưa";
+"lunch.enable" = "Bật nhắc ăn trưa";
+"lunch.time" = "Thời gian:";
+"lunch.helpText" = "Màn hình xanh sẽ nhắc bạn khi đến giờ ăn trưa.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "Tiếng chuông tỉnh thức hiện đại";
+"about.description" = "Bảo vệ mắt và rèn luyện chánh niệm. Cứ mỗi vài giờ, một lời nhắc màn hình xanh nhẹ nhàng khuyến khích bạn nhìn ra xa màn hình, tập trung mắt vào một điểm ở phía xa và hít thở một hơi thật chánh niệm.\n\nLấy cảm hứng từ ký ức điện toán cổ điển, được tái tạo thành công cụ chăm sóc sức khỏe số.";
+"about.versionFormat" = "Phiên bản %@";
+
+/* Language */
+"language.system" = "Mặc định hệ thống";
+
+/* Accessibility */
+"a11y.overlay.label" = "Nhắc nhở màn hình xanh";
+"a11y.overlay.hint" = "Hãy dừng lại một chút, nhìn ra xa màn hình và hít thở. Nhấn phím bất kỳ hoặc bấm chuột để đóng.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Bấm chuột trái để kích hoạt, bấm chuột phải để mở cài đặt";

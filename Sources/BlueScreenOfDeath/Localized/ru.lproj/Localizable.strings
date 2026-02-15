@@ -1,0 +1,79 @@
+/* Russian (ru) — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Показать сейчас";
+"menu.enabled" = "Включено";
+"menu.styleFormat" = "Стиль: %@";
+"menu.intervalFormat" = "Интервал: %@";
+"menu.customSchedule" = "Расписание…";
+"menu.suppressScreenShare" = "Не показывать при демонстрации экрана";
+"menu.lunchReminderFormat" = "Напоминание об обеде (%@)…";
+"menu.lunchReminder" = "Напоминание об обеде…";
+"menu.nextFormat" = "Следующий: %@";
+"menu.about" = "О приложении Blue Screen of Death";
+"menu.quit" = "Завершить";
+"menu.language" = "Язык";
+
+/* Styles */
+"style.modern" = "Современный";
+"style.classic" = "Классический";
+"style.classicDump" = "Классический дамп";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Случайный";
+
+/* Intervals */
+"interval.twentyMinutes" = "Каждые 20 минут";
+"interval.oneHour" = "Каждый час";
+"interval.twoHours" = "Каждые 2 часа";
+"interval.threeHours" = "Каждые 3 часа";
+"interval.randomShort" = "Случайно (~1,5 часа)";
+"interval.randomLong" = "Случайно (~3 часа)";
+"interval.customFormat" = "Свой (%d мин)…";
+"interval.custom" = "Свой…";
+"interval.everyNMinFormat" = "Каждые %d мин";
+
+/* Custom Interval View */
+"customInterval.title" = "Свой интервал";
+"customInterval.minutes" = "Минуты:";
+"customInterval.range" = "Диапазон: 1–240 минут";
+"customInterval.apply" = "Применить";
+
+/* Schedule */
+"schedule.title" = "Расписание";
+"schedule.useCustom" = "Использовать расписание";
+"schedule.activeDays" = "Активные дни";
+"schedule.activeHours" = "Активные часы";
+"schedule.from" = "С";
+"schedule.to" = "До";
+"schedule.helpText" = "Синий экран будет появляться только в выбранные дни и часы.";
+
+/* Days */
+"day.monday" = "Понедельник";
+"day.tuesday" = "Вторник";
+"day.wednesday" = "Среда";
+"day.thursday" = "Четверг";
+"day.friday" = "Пятница";
+"day.saturday" = "Суббота";
+"day.sunday" = "Воскресенье";
+
+/* Lunch Reminder */
+"lunch.title" = "Напоминание об обеде";
+"lunch.enable" = "Включить напоминание об обеде";
+"lunch.time" = "Время:";
+"lunch.helpText" = "Синий экран напомнит вам, когда наступит время обеда.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "Современный колокол осознанности";
+"about.description" = "Берегите зрение и развивайте осознанность. Каждые несколько часов мягкое напоминание в виде синего экрана предлагает вам отвести взгляд от монитора, сфокусироваться на чём-то вдалеке и сделать осознанный вдох.\n\nВдохновлено ностальгией по классическим компьютерам, переосмыслено как инструмент цифрового благополучия.";
+"about.versionFormat" = "Версия %@";
+
+/* Language */
+"language.system" = "Системный язык";
+
+/* Accessibility */
+"a11y.overlay.label" = "Напоминание «синий экран»";
+"a11y.overlay.hint" = "Отвлекитесь от экрана и сделайте вдох. Нажмите любую клавишу или щёлкните мышью, чтобы закрыть.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Левый клик — показать, правый клик — настройки";

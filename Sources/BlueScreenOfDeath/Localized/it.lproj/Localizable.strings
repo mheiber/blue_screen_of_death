@@ -1,0 +1,79 @@
+/* Italiano — Blue Screen of Death */
+
+/* Menu */
+"menu.triggerNow" = "Attiva ora";
+"menu.enabled" = "Attivato";
+"menu.styleFormat" = "Stile: %@";
+"menu.intervalFormat" = "Intervallo: %@";
+"menu.customSchedule" = "Orario personalizzato…";
+"menu.suppressScreenShare" = "Sospendi durante condivisione schermo";
+"menu.lunchReminderFormat" = "Promemoria pranzo (%@)…";
+"menu.lunchReminder" = "Promemoria pranzo…";
+"menu.nextFormat" = "Prossimo: %@";
+"menu.about" = "Informazioni su Blue Screen of Death";
+"menu.quit" = "Esci";
+"menu.language" = "Lingua";
+
+/* Styles */
+"style.modern" = "Moderno";
+"style.classic" = "Classico";
+"style.classicDump" = "Classico (dump)";
+"style.mojibake" = "Mojibake";
+"style.cyberwin2070" = "CyberWin 2070";
+"style.random" = "Casuale";
+
+/* Intervals */
+"interval.twentyMinutes" = "Ogni 20 minuti";
+"interval.oneHour" = "Ogni ora";
+"interval.twoHours" = "Ogni 2 ore";
+"interval.threeHours" = "Ogni 3 ore";
+"interval.randomShort" = "Casuale (~1,5 ore)";
+"interval.randomLong" = "Casuale (~3 ore)";
+"interval.customFormat" = "Personalizzato (%d min)…";
+"interval.custom" = "Personalizzato…";
+"interval.everyNMinFormat" = "Ogni %d min";
+
+/* Custom Interval View */
+"customInterval.title" = "Intervallo personalizzato";
+"customInterval.minutes" = "Minuti:";
+"customInterval.range" = "Intervallo: 1–240 minuti";
+"customInterval.apply" = "Applica";
+
+/* Schedule */
+"schedule.title" = "Orario personalizzato";
+"schedule.useCustom" = "Usa orario personalizzato";
+"schedule.activeDays" = "Giorni attivi";
+"schedule.activeHours" = "Ore attive";
+"schedule.from" = "Da";
+"schedule.to" = "A";
+"schedule.helpText" = "I promemoria della schermata blu verranno attivati solo nei giorni e negli orari selezionati.";
+
+/* Days */
+"day.monday" = "Lunedì";
+"day.tuesday" = "Martedì";
+"day.wednesday" = "Mercoledì";
+"day.thursday" = "Giovedì";
+"day.friday" = "Venerdì";
+"day.saturday" = "Sabato";
+"day.sunday" = "Domenica";
+
+/* Lunch Reminder */
+"lunch.title" = "Promemoria pranzo";
+"lunch.enable" = "Attiva promemoria pranzo";
+"lunch.time" = "Ora:";
+"lunch.helpText" = "La schermata blu ti ricorderà quando è ora di pranzo.";
+
+/* About */
+"about.title" = "Blue Screen of Death";
+"about.subtitle" = "Una campana moderna di consapevolezza";
+"about.description" = "Proteggi la vista e coltiva la consapevolezza. Ogni poche ore, un delicato promemoria a schermata blu ti invita a distogliere lo sguardo dallo schermo, mettere a fuoco gli occhi su qualcosa in lontananza e fare un respiro consapevole.\n\nIspirato alla nostalgia dell'informatica classica, reimmaginato come strumento per il benessere digitale.";
+"about.versionFormat" = "Versione %@";
+
+/* Language */
+"language.system" = "Predefinito di sistema";
+
+/* Accessibility */
+"a11y.overlay.label" = "Promemoria schermata blu";
+"a11y.overlay.hint" = "Prenditi un momento per distogliere lo sguardo dallo schermo e respirare. Premi un tasto qualsiasi o fai clic per chiudere.";
+"a11y.statusItem.label" = "Blue Screen of Death";
+"a11y.statusItem.hint" = "Clic sinistro per attivare, clic destro per le impostazioni";

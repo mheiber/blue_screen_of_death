@@ -9,30 +9,22 @@ struct AboutView: View {
                 .frame(width: 80, height: 80)
                 .background(Color.blue)
                 .cornerRadius(16)
+                .accessibilityLabel(L("about.title"))
 
-            Text("Blue Screen of Death")
+            Text(L("about.title"))
                 .font(.title2.bold())
 
-            Text("A Modern Bell of Awareness")
+            Text(L("about.subtitle"))
                 .font(.subheadline)
                 .foregroundColor(.secondary)
 
-            Text("""
-                Protect your eyesight and cultivate mindfulness. \
-                Every few hours, a gentle blue screen reminder \
-                encourages you to look away from the screen, \
-                focus your eyes on something in the distance, \
-                and take a mindful breath.
-
-                Inspired by classic computing nostalgia, \
-                reimagined as a tool for digital wellbeing.
-                """)
+            Text(L("about.description"))
                 .font(.body)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
                 .padding(.horizontal)
 
-            Text("Version 1.0.0")
+            Text(L("about.versionFormat", "1.0.0"))
                 .font(.caption)
                 .foregroundColor(.secondary)
         }

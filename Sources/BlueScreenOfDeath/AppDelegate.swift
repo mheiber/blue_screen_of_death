@@ -17,8 +17,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.title = "0x"
             button.font = NSFont.monospacedSystemFont(ofSize: 12, weight: .bold)
             button.action = #selector(statusItemClicked(_:))
-            button.sendAction(on: [.leftMouseUp, .rightMouseUp])
+            button.sendAction(on: [.leftMouseUp, .rightMouseUp]
+            )
             button.target = self
+
+            // Accessibility
+            button.setAccessibilityLabel(L("a11y.statusItem.label"))
+            button.setAccessibilityHelp(L("a11y.statusItem.hint"))
         }
 
         // Start the scheduler
@@ -53,12 +58,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let scheduler = ScheduleManager.shared
 
         // Trigger Now (also available via right-click menu)
-        menu.addItem(NSMenuItem(title: "Trigger Now", action: #selector(triggerNow), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: L("menu.triggerNow"), action: #selector(triggerNow), keyEquivalent: ""))
 
         menu.addItem(.separator())
 
         // Enabled toggle
-        let enabledItem = NSMenuItem(title: "Enabled", action: #selector(toggleEnabled), keyEquivalent: "")
+        let enabledItem = NSMenuItem(title: L("menu.enabled"), action: #selector(toggleEnabled), keyEquivalent: "")
         enabledItem.state = prefs.isEnabled ? .on : .off
         menu.addItem(enabledItem)
 
@@ -71,13 +76,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             styleMenu.addItem(item)
         }
         styleMenu.addItem(.separator())
-        let randomItem = NSMenuItem(title: "Random", action: #selector(selectStyle(_:)), keyEquivalent: "")
+        let randomItem = NSMenuItem(title: L("style.random"), action: #selector(selectStyle(_:)), keyEquivalent: "")
         randomItem.representedObject = "random"
         randomItem.state = (prefs.selectedStyleRaw == "random") ? .on : .off
         styleMenu.addItem(randomItem)
         styleMenu.delegate = self
 
-        let styleMenuItem = NSMenuItem(title: "Style: \(styleDisplayName(prefs))", action: nil, keyEquivalent: "")
+        let styleMenuItem = NSMenuItem(title: L("menu.styleFormat", styleDisplayName(prefs)), action: nil, keyEquivalent: "")
         styleMenuItem.submenu = styleMenu
         menu.addItem(styleMenuItem)
 
@@ -95,7 +100,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         intervalMenu.addItem(.separator())
         let customIntervalItem = NSMenuItem(
-            title: prefs.useCustomInterval ? "Custom (\(prefs.customMinutes) min)..." : "Custom...",
+            title: prefs.useCustomInterval ? L("interval.customFormat", prefs.customMinutes) : L("interval.custom"),
             action: #selector(openCustomInterval),
             keyEquivalent: ""
         )
@@ -103,7 +108,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         intervalMenu.addItem(customIntervalItem)
 
         let intervalMenuItem = NSMenuItem(
-            title: "Interval: \(prefs.intervalDisplayName)",
+            title: L("menu.intervalFormat", prefs.intervalDisplayName),
             action: nil,
             keyEquivalent: ""
         )
@@ -111,11 +116,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(intervalMenuItem)
 
         // Custom Schedule
-        menu.addItem(NSMenuItem(title: "Custom Schedule...", action: #selector(openCustomSchedule), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: L("menu.customSchedule"), action: #selector(openCustomSchedule), keyEquivalent: ""))
 
         // Screen Share Suppression
         let screenShareItem = NSMenuItem(
-            title: "Suppress During Screen Share",
+            title: L("menu.suppressScreenShare"),
             action: #selector(toggleScreenShareSuppression),
             keyEquivalent: ""
         )
@@ -123,8 +128,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(screenShareItem)
 
         // Lunch Reminder (independent of interval)
+        let lunchTitle: String
+        if prefs.lunchReminderEnabled {
+            let timeStr = String(format: "%d:%02d", prefs.lunchReminderHour, prefs.lunchReminderMinute)
+            lunchTitle = L("menu.lunchReminderFormat", timeStr)
+        } else {
+            lunchTitle = L("menu.lunchReminder")
+        }
         let lunchItem = NSMenuItem(
-            title: "Lunch Reminder\(prefs.lunchReminderEnabled ? " (\(String(format: "%d:%02d", prefs.lunchReminderHour, prefs.lunchReminderMinute)))" : "")...",
+            title: lunchTitle,
             action: #selector(openLunchReminder),
             keyEquivalent: ""
         )
@@ -136,15 +148,48 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let formatter = RelativeDateTimeFormatter()
             formatter.unitsStyle = .abbreviated
             let relative = formatter.localizedString(for: next, relativeTo: Date())
-            let infoItem = NSMenuItem(title: "Next: \(relative)", action: nil, keyEquivalent: "")
+            let infoItem = NSMenuItem(title: L("menu.nextFormat", relative), action: nil, keyEquivalent: "")
             infoItem.isEnabled = false
             menu.addItem(infoItem)
         }
 
         menu.addItem(.separator())
 
-        menu.addItem(NSMenuItem(title: "About Blue Screen of Death", action: #selector(openAbout), keyEquivalent: ""))
-        menu.addItem(NSMenuItem(title: "Quit", action: #selector(quit), keyEquivalent: "q"))
+        // Language submenu with globe icon
+        let languageMenu = NSMenu()
+
+        // System Default option
+        let systemItem = NSMenuItem(title: L("language.system"), action: #selector(selectLanguage(_:)), keyEquivalent: "")
+        systemItem.representedObject = "system"
+        systemItem.state = (LocalizationManager.shared.currentLanguage == "system") ? .on : .off
+        languageMenu.addItem(systemItem)
+        languageMenu.addItem(.separator())
+
+        // All supported languages
+        for lang in LocalizationManager.supportedLanguages {
+            let title = lang.code == "en" ? lang.nativeName : "\(lang.nativeName) — \(lang.englishName)"
+            let item = NSMenuItem(title: title, action: #selector(selectLanguage(_:)), keyEquivalent: "")
+            item.representedObject = lang.code
+            item.state = (LocalizationManager.shared.currentLanguage == lang.code) ? .on : .off
+            languageMenu.addItem(item)
+        }
+
+        let languageMenuItem = NSMenuItem(
+            title: "\(L("menu.language")): \(LocalizationManager.shared.currentLanguageDisplayName)",
+            action: nil,
+            keyEquivalent: ""
+        )
+        languageMenuItem.submenu = languageMenu
+        if let globeImage = NSImage(systemSymbolName: "globe", accessibilityDescription: L("menu.language")) {
+            globeImage.isTemplate = true
+            languageMenuItem.image = globeImage
+        }
+        menu.addItem(languageMenuItem)
+
+        menu.addItem(.separator())
+
+        menu.addItem(NSMenuItem(title: L("menu.about"), action: #selector(openAbout), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: L("menu.quit"), action: #selector(quit), keyEquivalent: "q"))
 
         // Show the menu
         menu.delegate = self
@@ -158,7 +203,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let style = prefs.selectedStyle {
             return style.displayName
         }
-        return "Random"
+        return L("style.random")
     }
 
     // MARK: - Actions
@@ -182,6 +227,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Preferences.shared.selectedIntervalRaw = raw
     }
 
+    @objc private func selectLanguage(_ sender: NSMenuItem) {
+        guard let code = sender.representedObject as? String else { return }
+        LocalizationManager.shared.currentLanguage = code
+    }
+
     @objc private func openCustomInterval() {
         let window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 280, height: 150),
@@ -189,7 +239,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             backing: .buffered,
             defer: false
         )
-        window.title = "Custom Interval"
+        window.title = L("customInterval.title")
         window.contentView = NSHostingView(rootView: CustomIntervalView())
         window.center()
         window.isReleasedWhenClosed = false
@@ -208,7 +258,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             backing: .buffered,
             defer: false
         )
-        window.title = "Custom Schedule"
+        window.title = L("schedule.title")
         window.contentView = NSHostingView(rootView: CustomScheduleView())
         window.center()
         window.isReleasedWhenClosed = false
@@ -223,7 +273,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             backing: .buffered,
             defer: false
         )
-        window.title = "Lunch Reminder"
+        window.title = L("lunch.title")
         window.contentView = NSHostingView(rootView: LunchReminderView())
         window.center()
         window.isReleasedWhenClosed = false
@@ -238,7 +288,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             backing: .buffered,
             defer: false
         )
-        window.title = "About Blue Screen of Death"
+        window.title = L("menu.about")
         window.contentView = NSHostingView(rootView: AboutView())
         window.center()
         window.isReleasedWhenClosed = false
