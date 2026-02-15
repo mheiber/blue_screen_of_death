@@ -5,12 +5,9 @@ struct BlueScreenOfDeathApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
-        MenuBarExtra {
-            MenuBarView()
-        } label: {
-            Text("0x")
-                .font(.system(size: 12, weight: .bold, design: .monospaced))
+        // No visible windows — everything is in the menu bar status item
+        Settings {
+            EmptyView()
         }
-        .menuBarExtraStyle(.menu)
     }
 }

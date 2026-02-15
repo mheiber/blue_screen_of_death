@@ -1,6 +1,5 @@
 import Foundation
 import Combine
-import AppKit
 
 /// Screen style options for the blue screen overlay
 enum ScreenStyle: String, CaseIterable, Identifiable {
@@ -59,8 +58,6 @@ final class Preferences: ObservableObject {
         static let selectedStyleRaw = "selectedStyleRaw"
         static let customMinutes = "customMinutes"
         static let useCustomInterval = "useCustomInterval"
-        static let hotkeyCharacter = "hotkeyCharacter"
-        static let hotkeyModifiersRaw = "hotkeyModifiersRaw"
     }
 
     @Published var isEnabled: Bool {
@@ -113,56 +110,6 @@ final class Preferences: ObservableObject {
         didSet { defaults.set(useCustomInterval, forKey: Keys.useCustomInterval) }
     }
 
-    /// Hotkey character (empty string = no hotkey assigned)
-    @Published var hotkeyCharacter: String {
-        didSet { defaults.set(hotkeyCharacter, forKey: Keys.hotkeyCharacter) }
-    }
-
-    /// Hotkey modifier flags raw value
-    @Published var hotkeyModifiersRaw: UInt {
-        didSet { defaults.set(hotkeyModifiersRaw, forKey: Keys.hotkeyModifiersRaw) }
-    }
-
-    var hasHotkey: Bool { !hotkeyCharacter.isEmpty }
-
-    func clearHotkey() {
-        hotkeyCharacter = ""
-        hotkeyModifiersRaw = 0
-    }
-
-    func setHotkey(character: String, modifiers: UInt) {
-        hotkeyCharacter = character
-        hotkeyModifiersRaw = modifiers
-    }
-
-    /// System shortcuts that must not be overridden (Cmd + key)
-    static let blockedCmdKeys: Set<String> = [
-        "c", "v", "x", "z", "a", "s", "q", "w", "p", "f",
-        "n", "o", "t", "h", "m", " ",
-    ]
-
-    /// Validate a proposed hotkey. Returns nil if valid, or an error message.
-    static func validateHotkey(
-        character: String,
-        modifiers: NSEvent.ModifierFlags
-    ) -> String? {
-        let mods = modifiers.intersection([.command, .control, .option, .shift])
-
-        // Require at least one "real" modifier (not just Shift)
-        let hasRealModifier = !mods.intersection([.command, .control, .option]).isEmpty
-        guard hasRealModifier else {
-            return "A modifier key (Cmd, Ctrl, or Option) is required"
-        }
-
-        // Block system shortcuts: Cmd+<common key> with no other modifier
-        let onlyCmd = mods.subtracting(.shift) == .command
-        if onlyCmd && blockedCmdKeys.contains(character.lowercased()) {
-            return "That shortcut is reserved by the system"
-        }
-
-        return nil
-    }
-
     /// Returns the selected style, or nil if "random"
     var selectedStyle: ScreenStyle? {
         ScreenStyle(rawValue: selectedStyleRaw)
@@ -194,31 +141,26 @@ final class Preferences: ObservableObject {
     }
 
     private init() {
-        // Register defaults
         defaults.register(defaults: [
             Keys.isEnabled: true,
             Keys.intervalSeconds: TriggerInterval.twoHours.rawValue,
             Keys.launchAtLogin: false,
             Keys.useCustomSchedule: false,
-            Keys.enabledWeekdays: [2, 3, 4, 5, 6], // Mon-Fri
+            Keys.enabledWeekdays: [2, 3, 4, 5, 6],
             Keys.startHour: 9,
             Keys.endHour: 17,
             Keys.selectedStyleRaw: "modern",
             Keys.customMinutes: 20,
             Keys.useCustomInterval: false,
-            Keys.hotkeyCharacter: "",
-            Keys.hotkeyModifiersRaw: 0,
         ])
 
         self.isEnabled = defaults.bool(forKey: Keys.isEnabled)
         self.intervalSeconds = defaults.integer(forKey: Keys.intervalSeconds)
         self.launchAtLogin = defaults.bool(forKey: Keys.launchAtLogin)
         self.useCustomSchedule = defaults.bool(forKey: Keys.useCustomSchedule)
-        self.selectedStyleRaw = defaults.string(forKey: Keys.selectedStyleRaw) ?? "random"
+        self.selectedStyleRaw = defaults.string(forKey: Keys.selectedStyleRaw) ?? "modern"
         self.customMinutes = defaults.integer(forKey: Keys.customMinutes)
         self.useCustomInterval = defaults.bool(forKey: Keys.useCustomInterval)
-        self.hotkeyCharacter = defaults.string(forKey: Keys.hotkeyCharacter) ?? ""
-        self.hotkeyModifiersRaw = UInt(defaults.integer(forKey: Keys.hotkeyModifiersRaw))
 
         if let weekdays = defaults.array(forKey: Keys.enabledWeekdays) as? [Int] {
             self.enabledWeekdays = Set(weekdays)
@@ -244,7 +186,6 @@ final class Preferences: ObservableObject {
         if startHour <= endHour {
             return hour >= startHour && hour < endHour
         } else {
-            // Wraps around midnight
             return hour >= startHour || hour < endHour
         }
     }
