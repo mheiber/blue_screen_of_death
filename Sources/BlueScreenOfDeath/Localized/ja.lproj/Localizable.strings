@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "診断情報を収集中 ";
 "bsod.cyber.percentComplete" = "% 完了";
 "bsod.cyber.dumpingCore" = "コアダンプ中";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "致命的";
+"bsod.cyber.error" = "エラー";
+"bsod.cyber.kernelPanic" = "カーネル.パニック";
+"bsod.cyber.at" = " 位置 ";
+"bsod.cyber.process" = ": プロセス ";
+"bsod.cyber.exited" = " 終了 ";
+"bsod.cyber.signalFormat" = "シグナル %d";
+"bsod.cyber.addr" = ": 番地=";
+"bsod.cyber.segment" = " 区画=";
+"bsod.cyber.stackTrace" = "スタック追跡";
+"bsod.cyber.registers" = "レジスタ";
+"bsod.cyber.regRip" = "命令ポインタ=";
+"bsod.cyber.regRsp" = " スタックポインタ=";
+"bsod.cyber.regRbp" = " ベースポインタ=";
+"bsod.cyber.failedToUnload" = "アンロード失敗 ";
+"bsod.cyber.resourceBusy" = "リソース使用中";
+"bsod.cyber.refLabel" = "> 参照: ";
+"bsod.cyber.haltCodeLabel" = "> 停止コード: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "システム停止";
+"bsod.cyber.halt.kernelPanic" = "カーネルパニック";
+"bsod.cyber.halt.fatalException" = "致命的例外";
+"bsod.cyber.halt.unrecoverableError" = "回復不能エラー";
+"bsod.cyber.halt.watchdogTimeout" = "監視タイマー超過";
+"bsod.cyber.halt.tripleFault" = "三重障害";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "メモリ障害";
+"bsod.cyber.fault.segmentation" = "セグメンテーション障害";
+"bsod.cyber.fault.bus" = "バスエラー";
+"bsod.cyber.fault.stackOverflow" = "スタック溢れ";
+"bsod.cyber.fault.heapCorruption" = "ヒープ破損";
+"bsod.cyber.fault.nullDeref" = "ヌル参照";
+"bsod.cyber.fault.doubleFree" = "二重解放";
+"bsod.cyber.fault.useAfterFree" = "解放後使用";
+"bsod.cyber.fault.bufferOverrun" = "バッファ超過";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".命令";
+"bsod.cyber.seg.data" = ".データ";
+"bsod.cyber.seg.bss" = ".未初期化";
+"bsod.cyber.seg.rodata" = ".読専データ";
+"bsod.cyber.seg.heap" = ".ヒープ";
+"bsod.cyber.seg.stack" = ".スタック";

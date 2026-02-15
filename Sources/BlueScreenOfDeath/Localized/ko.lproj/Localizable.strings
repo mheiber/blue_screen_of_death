@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "진단 정보 수집 중 ";
 "bsod.cyber.percentComplete" = "% 완료";
 "bsod.cyber.dumpingCore" = "코어 덤프 중";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "치명적";
+"bsod.cyber.error" = "오류";
+"bsod.cyber.kernelPanic" = "커널.패닉";
+"bsod.cyber.at" = " 위치 ";
+"bsod.cyber.process" = ": 프로세스 ";
+"bsod.cyber.exited" = " 종료됨 ";
+"bsod.cyber.signalFormat" = "신호 %d";
+"bsod.cyber.addr" = ": 주소=";
+"bsod.cyber.segment" = " 구역=";
+"bsod.cyber.stackTrace" = "스택_추적";
+"bsod.cyber.registers" = "레지스터";
+"bsod.cyber.regRip" = "명령포인터=";
+"bsod.cyber.regRsp" = " 스택포인터=";
+"bsod.cyber.regRbp" = " 베이스포인터=";
+"bsod.cyber.failedToUnload" = "언로드 실패 ";
+"bsod.cyber.resourceBusy" = "자원 사용 중";
+"bsod.cyber.refLabel" = "> 참조: ";
+"bsod.cyber.haltCodeLabel" = "> 정지코드: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "시스템_정지";
+"bsod.cyber.halt.kernelPanic" = "커널_패닉";
+"bsod.cyber.halt.fatalException" = "치명적_예외";
+"bsod.cyber.halt.unrecoverableError" = "복구불능_오류";
+"bsod.cyber.halt.watchdogTimeout" = "감시_타이머_초과";
+"bsod.cyber.halt.tripleFault" = "삼중_장애";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "메모리_장애";
+"bsod.cyber.fault.segmentation" = "세그먼트_장애";
+"bsod.cyber.fault.bus" = "버스_오류";
+"bsod.cyber.fault.stackOverflow" = "스택_넘침";
+"bsod.cyber.fault.heapCorruption" = "힙_손상";
+"bsod.cyber.fault.nullDeref" = "널_참조";
+"bsod.cyber.fault.doubleFree" = "이중_해제";
+"bsod.cyber.fault.useAfterFree" = "해제후_사용";
+"bsod.cyber.fault.bufferOverrun" = "버퍼_초과";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".명령";
+"bsod.cyber.seg.data" = ".데이터";
+"bsod.cyber.seg.bss" = ".미초기화";
+"bsod.cyber.seg.rodata" = ".읽기전용";
+"bsod.cyber.seg.heap" = ".힙";
+"bsod.cyber.seg.stack" = ".스택";

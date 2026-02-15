@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "नैदानिक जानकारी एकत्र हो रही है ";
 "bsod.cyber.percentComplete" = "% पूर्ण";
 "bsod.cyber.dumpingCore" = "कोर डंपिंग";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "घातक";
+"bsod.cyber.error" = "त्रुटि";
+"bsod.cyber.kernelPanic" = "नाभिक.आतंक";
+"bsod.cyber.at" = " पर ";
+"bsod.cyber.process" = ": प्रक्रिया ";
+"bsod.cyber.exited" = " निकली ";
+"bsod.cyber.signalFormat" = "संकेत %d";
+"bsod.cyber.addr" = ": पता=";
+"bsod.cyber.segment" = " खंड=";
+"bsod.cyber.stackTrace" = "स्टैक_अनुरेख";
+"bsod.cyber.registers" = "रजिस्टर";
+"bsod.cyber.regRip" = "निर्देश_सूचक=";
+"bsod.cyber.regRsp" = " स्टैक_सूचक=";
+"bsod.cyber.regRbp" = " आधार_सूचक=";
+"bsod.cyber.failedToUnload" = "अनलोड विफल ";
+"bsod.cyber.resourceBusy" = "संसाधन व्यस्त";
+"bsod.cyber.refLabel" = "> संदर्भ: ";
+"bsod.cyber.haltCodeLabel" = "> रोक_कोड: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "प्रणाली_रोक";
+"bsod.cyber.halt.kernelPanic" = "नाभिक_आतंक";
+"bsod.cyber.halt.fatalException" = "घातक_अपवाद";
+"bsod.cyber.halt.unrecoverableError" = "अपुनर्प्राप्य_त्रुटि";
+"bsod.cyber.halt.watchdogTimeout" = "प्रहरी_समयसीमा";
+"bsod.cyber.halt.tripleFault" = "त्रिदोष";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "स्मृति_दोष";
+"bsod.cyber.fault.segmentation" = "खंडन_दोष";
+"bsod.cyber.fault.bus" = "बस_त्रुटि";
+"bsod.cyber.fault.stackOverflow" = "स्टैक_अतिप्रवाह";
+"bsod.cyber.fault.heapCorruption" = "हीप_भ्रष्टता";
+"bsod.cyber.fault.nullDeref" = "शून्य_संदर्भ";
+"bsod.cyber.fault.doubleFree" = "दोहरा_मुक्ति";
+"bsod.cyber.fault.useAfterFree" = "मुक्ति_पश्चात_उपयोग";
+"bsod.cyber.fault.bufferOverrun" = "बफर_अतिक्रमण";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".कोड";
+"bsod.cyber.seg.data" = ".आँकड़े";
+"bsod.cyber.seg.bss" = ".चर";
+"bsod.cyber.seg.rodata" = ".स्थिर_आँकड़े";
+"bsod.cyber.seg.heap" = ".हीप";
+"bsod.cyber.seg.stack" = ".स्टैक";

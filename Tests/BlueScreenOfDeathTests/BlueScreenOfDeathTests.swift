@@ -854,6 +854,27 @@ final class LocalizationCoverageTests: XCTestCase {
         // CyberWin 2070 BSOD
         "bsod.cyber.scanDiagnostic", "bsod.cyber.collectingDiagnostics",
         "bsod.cyber.percentComplete", "bsod.cyber.dumpingCore",
+        // CyberWin 2070 - Terminal keywords & labels
+        "bsod.cyber.fatal", "bsod.cyber.error", "bsod.cyber.kernelPanic",
+        "bsod.cyber.at", "bsod.cyber.process", "bsod.cyber.exited",
+        "bsod.cyber.signalFormat", "bsod.cyber.addr", "bsod.cyber.segment",
+        "bsod.cyber.stackTrace", "bsod.cyber.registers",
+        "bsod.cyber.regRip", "bsod.cyber.regRsp", "bsod.cyber.regRbp",
+        "bsod.cyber.failedToUnload", "bsod.cyber.resourceBusy",
+        "bsod.cyber.refLabel", "bsod.cyber.haltCodeLabel",
+        // CyberWin 2070 - Halt reasons
+        "bsod.cyber.halt.systemHalt", "bsod.cyber.halt.kernelPanic",
+        "bsod.cyber.halt.fatalException", "bsod.cyber.halt.unrecoverableError",
+        "bsod.cyber.halt.watchdogTimeout", "bsod.cyber.halt.tripleFault",
+        // CyberWin 2070 - Fault types
+        "bsod.cyber.fault.memory", "bsod.cyber.fault.segmentation",
+        "bsod.cyber.fault.bus", "bsod.cyber.fault.stackOverflow",
+        "bsod.cyber.fault.heapCorruption", "bsod.cyber.fault.nullDeref",
+        "bsod.cyber.fault.doubleFree", "bsod.cyber.fault.useAfterFree",
+        "bsod.cyber.fault.bufferOverrun",
+        // CyberWin 2070 - Memory segments
+        "bsod.cyber.seg.text", "bsod.cyber.seg.data", "bsod.cyber.seg.bss",
+        "bsod.cyber.seg.rodata", "bsod.cyber.seg.heap", "bsod.cyber.seg.stack",
     ]
 
     /// All supported language codes (must match LocalizationManager.supportedLanguages).
@@ -907,6 +928,59 @@ final class LocalizationCoverageTests: XCTestCase {
         }
     }
 
+    func testNonEnglishLanguagesHaveDistinctTranslations() {
+        // Load the English bundle
+        let enCandidates = ["en", "en".lowercased()]
+        var enBundle: Bundle?
+        for candidate in enCandidates {
+            if let path = Bundle.module.path(forResource: candidate, ofType: "lproj") {
+                enBundle = Bundle(path: path)
+                if enBundle != nil { break }
+            }
+        }
+        guard let englishBundle = enBundle else {
+            XCTFail("Missing English .lproj bundle")
+            return
+        }
+
+        // Keys that are intentionally identical across languages (e.g., technical codes, format-only)
+        let exemptKeys: Set<String> = [
+            "bsod.modern.percentComplete",  // "%d% complete" may be similar
+            "about.versionFormat",           // "Version %@" may be similar
+        ]
+
+        for lang in Self.allLanguageCodes where lang != "en" {
+            let candidates = [lang, lang.lowercased()]
+            var bundle: Bundle?
+            for candidate in candidates {
+                if let path = Bundle.module.path(forResource: candidate, ofType: "lproj") {
+                    bundle = Bundle(path: path)
+                    if bundle != nil { break }
+                }
+            }
+            guard let langBundle = bundle else { continue }
+
+            var distinctCount = 0
+            var totalChecked = 0
+
+            for key in Self.allKeys where !exemptKeys.contains(key) {
+                let enValue = englishBundle.localizedString(forKey: key, value: nil, table: nil)
+                let langValue = langBundle.localizedString(forKey: key, value: nil, table: nil)
+                totalChecked += 1
+                if langValue != enValue {
+                    distinctCount += 1
+                }
+            }
+
+            // At least 70% of keys should differ from English
+            let ratio = totalChecked > 0 ? Double(distinctCount) / Double(totalChecked) : 0
+            XCTAssertGreaterThan(
+                ratio, 0.7,
+                "Language '\(lang)' has only \(distinctCount)/\(totalChecked) (\(Int(ratio * 100))%) keys distinct from English — likely not translated"
+            )
+        }
+    }
+
     func testFormatSpecifiersPreserved() {
         // Keys that contain format specifiers and what they should contain
         let formatKeys: [(key: String, specifier: String)] = [
@@ -920,6 +994,7 @@ final class LocalizationCoverageTests: XCTestCase {
             ("bsod.modern.percentComplete", "%d"),
             ("bsod.modern.stopCode", "%@"),
             ("bsod.classic.causedBy", "%@"),
+            ("bsod.cyber.signalFormat", "%d"),
         ]
 
         for lang in Self.allLanguageCodes {

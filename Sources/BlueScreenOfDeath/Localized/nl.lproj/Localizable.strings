@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "diagnostische gegevens verzamelen ";
 "bsod.cyber.percentComplete" = "% voltooid";
 "bsod.cyber.dumpingCore" = "kerngeheugen dumpen";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "FATAAL";
+"bsod.cyber.error" = "FOUT";
+"bsod.cyber.kernelPanic" = "kern.paniek";
+"bsod.cyber.at" = " bij ";
+"bsod.cyber.process" = ": proces ";
+"bsod.cyber.exited" = " afgesloten ";
+"bsod.cyber.signalFormat" = "signaal %d";
+"bsod.cyber.addr" = ": adr=";
+"bsod.cyber.segment" = " segment=";
+"bsod.cyber.stackTrace" = "stapel_spoor";
+"bsod.cyber.registers" = "registers";
+"bsod.cyber.regRip" = "instrwijzer=";
+"bsod.cyber.regRsp" = " stapelwijzer=";
+"bsod.cyber.regRbp" = " basiswijzer=";
+"bsod.cyber.failedToUnload" = "ontladen mislukt ";
+"bsod.cyber.resourceBusy" = "bron bezet";
+"bsod.cyber.refLabel" = "> ref: ";
+"bsod.cyber.haltCodeLabel" = "> stopcode: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "SYSTEEM_STOP";
+"bsod.cyber.halt.kernelPanic" = "KERN_PANIEK";
+"bsod.cyber.halt.fatalException" = "FATALE_UITZONDERING";
+"bsod.cyber.halt.unrecoverableError" = "ONHERSTELBARE_FOUT";
+"bsod.cyber.halt.watchdogTimeout" = "WAAKHOND_TIJDSLIMIET";
+"bsod.cyber.halt.tripleFault" = "DRIEVOUDIGE_FOUT";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "geheugen_fout";
+"bsod.cyber.fault.segmentation" = "segmentatie_fout";
+"bsod.cyber.fault.bus" = "bus_fout";
+"bsod.cyber.fault.stackOverflow" = "stapel_overloop";
+"bsod.cyber.fault.heapCorruption" = "hoop_corruptie";
+"bsod.cyber.fault.nullDeref" = "null_verwijzing";
+"bsod.cyber.fault.doubleFree" = "dubbele_vrijgave";
+"bsod.cyber.fault.useAfterFree" = "gebruik_na_vrijgave";
+"bsod.cyber.fault.bufferOverrun" = "buffer_overloop";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".tekst";
+"bsod.cyber.seg.data" = ".gegevens";
+"bsod.cyber.seg.bss" = ".bss";
+"bsod.cyber.seg.rodata" = ".nurgegevens";
+"bsod.cyber.seg.heap" = ".hoop";
+"bsod.cyber.seg.stack" = ".stapel";

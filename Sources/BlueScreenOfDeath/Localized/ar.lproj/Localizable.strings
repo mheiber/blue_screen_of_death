@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "جمع بيانات التشخيص ";
 "bsod.cyber.percentComplete" = "% مكتمل";
 "bsod.cyber.dumpingCore" = "تفريغ النواة";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "فادح";
+"bsod.cyber.error" = "خطأ";
+"bsod.cyber.kernelPanic" = "نواة.ذعر";
+"bsod.cyber.at" = " عند ";
+"bsod.cyber.process" = ": عملية ";
+"bsod.cyber.exited" = " خرجت ";
+"bsod.cyber.signalFormat" = "إشارة %d";
+"bsod.cyber.addr" = ": عنوان=";
+"bsod.cyber.segment" = " مقطع=";
+"bsod.cyber.stackTrace" = "تتبع_المكدس";
+"bsod.cyber.registers" = "السجلات";
+"bsod.cyber.regRip" = "مؤشر_التعليمة=";
+"bsod.cyber.regRsp" = " مؤشر_المكدس=";
+"bsod.cyber.regRbp" = " مؤشر_القاعدة=";
+"bsod.cyber.failedToUnload" = "فشل تحرير ";
+"bsod.cyber.resourceBusy" = "المورد مشغول";
+"bsod.cyber.refLabel" = "> مرجع: ";
+"bsod.cyber.haltCodeLabel" = "> رمز_التوقف: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "توقف_النظام";
+"bsod.cyber.halt.kernelPanic" = "ذعر_النواة";
+"bsod.cyber.halt.fatalException" = "استثناء_فادح";
+"bsod.cyber.halt.unrecoverableError" = "خطأ_غير_قابل_للاسترداد";
+"bsod.cyber.halt.watchdogTimeout" = "انتهاء_مهلة_الحارس";
+"bsod.cyber.halt.tripleFault" = "خطأ_ثلاثي";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "خطأ_ذاكرة";
+"bsod.cyber.fault.segmentation" = "خطأ_تجزئة";
+"bsod.cyber.fault.bus" = "خطأ_ناقل";
+"bsod.cyber.fault.stackOverflow" = "طفحان_مكدس";
+"bsod.cyber.fault.heapCorruption" = "تلف_كومة";
+"bsod.cyber.fault.nullDeref" = "إشارة_فارغة";
+"bsod.cyber.fault.doubleFree" = "تحرير_مزدوج";
+"bsod.cyber.fault.useAfterFree" = "استخدام_بعد_تحرير";
+"bsod.cyber.fault.bufferOverrun" = "تجاوز_مخزن";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".نص";
+"bsod.cyber.seg.data" = ".بيانات";
+"bsod.cyber.seg.bss" = ".متغيرات";
+"bsod.cyber.seg.rodata" = ".بيانات_ثابتة";
+"bsod.cyber.seg.heap" = ".كومة";
+"bsod.cyber.seg.stack" = ".مكدس";

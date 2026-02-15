@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "mengumpulkan diagnostik ";
 "bsod.cyber.percentComplete" = "% selesai";
 "bsod.cyber.dumpingCore" = "membuang inti";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "FATAL";
+"bsod.cyber.error" = "GALAT";
+"bsod.cyber.kernelPanic" = "inti.panik";
+"bsod.cyber.at" = " di ";
+"bsod.cyber.process" = ": proses ";
+"bsod.cyber.exited" = " keluar ";
+"bsod.cyber.signalFormat" = "sinyal %d";
+"bsod.cyber.addr" = ": alamat=";
+"bsod.cyber.segment" = " segmen=";
+"bsod.cyber.stackTrace" = "jejak_tumpukan";
+"bsod.cyber.registers" = "register";
+"bsod.cyber.regRip" = "rpl=";
+"bsod.cyber.regRsp" = " rpt=";
+"bsod.cyber.regRbp" = " rpd=";
+"bsod.cyber.failedToUnload" = "gagal memuat ulang ";
+"bsod.cyber.resourceBusy" = "sumber daya sibuk";
+"bsod.cyber.refLabel" = "> referensi: ";
+"bsod.cyber.haltCodeLabel" = "> kode_henti: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "SISTEM_BERHENTI";
+"bsod.cyber.halt.kernelPanic" = "INTI_PANIK";
+"bsod.cyber.halt.fatalException" = "PENGECUALIAN_FATAL";
+"bsod.cyber.halt.unrecoverableError" = "GALAT_TIDAK_DAPAT_PULIH";
+"bsod.cyber.halt.watchdogTimeout" = "PENJAGA_WAKTU_HABIS";
+"bsod.cyber.halt.tripleFault" = "KESALAHAN_TIGA_LAPIS";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "kesalahan_memori";
+"bsod.cyber.fault.segmentation" = "kesalahan_segmentasi";
+"bsod.cyber.fault.bus" = "galat_bus";
+"bsod.cyber.fault.stackOverflow" = "tumpukan_meluap";
+"bsod.cyber.fault.heapCorruption" = "timbunan_rusak";
+"bsod.cyber.fault.nullDeref" = "rujukan_kosong";
+"bsod.cyber.fault.doubleFree" = "bebaskan_ganda";
+"bsod.cyber.fault.useAfterFree" = "pakai_setelah_bebas";
+"bsod.cyber.fault.bufferOverrun" = "penyangga_meluap";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".kode";
+"bsod.cyber.seg.data" = ".data";
+"bsod.cyber.seg.bss" = ".belum_diisi";
+"bsod.cyber.seg.rodata" = ".data_baca_saja";
+"bsod.cyber.seg.heap" = ".timbunan";
+"bsod.cyber.seg.stack" = ".tumpukan";

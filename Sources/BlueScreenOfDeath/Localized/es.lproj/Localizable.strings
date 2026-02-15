@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "recopilando diagnósticos ";
 "bsod.cyber.percentComplete" = "% completado";
 "bsod.cyber.dumpingCore" = "volcando núcleo";
+
+/* CyberWin 2070 - Palabras clave y etiquetas de terminal */
+"bsod.cyber.fatal" = "FATAL";
+"bsod.cyber.error" = "ERROR";
+"bsod.cyber.kernelPanic" = "núcleo.pánico";
+"bsod.cyber.at" = " en ";
+"bsod.cyber.process" = ": proceso ";
+"bsod.cyber.exited" = " terminó ";
+"bsod.cyber.signalFormat" = "señal %d";
+"bsod.cyber.addr" = ": dir=";
+"bsod.cyber.segment" = " segmento=";
+"bsod.cyber.stackTrace" = "traza_pila";
+"bsod.cyber.registers" = "registros";
+"bsod.cyber.regRip" = "pi=";
+"bsod.cyber.regRsp" = " pp=";
+"bsod.cyber.regRbp" = " pb=";
+"bsod.cyber.failedToUnload" = "fallo al descargar ";
+"bsod.cyber.resourceBusy" = "recurso ocupado";
+"bsod.cyber.refLabel" = "> ref: ";
+"bsod.cyber.haltCodeLabel" = "> código_parada: ";
+
+/* CyberWin 2070 - Razones de parada */
+"bsod.cyber.halt.systemHalt" = "PARADA_SISTEMA";
+"bsod.cyber.halt.kernelPanic" = "PÁNICO_NÚCLEO";
+"bsod.cyber.halt.fatalException" = "EXCEPCIÓN_FATAL";
+"bsod.cyber.halt.unrecoverableError" = "ERROR_IRRECUPERABLE";
+"bsod.cyber.halt.watchdogTimeout" = "EXPIRACIÓN_GUARDIÁN";
+"bsod.cyber.halt.tripleFault" = "TRIPLE_FALLO";
+
+/* CyberWin 2070 - Tipos de fallo */
+"bsod.cyber.fault.memory" = "fallo_memoria";
+"bsod.cyber.fault.segmentation" = "fallo_segmentación";
+"bsod.cyber.fault.bus" = "error_bus";
+"bsod.cyber.fault.stackOverflow" = "desbordamiento_pila";
+"bsod.cyber.fault.heapCorruption" = "corrupción_montículo";
+"bsod.cyber.fault.nullDeref" = "deref_nula";
+"bsod.cyber.fault.doubleFree" = "doble_liberación";
+"bsod.cyber.fault.useAfterFree" = "uso_tras_liberación";
+"bsod.cyber.fault.bufferOverrun" = "desbordamiento_búfer";
+
+/* CyberWin 2070 - Segmentos de memoria */
+"bsod.cyber.seg.text" = ".texto";
+"bsod.cyber.seg.data" = ".datos";
+"bsod.cyber.seg.bss" = ".bss";
+"bsod.cyber.seg.rodata" = ".datos_fijos";
+"bsod.cyber.seg.heap" = ".montículo";
+"bsod.cyber.seg.stack" = ".pila";

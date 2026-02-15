@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "coletando diagnósticos ";
 "bsod.cyber.percentComplete" = "% concluído";
 "bsod.cyber.dumpingCore" = "despejando núcleo";
+
+/* CyberWin 2070 - Palavras-chave e rótulos do terminal */
+"bsod.cyber.fatal" = "FATAL";
+"bsod.cyber.error" = "ERRO";
+"bsod.cyber.kernelPanic" = "núcleo.pânico";
+"bsod.cyber.at" = " em ";
+"bsod.cyber.process" = ": processo ";
+"bsod.cyber.exited" = " encerrou ";
+"bsod.cyber.signalFormat" = "sinal %d";
+"bsod.cyber.addr" = ": end=";
+"bsod.cyber.segment" = " segmento=";
+"bsod.cyber.stackTrace" = "rastreio_pilha";
+"bsod.cyber.registers" = "registradores";
+"bsod.cyber.regRip" = "pi=";
+"bsod.cyber.regRsp" = " pp=";
+"bsod.cyber.regRbp" = " pb=";
+"bsod.cyber.failedToUnload" = "falha ao descarregar ";
+"bsod.cyber.resourceBusy" = "recurso ocupado";
+"bsod.cyber.refLabel" = "> ref: ";
+"bsod.cyber.haltCodeLabel" = "> código_parada: ";
+
+/* CyberWin 2070 - Razões de parada */
+"bsod.cyber.halt.systemHalt" = "PARADA_SISTEMA";
+"bsod.cyber.halt.kernelPanic" = "PÂNICO_NÚCLEO";
+"bsod.cyber.halt.fatalException" = "EXCEÇÃO_FATAL";
+"bsod.cyber.halt.unrecoverableError" = "ERRO_IRRECUPERÁVEL";
+"bsod.cyber.halt.watchdogTimeout" = "ESTOURO_CÃO_DE_GUARDA";
+"bsod.cyber.halt.tripleFault" = "FALHA_TRIPLA";
+
+/* CyberWin 2070 - Tipos de falha */
+"bsod.cyber.fault.memory" = "falha_memória";
+"bsod.cyber.fault.segmentation" = "falha_segmentação";
+"bsod.cyber.fault.bus" = "erro_barramento";
+"bsod.cyber.fault.stackOverflow" = "estouro_pilha";
+"bsod.cyber.fault.heapCorruption" = "corrupção_monte";
+"bsod.cyber.fault.nullDeref" = "deref_nula";
+"bsod.cyber.fault.doubleFree" = "dupla_liberação";
+"bsod.cyber.fault.useAfterFree" = "uso_após_liberação";
+"bsod.cyber.fault.bufferOverrun" = "estouro_buffer";
+
+/* CyberWin 2070 - Segmentos de memória */
+"bsod.cyber.seg.text" = ".texto";
+"bsod.cyber.seg.data" = ".dados";
+"bsod.cyber.seg.bss" = ".bss";
+"bsod.cyber.seg.rodata" = ".dados_fixos";
+"bsod.cyber.seg.heap" = ".monte";
+"bsod.cyber.seg.stack" = ".pilha";

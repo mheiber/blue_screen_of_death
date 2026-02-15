@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "ᎠᏍᏕᏰᎵᏍᎦ ᎠᎵᏍᏕᏰᏗ ";
 "bsod.cyber.percentComplete" = "% ᏚᎸᏌᏓ";
 "bsod.cyber.dumpingCore" = "ᎤᏤᎵ ᎠᏍᏓᏩᏛᏍᏗ";
+
+/* CyberWin 2070 - ᏗᏟᎶᏍᏔᏅ ᏗᎪᏪᎵ ᎠᎴ ᎠᏍᏓᏩᏛᏍᏗ */
+"bsod.cyber.fatal" = "ᎠᏲᏢᏗ";
+"bsod.cyber.error" = "ᎤᏲᏍᏗ";
+"bsod.cyber.kernelPanic" = "ᎤᏤᎵ.ᎠᏍᎦᎾᏍᏗ";
+"bsod.cyber.at" = " ᎡᎯ ";
+"bsod.cyber.process" = ": ᏗᎦᎸᏫᏍᏓᏁᏗ ";
+"bsod.cyber.exited" = " ᎤᏓᏅᏖᏍᏔᏁ ";
+"bsod.cyber.signalFormat" = "ᎠᏓᏅᏖᏍᎬ %d";
+"bsod.cyber.addr" = ": ᏧᏓᎴᎿᎢ=";
+"bsod.cyber.segment" = " ᎤᏍᏆᎸ=";
+"bsod.cyber.stackTrace" = "ᏗᏣᏅᏙ_ᎦᏅᏍᏙᏍᏗ";
+"bsod.cyber.registers" = "ᏗᎦᏅᏓᏗ";
+"bsod.cyber.regRip" = "ᏗᎪᏪᎵ_ᎦᎷᎶᏗ=";
+"bsod.cyber.regRsp" = " ᏗᏣᏅᏙ_ᎦᎷᎶᏗ=";
+"bsod.cyber.regRbp" = " ᎦᏍᏙᎵ_ᎦᎷᎶᏗ=";
+"bsod.cyber.failedToUnload" = "ᏄᎵᏍᏔᏂᏓᏁᎸ ᎠᏍᏙᏍᏗ ";
+"bsod.cyber.resourceBusy" = "ᎠᏍᏆᏗᏍᏗ ᎤᏂᎩᏗᏳ";
+"bsod.cyber.refLabel" = "> ᎠᏓᎴᎿᎢ: ";
+"bsod.cyber.haltCodeLabel" = "> ᎠᏍᏆᎵᏍᏗ_ᎪᏪᎵ: ";
+
+/* CyberWin 2070 - ᎠᏍᏆᎵᏍᏗ ᎤᏙᏢᏒ */
+"bsod.cyber.halt.systemHalt" = "ᎠᏍᏆᏗᏍᏗ_ᎠᏍᏆᎵᏍᏗ";
+"bsod.cyber.halt.kernelPanic" = "ᎤᏤᎵ_ᎠᏍᎦᎾᏍᏗ";
+"bsod.cyber.halt.fatalException" = "ᎠᏲᏢᏗ_ᏗᎦᏙᎵ";
+"bsod.cyber.halt.unrecoverableError" = "ᏂᎨᏒᎾ_ᎤᏲᏍᏗ";
+"bsod.cyber.halt.watchdogTimeout" = "ᎠᏥᎸᏉᏗ_ᎠᏟᎶᏍᏗ";
+"bsod.cyber.halt.tripleFault" = "ᏦᎢ_ᎤᏲᏍᏗ";
+
+/* CyberWin 2070 - ᎤᏲᏍᏗ ᎠᏓᏅᏖᏍᎬ */
+"bsod.cyber.fault.memory" = "ᎠᏍᏓᏱᏗ_ᎤᏲᏍᏗ";
+"bsod.cyber.fault.segmentation" = "ᎤᏍᏆᎸ_ᎤᏲᏍᏗ";
+"bsod.cyber.fault.bus" = "ᏅᏃᎯ_ᎤᏲᏍᏗ";
+"bsod.cyber.fault.stackOverflow" = "ᏗᏣᏅᏙ_ᎠᎵᏍᏓᏍᏗ";
+"bsod.cyber.fault.heapCorruption" = "ᎤᎳᏏᏕᎾ_ᎠᏍᎦᏅᏍᏗ";
+"bsod.cyber.fault.nullDeref" = "ᏂᎨᏒᎾ_ᎠᏓᎴᎿᎢ";
+"bsod.cyber.fault.doubleFree" = "ᏔᎵ_ᎠᏗᏍᎬ";
+"bsod.cyber.fault.useAfterFree" = "ᎤᏲᏉ_ᏗᎦᏓ_ᎠᏗᏍᎬ";
+"bsod.cyber.fault.bufferOverrun" = "ᎠᏍᏓᏱᏗ_ᎠᎵᏍᏓᏍᏗ";
+
+/* CyberWin 2070 - ᎠᏍᏓᏱᏗ ᎤᏍᏆᎸ */
+"bsod.cyber.seg.text" = ".ᏗᎪᏪᎵ";
+"bsod.cyber.seg.data" = ".ᏗᎦᏃᏣᎳ";
+"bsod.cyber.seg.bss" = ".ᎦᎸᎳᏗ";
+"bsod.cyber.seg.rodata" = ".ᎠᎪᎵᏰᏗ";
+"bsod.cyber.seg.heap" = ".ᎤᎳᏏᏕᎾ";
+"bsod.cyber.seg.stack" = ".ᏗᏣᏅᏙ";

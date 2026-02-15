@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "đang thu thập chẩn đoán ";
 "bsod.cyber.percentComplete" = "% hoàn tất";
 "bsod.cyber.dumpingCore" = "đang kết xuất lõi";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "NGHIÊM_TRỌNG";
+"bsod.cyber.error" = "LỖI";
+"bsod.cyber.kernelPanic" = "nhân.hoảng";
+"bsod.cyber.at" = " tại ";
+"bsod.cyber.process" = ": tiến_trình ";
+"bsod.cyber.exited" = " thoát ";
+"bsod.cyber.signalFormat" = "tín_hiệu %d";
+"bsod.cyber.addr" = ": địa_chỉ=";
+"bsod.cyber.segment" = " phân_đoạn=";
+"bsod.cyber.stackTrace" = "vết_ngăn_xếp";
+"bsod.cyber.registers" = "thanh_ghi";
+"bsod.cyber.regRip" = "tgcl=";
+"bsod.cyber.regRsp" = " tgnx=";
+"bsod.cyber.regRbp" = " tgcs=";
+"bsod.cyber.failedToUnload" = "không thể giải phóng ";
+"bsod.cyber.resourceBusy" = "tài nguyên đang bận";
+"bsod.cyber.refLabel" = "> tham_chiếu: ";
+"bsod.cyber.haltCodeLabel" = "> mã_dừng: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "HỆ_THỐNG_DỪNG";
+"bsod.cyber.halt.kernelPanic" = "NHÂN_HOẢNG";
+"bsod.cyber.halt.fatalException" = "NGOẠI_LỆ_NGHIÊM_TRỌNG";
+"bsod.cyber.halt.unrecoverableError" = "LỖI_KHÔNG_PHỤC_HỒI";
+"bsod.cyber.halt.watchdogTimeout" = "CHÓ_GÁC_HẾT_GIỜ";
+"bsod.cyber.halt.tripleFault" = "LỖI_BA_LẦN";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "lỗi_bộ_nhớ";
+"bsod.cyber.fault.segmentation" = "lỗi_phân_đoạn";
+"bsod.cyber.fault.bus" = "lỗi_kênh";
+"bsod.cyber.fault.stackOverflow" = "tràn_ngăn_xếp";
+"bsod.cyber.fault.heapCorruption" = "hỏng_vùng_nhớ_động";
+"bsod.cyber.fault.nullDeref" = "trỏ_rỗng";
+"bsod.cyber.fault.doubleFree" = "giải_phóng_kép";
+"bsod.cyber.fault.useAfterFree" = "dùng_sau_giải_phóng";
+"bsod.cyber.fault.bufferOverrun" = "tràn_bộ_đệm";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".mã_lệnh";
+"bsod.cyber.seg.data" = ".dữ_liệu";
+"bsod.cyber.seg.bss" = ".chưa_khởi_tạo";
+"bsod.cyber.seg.rodata" = ".dữ_liệu_chỉ_đọc";
+"bsod.cyber.seg.heap" = ".vùng_nhớ_động";
+"bsod.cyber.seg.stack" = ".ngăn_xếp";

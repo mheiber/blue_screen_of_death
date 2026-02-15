@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "ডায়াগনস্টিক তথ্য সংগ্রহ হচ্ছে ";
 "bsod.cyber.percentComplete" = "% সম্পন্ন";
 "bsod.cyber.dumpingCore" = "কোর ডাম্পিং";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "মারাত্মক";
+"bsod.cyber.error" = "ত্রুটি";
+"bsod.cyber.kernelPanic" = "কেন্দ্রক.আতঙ্ক";
+"bsod.cyber.at" = " তে ";
+"bsod.cyber.process" = ": প্রক্রিয়া ";
+"bsod.cyber.exited" = " বেরিয়েছে ";
+"bsod.cyber.signalFormat" = "সংকেত %d";
+"bsod.cyber.addr" = ": ঠিকানা=";
+"bsod.cyber.segment" = " খণ্ড=";
+"bsod.cyber.stackTrace" = "স্ট্যাক_চিহ্ন";
+"bsod.cyber.registers" = "রেজিস্টার";
+"bsod.cyber.regRip" = "নির্দেশ_সূচক=";
+"bsod.cyber.regRsp" = " স্ট্যাক_সূচক=";
+"bsod.cyber.regRbp" = " ভিত্তি_সূচক=";
+"bsod.cyber.failedToUnload" = "আনলোড ব্যর্থ ";
+"bsod.cyber.resourceBusy" = "সম্পদ ব্যস্ত";
+"bsod.cyber.refLabel" = "> তথ্যসূত্র: ";
+"bsod.cyber.haltCodeLabel" = "> স্থগিত_কোড: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "সিস্টেম_স্থগিত";
+"bsod.cyber.halt.kernelPanic" = "কেন্দ্রক_আতঙ্ক";
+"bsod.cyber.halt.fatalException" = "মারাত্মক_ব্যতিক্রম";
+"bsod.cyber.halt.unrecoverableError" = "অপুনরুদ্ধারযোগ্য_ত্রুটি";
+"bsod.cyber.halt.watchdogTimeout" = "প্রহরী_সময়সীমা";
+"bsod.cyber.halt.tripleFault" = "ত্রিদোষ";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "স্মৃতি_দোষ";
+"bsod.cyber.fault.segmentation" = "খণ্ডন_দোষ";
+"bsod.cyber.fault.bus" = "বাস_ত্রুটি";
+"bsod.cyber.fault.stackOverflow" = "স্ট্যাক_উপচে_পড়া";
+"bsod.cyber.fault.heapCorruption" = "হিপ_কলুষণ";
+"bsod.cyber.fault.nullDeref" = "শূন্য_নির্দেশ";
+"bsod.cyber.fault.doubleFree" = "দ্বৈত_মুক্তি";
+"bsod.cyber.fault.useAfterFree" = "মুক্তি_পরবর্তী_ব্যবহার";
+"bsod.cyber.fault.bufferOverrun" = "বাফার_অতিক্রম";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".কোড";
+"bsod.cyber.seg.data" = ".তথ্য";
+"bsod.cyber.seg.bss" = ".চলক";
+"bsod.cyber.seg.rodata" = ".স্থির_তথ্য";
+"bsod.cyber.seg.heap" = ".হিপ";
+"bsod.cyber.seg.stack" = ".স্ট্যাক";

@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "kolektante diagnozojn ";
 "bsod.cyber.percentComplete" = "% plenumita";
 "bsod.cyber.dumpingCore" = "elĵetante kernon";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "FATALA";
+"bsod.cyber.error" = "ERARO";
+"bsod.cyber.kernelPanic" = "kerno.paniko";
+"bsod.cyber.at" = " ĉe ";
+"bsod.cyber.process" = ": procezo ";
+"bsod.cyber.exited" = " eliĝis ";
+"bsod.cyber.signalFormat" = "signalo %d";
+"bsod.cyber.addr" = ": adr=";
+"bsod.cyber.segment" = " segmento=";
+"bsod.cyber.stackTrace" = "staka_spuro";
+"bsod.cyber.registers" = "registroj";
+"bsod.cyber.regRip" = "instrukcia_montrilo=";
+"bsod.cyber.regRsp" = " staka_montrilo=";
+"bsod.cyber.regRbp" = " kadra_montrilo=";
+"bsod.cyber.failedToUnload" = "malsukcesis malŝargi ";
+"bsod.cyber.resourceBusy" = "rimedo okupata";
+"bsod.cyber.refLabel" = "> ref: ";
+"bsod.cyber.haltCodeLabel" = "> halt_kodo: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "SISTEMA_HALTO";
+"bsod.cyber.halt.kernelPanic" = "KERNA_PANIKO";
+"bsod.cyber.halt.fatalException" = "FATALA_ESCEPTO";
+"bsod.cyber.halt.unrecoverableError" = "NERIPEBLA_ERARO";
+"bsod.cyber.halt.watchdogTimeout" = "GARDOHUNDA_TEMPOLIMO";
+"bsod.cyber.halt.tripleFault" = "TRIOBLA_MISFUNKCIO";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "memoro_eraro";
+"bsod.cyber.fault.segmentation" = "segmenta_eraro";
+"bsod.cyber.fault.bus" = "busa_eraro";
+"bsod.cyber.fault.stackOverflow" = "staka_superfluo";
+"bsod.cyber.fault.heapCorruption" = "amasa_koruptado";
+"bsod.cyber.fault.nullDeref" = "nula_referenco";
+"bsod.cyber.fault.doubleFree" = "duobla_liberigo";
+"bsod.cyber.fault.useAfterFree" = "uzo_post_liberigo";
+"bsod.cyber.fault.bufferOverrun" = "bufra_superfluo";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".teksto";
+"bsod.cyber.seg.data" = ".datenoj";
+"bsod.cyber.seg.bss" = ".bss";
+"bsod.cyber.seg.rodata" = ".nurlegdatenoj";
+"bsod.cyber.seg.heap" = ".amaso";
+"bsod.cyber.seg.stack" = ".stako";

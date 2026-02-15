@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "zbieranie danych diagnostycznych ";
 "bsod.cyber.percentComplete" = "% ukończono";
 "bsod.cyber.dumpingCore" = "zrzucanie pamięci rdzenia";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "KRYTYCZNY";
+"bsod.cyber.error" = "BŁĄD";
+"bsod.cyber.kernelPanic" = "jądro.panika";
+"bsod.cyber.at" = " w ";
+"bsod.cyber.process" = ": proces ";
+"bsod.cyber.exited" = " zakończony ";
+"bsod.cyber.signalFormat" = "sygnał %d";
+"bsod.cyber.addr" = ": adr=";
+"bsod.cyber.segment" = " segment=";
+"bsod.cyber.stackTrace" = "ślad_stosu";
+"bsod.cyber.registers" = "rejestry";
+"bsod.cyber.regRip" = "wsk_rozkazów=";
+"bsod.cyber.regRsp" = " wsk_stosu=";
+"bsod.cyber.regRbp" = " wsk_bazy=";
+"bsod.cyber.failedToUnload" = "nie udało się zwolnić ";
+"bsod.cyber.resourceBusy" = "zasób zajęty";
+"bsod.cyber.refLabel" = "> odn: ";
+"bsod.cyber.haltCodeLabel" = "> kod_stopu: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "SYSTEM_ZATRZYMANY";
+"bsod.cyber.halt.kernelPanic" = "PANIKA_JĄDRA";
+"bsod.cyber.halt.fatalException" = "KRYTYCZNY_WYJĄTEK";
+"bsod.cyber.halt.unrecoverableError" = "NIEODWRACALNY_BŁĄD";
+"bsod.cyber.halt.watchdogTimeout" = "LIMIT_CZASU_WATCHDOGA";
+"bsod.cyber.halt.tripleFault" = "POTRÓJNY_BŁĄD";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "błąd_pamięci";
+"bsod.cyber.fault.segmentation" = "naruszenie_segmentu";
+"bsod.cyber.fault.bus" = "błąd_magistrali";
+"bsod.cyber.fault.stackOverflow" = "przepełnienie_stosu";
+"bsod.cyber.fault.heapCorruption" = "uszkodzenie_sterty";
+"bsod.cyber.fault.nullDeref" = "puste_odwołanie";
+"bsod.cyber.fault.doubleFree" = "podwójne_zwolnienie";
+"bsod.cyber.fault.useAfterFree" = "użycie_po_zwolnieniu";
+"bsod.cyber.fault.bufferOverrun" = "przepełnienie_bufora";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".tekst";
+"bsod.cyber.seg.data" = ".dane";
+"bsod.cyber.seg.bss" = ".bss";
+"bsod.cyber.seg.rodata" = ".nurdane";
+"bsod.cyber.seg.heap" = ".sterta";
+"bsod.cyber.seg.stack" = ".stos";

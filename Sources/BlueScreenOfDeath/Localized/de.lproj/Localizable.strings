@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "Diagnosedaten werden gesammelt ";
 "bsod.cyber.percentComplete" = "% abgeschlossen";
 "bsod.cyber.dumpingCore" = "Kernspeicherabbild wird erstellt";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "FATAL";
+"bsod.cyber.error" = "FEHLER";
+"bsod.cyber.kernelPanic" = "Kern.Panik";
+"bsod.cyber.at" = " bei ";
+"bsod.cyber.process" = ": Prozess ";
+"bsod.cyber.exited" = " beendet ";
+"bsod.cyber.signalFormat" = "Signal %d";
+"bsod.cyber.addr" = ": Adr=";
+"bsod.cyber.segment" = " Segment=";
+"bsod.cyber.stackTrace" = "Stapel_Spur";
+"bsod.cyber.registers" = "Register";
+"bsod.cyber.regRip" = "Befehlszeiger=";
+"bsod.cyber.regRsp" = " Stapelzeiger=";
+"bsod.cyber.regRbp" = " Basiszeiger=";
+"bsod.cyber.failedToUnload" = "Entladen fehlgeschlagen ";
+"bsod.cyber.resourceBusy" = "Ressource belegt";
+"bsod.cyber.refLabel" = "> Ref: ";
+"bsod.cyber.haltCodeLabel" = "> Stoppcode: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "SYSTEM_STOPP";
+"bsod.cyber.halt.kernelPanic" = "KERN_PANIK";
+"bsod.cyber.halt.fatalException" = "FATALE_AUSNAHME";
+"bsod.cyber.halt.unrecoverableError" = "UNBEHEBBARER_FEHLER";
+"bsod.cyber.halt.watchdogTimeout" = "WACHHUND_ZEITÜBERSCHREITUNG";
+"bsod.cyber.halt.tripleFault" = "DREIFACH_FEHLER";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "Speicher_Fehler";
+"bsod.cyber.fault.segmentation" = "Segmentierungs_Fehler";
+"bsod.cyber.fault.bus" = "Bus_Fehler";
+"bsod.cyber.fault.stackOverflow" = "Stapel_Überlauf";
+"bsod.cyber.fault.heapCorruption" = "Halde_Korruption";
+"bsod.cyber.fault.nullDeref" = "Null_Verweis";
+"bsod.cyber.fault.doubleFree" = "Doppel_Freigabe";
+"bsod.cyber.fault.useAfterFree" = "Zugriff_nach_Freigabe";
+"bsod.cyber.fault.bufferOverrun" = "Puffer_Überlauf";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".Text";
+"bsod.cyber.seg.data" = ".Daten";
+"bsod.cyber.seg.bss" = ".Bss";
+"bsod.cyber.seg.rodata" = ".Nurdaten";
+"bsod.cyber.seg.heap" = ".Halde";
+"bsod.cyber.seg.stack" = ".Stapel";

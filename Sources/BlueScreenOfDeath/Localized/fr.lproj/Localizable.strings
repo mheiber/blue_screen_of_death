@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "collecte des diagnostics ";
 "bsod.cyber.percentComplete" = "% terminé";
 "bsod.cyber.dumpingCore" = "vidage du noyau";
+
+/* CyberWin 2070 - Mots-clés & libellés du terminal */
+"bsod.cyber.fatal" = "FATAL";
+"bsod.cyber.error" = "ERREUR";
+"bsod.cyber.kernelPanic" = "noyau.panique";
+"bsod.cyber.at" = " à ";
+"bsod.cyber.process" = " : processus ";
+"bsod.cyber.exited" = " terminé ";
+"bsod.cyber.signalFormat" = "signal %d";
+"bsod.cyber.addr" = " : adr=";
+"bsod.cyber.segment" = " segment=";
+"bsod.cyber.stackTrace" = "trace_pile";
+"bsod.cyber.registers" = "registres";
+"bsod.cyber.regRip" = "pi=";
+"bsod.cyber.regRsp" = " pp=";
+"bsod.cyber.regRbp" = " pb=";
+"bsod.cyber.failedToUnload" = "échec du déchargement ";
+"bsod.cyber.resourceBusy" = "ressource occupée";
+"bsod.cyber.refLabel" = "> réf : ";
+"bsod.cyber.haltCodeLabel" = "> code_arrêt : ";
+
+/* CyberWin 2070 - Raisons d'arrêt */
+"bsod.cyber.halt.systemHalt" = "ARRÊT_SYSTÈME";
+"bsod.cyber.halt.kernelPanic" = "PANIQUE_NOYAU";
+"bsod.cyber.halt.fatalException" = "EXCEPTION_FATALE";
+"bsod.cyber.halt.unrecoverableError" = "ERREUR_IRRÉCUPÉRABLE";
+"bsod.cyber.halt.watchdogTimeout" = "EXPIRATION_CHIEN_DE_GARDE";
+"bsod.cyber.halt.tripleFault" = "TRIPLE_FAUTE";
+
+/* CyberWin 2070 - Types de faute */
+"bsod.cyber.fault.memory" = "défaut_mémoire";
+"bsod.cyber.fault.segmentation" = "défaut_segmentation";
+"bsod.cyber.fault.bus" = "erreur_bus";
+"bsod.cyber.fault.stackOverflow" = "débordement_pile";
+"bsod.cyber.fault.heapCorruption" = "corruption_tas";
+"bsod.cyber.fault.nullDeref" = "déréf_nulle";
+"bsod.cyber.fault.doubleFree" = "double_libération";
+"bsod.cyber.fault.useAfterFree" = "usage_après_libération";
+"bsod.cyber.fault.bufferOverrun" = "dépassement_tampon";
+
+/* CyberWin 2070 - Segments mémoire */
+"bsod.cyber.seg.text" = ".texte";
+"bsod.cyber.seg.data" = ".données";
+"bsod.cyber.seg.bss" = ".bss";
+"bsod.cyber.seg.rodata" = ".données_fixes";
+"bsod.cyber.seg.heap" = ".tas";
+"bsod.cyber.seg.stack" = ".pile";

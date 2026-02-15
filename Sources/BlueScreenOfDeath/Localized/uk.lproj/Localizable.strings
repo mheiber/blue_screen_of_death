@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "збір діагностики ";
 "bsod.cyber.percentComplete" = "% завершено";
 "bsod.cyber.dumpingCore" = "створення дампу ядра";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "КРИТИЧНА";
+"bsod.cyber.error" = "ПОМИЛКА";
+"bsod.cyber.kernelPanic" = "ядро.паніка";
+"bsod.cyber.at" = " за адресою ";
+"bsod.cyber.process" = ": процес ";
+"bsod.cyber.exited" = " завершено ";
+"bsod.cyber.signalFormat" = "сигнал %d";
+"bsod.cyber.addr" = ": адр=";
+"bsod.cyber.segment" = " сегмент=";
+"bsod.cyber.stackTrace" = "трасування_стеку";
+"bsod.cyber.registers" = "регістри";
+"bsod.cyber.regRip" = "вк=";
+"bsod.cyber.regRsp" = " вс=";
+"bsod.cyber.regRbp" = " вб=";
+"bsod.cyber.failedToUnload" = "не вдалося вивантажити ";
+"bsod.cyber.resourceBusy" = "ресурс зайнятий";
+"bsod.cyber.refLabel" = "> посилання: ";
+"bsod.cyber.haltCodeLabel" = "> код_зупинки: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "ЗУПИНКА_СИСТЕМИ";
+"bsod.cyber.halt.kernelPanic" = "ПАНІКА_ЯДРА";
+"bsod.cyber.halt.fatalException" = "КРИТИЧНИЙ_ВИНЯТОК";
+"bsod.cyber.halt.unrecoverableError" = "НЕВИПРАВНА_ПОМИЛКА";
+"bsod.cyber.halt.watchdogTimeout" = "ТАЙМ_АУТ_СТОРОЖОВОГО";
+"bsod.cyber.halt.tripleFault" = "ПОТРІЙНИЙ_ЗБІЙ";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "помилка_памʼяті";
+"bsod.cyber.fault.segmentation" = "помилка_сегментації";
+"bsod.cyber.fault.bus" = "помилка_шини";
+"bsod.cyber.fault.stackOverflow" = "переповнення_стеку";
+"bsod.cyber.fault.heapCorruption" = "пошкодження_купи";
+"bsod.cyber.fault.nullDeref" = "нульове_посилання";
+"bsod.cyber.fault.doubleFree" = "подвійне_звільнення";
+"bsod.cyber.fault.useAfterFree" = "звернення_після_звільнення";
+"bsod.cyber.fault.bufferOverrun" = "переповнення_буфера";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".код";
+"bsod.cyber.seg.data" = ".дані";
+"bsod.cyber.seg.bss" = ".бсс";
+"bsod.cyber.seg.rodata" = ".конст";
+"bsod.cyber.seg.heap" = ".купа";
+"bsod.cyber.seg.stack" = ".стек";

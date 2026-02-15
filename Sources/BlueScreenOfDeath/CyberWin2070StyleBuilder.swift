@@ -1041,7 +1041,7 @@ struct CyberWin2070StyleBuilder {
             container.addSubview(line1)
 
             let line2 = makeInfoLabel(
-                text: "> ref: \(randomHexShort())-\(randomHexShort())-\(randomHexShort())",
+                text: "\(L("bsod.cyber.refLabel"))\(randomHexShort())-\(randomHexShort())-\(randomHexShort())",
                 fontSize: infoFontSize, color: electricCyan, width: infoWidth
             )
             line2.frame.origin = NSPoint(x: textX, y: line1.frame.origin.y - line2.frame.height - 4)
@@ -1050,7 +1050,7 @@ struct CyberWin2070StyleBuilder {
 
             let stopCode = CrashDumpGenerator.generateModernData().stopCode
             let line3 = makeInfoLabel(
-                text: "> halt_code: \(stopCode)",
+                text: "\(L("bsod.cyber.haltCodeLabel"))\(stopCode)",
                 fontSize: infoFontSize, color: neonPurple, width: infoWidth
             )
             line3.frame.origin = NSPoint(x: textX, y: line2.frame.origin.y - line3.frame.height - 4)
@@ -1094,27 +1094,33 @@ struct CyberWin2070StyleBuilder {
             "wsinput.kext", "wscache.so", "wsvm.dylib",
         ]
 
-        let segments = [".text", ".data", ".bss", ".rodata", ".heap", ".stack"]
+        let segments = [
+            L("bsod.cyber.seg.text"), L("bsod.cyber.seg.data"), L("bsod.cyber.seg.bss"),
+            L("bsod.cyber.seg.rodata"), L("bsod.cyber.seg.heap"), L("bsod.cyber.seg.stack"),
+        ]
 
         let faultTypes = [
-            "memory_fault", "segmentation_fault", "bus_error",
-            "stack_overflow", "heap_corruption", "null_deref",
-            "double_free", "use_after_free", "buffer_overrun",
+            L("bsod.cyber.fault.memory"), L("bsod.cyber.fault.segmentation"),
+            L("bsod.cyber.fault.bus"), L("bsod.cyber.fault.stackOverflow"),
+            L("bsod.cyber.fault.heapCorruption"), L("bsod.cyber.fault.nullDeref"),
+            L("bsod.cyber.fault.doubleFree"), L("bsod.cyber.fault.useAfterFree"),
+            L("bsod.cyber.fault.bufferOverrun"),
         ]
 
         let haltReasons = [
-            "SYSTEM_HALT", "KERNEL_PANIC", "FATAL_EXCEPTION",
-            "UNRECOVERABLE_ERROR", "WATCHDOG_TIMEOUT", "TRIPLE_FAULT",
+            L("bsod.cyber.halt.systemHalt"), L("bsod.cyber.halt.kernelPanic"),
+            L("bsod.cyber.halt.fatalException"), L("bsod.cyber.halt.unrecoverableError"),
+            L("bsod.cyber.halt.watchdogTimeout"), L("bsod.cyber.halt.tripleFault"),
         ]
 
         // Line 1: [FATAL] header
         let addr1 = randomHex8()
         lines.append([
             Token(text: "[", type: .operator),
-            Token(text: "FATAL", type: .keyword),
+            Token(text: L("bsod.cyber.fatal"), type: .keyword),
             Token(text: "] ", type: .operator),
-            Token(text: "kernel.panic", type: .plain),
-            Token(text: " at ", type: .plain),
+            Token(text: L("bsod.cyber.kernelPanic"), type: .plain),
+            Token(text: L("bsod.cyber.at"), type: .plain),
             Token(text: "0x\(addr1)", type: .number),
         ])
 
@@ -1125,11 +1131,11 @@ struct CyberWin2070StyleBuilder {
         lines.append([
             Token(text: "> ", type: .operator),
             Token(text: haltReason, type: .keyword),
-            Token(text: ": process ", type: .plain),
+            Token(text: L("bsod.cyber.process"), type: .plain),
             Token(text: "'\(process)'", type: .string),
-            Token(text: " exited ", type: .plain),
+            Token(text: L("bsod.cyber.exited"), type: .plain),
             Token(text: "(", type: .operator),
-            Token(text: "signal \(signal)", type: .number),
+            Token(text: L("bsod.cyber.signalFormat", signal), type: .number),
             Token(text: ")", type: .operator),
         ])
 
@@ -1140,9 +1146,9 @@ struct CyberWin2070StyleBuilder {
         lines.append([
             Token(text: "> ", type: .operator),
             Token(text: fault, type: .plain),
-            Token(text: ": addr=", type: .operator),
+            Token(text: L("bsod.cyber.addr"), type: .operator),
             Token(text: "0x\(faultAddr)", type: .number),
-            Token(text: " segment=", type: .operator),
+            Token(text: L("bsod.cyber.segment"), type: .operator),
             Token(text: seg, type: .string),
         ])
 
@@ -1155,7 +1161,7 @@ struct CyberWin2070StyleBuilder {
             let off2 = String(format: "0x%X", Int.random(in: 0x100...0xFFF))
             lines.append([
                 Token(text: "> ", type: .operator),
-                Token(text: "stack_trace", type: .plain),
+                Token(text: L("bsod.cyber.stackTrace"), type: .plain),
                 Token(text: ": ", type: .operator),
                 Token(text: mod1, type: .string),
                 Token(text: "+", type: .operator),
@@ -1170,13 +1176,13 @@ struct CyberWin2070StyleBuilder {
         // Line: register dump
         lines.append([
             Token(text: "> ", type: .operator),
-            Token(text: "registers", type: .plain),
+            Token(text: L("bsod.cyber.registers"), type: .plain),
             Token(text: ": ", type: .operator),
-            Token(text: "rip=", type: .operator),
+            Token(text: L("bsod.cyber.regRip"), type: .operator),
             Token(text: "0x\(randomHex8())", type: .number),
-            Token(text: " rsp=", type: .operator),
+            Token(text: L("bsod.cyber.regRsp"), type: .operator),
             Token(text: "0x\(randomHex8())", type: .number),
-            Token(text: " rbp=", type: .operator),
+            Token(text: L("bsod.cyber.regRbp"), type: .operator),
             Token(text: "0x\(randomHex8())", type: .number),
         ])
 
@@ -1184,12 +1190,12 @@ struct CyberWin2070StyleBuilder {
         let driver = moduleNames.randomElement()!
         lines.append([
             Token(text: "[", type: .operator),
-            Token(text: "ERROR", type: .keyword),
+            Token(text: L("bsod.cyber.error"), type: .keyword),
             Token(text: "] ", type: .operator),
-            Token(text: "failed to unload ", type: .plain),
+            Token(text: L("bsod.cyber.failedToUnload"), type: .plain),
             Token(text: "'\(driver)'", type: .string),
             Token(text: " -- ", type: .operator),
-            Token(text: "resource busy", type: .plain),
+            Token(text: L("bsod.cyber.resourceBusy"), type: .plain),
         ])
 
         // Blank line

@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "正在收集诊断信息 ";
 "bsod.cyber.percentComplete" = "% 完成";
 "bsod.cyber.dumpingCore" = "正在转储核心";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "致命";
+"bsod.cyber.error" = "错误";
+"bsod.cyber.kernelPanic" = "内核.恐慌";
+"bsod.cyber.at" = " 位于 ";
+"bsod.cyber.process" = ": 进程 ";
+"bsod.cyber.exited" = " 退出 ";
+"bsod.cyber.signalFormat" = "信号 %d";
+"bsod.cyber.addr" = ": 地址=";
+"bsod.cyber.segment" = " 段=";
+"bsod.cyber.stackTrace" = "栈_追踪";
+"bsod.cyber.registers" = "寄存器";
+"bsod.cyber.regRip" = "指令指针=";
+"bsod.cyber.regRsp" = " 栈指针=";
+"bsod.cyber.regRbp" = " 基址指针=";
+"bsod.cyber.failedToUnload" = "卸载失败 ";
+"bsod.cyber.resourceBusy" = "资源占用";
+"bsod.cyber.refLabel" = "> 引用: ";
+"bsod.cyber.haltCodeLabel" = "> 停机码: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "系统停机";
+"bsod.cyber.halt.kernelPanic" = "内核恐慌";
+"bsod.cyber.halt.fatalException" = "致命异常";
+"bsod.cyber.halt.unrecoverableError" = "不可恢复错误";
+"bsod.cyber.halt.watchdogTimeout" = "看门狗超时";
+"bsod.cyber.halt.tripleFault" = "三重故障";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "内存故障";
+"bsod.cyber.fault.segmentation" = "段错误";
+"bsod.cyber.fault.bus" = "总线错误";
+"bsod.cyber.fault.stackOverflow" = "栈溢出";
+"bsod.cyber.fault.heapCorruption" = "堆损坏";
+"bsod.cyber.fault.nullDeref" = "空引用";
+"bsod.cyber.fault.doubleFree" = "重复释放";
+"bsod.cyber.fault.useAfterFree" = "释放后使用";
+"bsod.cyber.fault.bufferOverrun" = "缓冲区溢出";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".指令";
+"bsod.cyber.seg.data" = ".数据";
+"bsod.cyber.seg.bss" = ".未初始化";
+"bsod.cyber.seg.rodata" = ".只读数据";
+"bsod.cyber.seg.heap" = ".堆";
+"bsod.cyber.seg.stack" = ".栈";

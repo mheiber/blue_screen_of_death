@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "collecting diagnostics ";
 "bsod.cyber.percentComplete" = "% complete";
 "bsod.cyber.dumpingCore" = "dumping core";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "FATAL";
+"bsod.cyber.error" = "ERROR";
+"bsod.cyber.kernelPanic" = "kernel.panic";
+"bsod.cyber.at" = " at ";
+"bsod.cyber.process" = ": process ";
+"bsod.cyber.exited" = " exited ";
+"bsod.cyber.signalFormat" = "signal %d";
+"bsod.cyber.addr" = ": addr=";
+"bsod.cyber.segment" = " segment=";
+"bsod.cyber.stackTrace" = "stack_trace";
+"bsod.cyber.registers" = "registers";
+"bsod.cyber.regRip" = "rip=";
+"bsod.cyber.regRsp" = " rsp=";
+"bsod.cyber.regRbp" = " rbp=";
+"bsod.cyber.failedToUnload" = "failed to unload ";
+"bsod.cyber.resourceBusy" = "resource busy";
+"bsod.cyber.refLabel" = "> ref: ";
+"bsod.cyber.haltCodeLabel" = "> halt_code: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "SYSTEM_HALT";
+"bsod.cyber.halt.kernelPanic" = "KERNEL_PANIC";
+"bsod.cyber.halt.fatalException" = "FATAL_EXCEPTION";
+"bsod.cyber.halt.unrecoverableError" = "UNRECOVERABLE_ERROR";
+"bsod.cyber.halt.watchdogTimeout" = "WATCHDOG_TIMEOUT";
+"bsod.cyber.halt.tripleFault" = "TRIPLE_FAULT";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "memory_fault";
+"bsod.cyber.fault.segmentation" = "segmentation_fault";
+"bsod.cyber.fault.bus" = "bus_error";
+"bsod.cyber.fault.stackOverflow" = "stack_overflow";
+"bsod.cyber.fault.heapCorruption" = "heap_corruption";
+"bsod.cyber.fault.nullDeref" = "null_deref";
+"bsod.cyber.fault.doubleFree" = "double_free";
+"bsod.cyber.fault.useAfterFree" = "use_after_free";
+"bsod.cyber.fault.bufferOverrun" = "buffer_overrun";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".text";
+"bsod.cyber.seg.data" = ".data";
+"bsod.cyber.seg.bss" = ".bss";
+"bsod.cyber.seg.rodata" = ".rodata";
+"bsod.cyber.seg.heap" = ".heap";
+"bsod.cyber.seg.stack" = ".stack";

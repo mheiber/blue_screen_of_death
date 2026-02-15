@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "tanılama bilgileri toplanıyor ";
 "bsod.cyber.percentComplete" = "% tamamlandı";
 "bsod.cyber.dumpingCore" = "çekirdek dökümü alınıyor";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "ÖLÜMCÜL";
+"bsod.cyber.error" = "HATA";
+"bsod.cyber.kernelPanic" = "çekirdek.panik";
+"bsod.cyber.at" = " konumda ";
+"bsod.cyber.process" = ": süreç ";
+"bsod.cyber.exited" = " sonlandı ";
+"bsod.cyber.signalFormat" = "sinyal %d";
+"bsod.cyber.addr" = ": adres=";
+"bsod.cyber.segment" = " bölüt=";
+"bsod.cyber.stackTrace" = "yığın_izi";
+"bsod.cyber.registers" = "yazmaçlar";
+"bsod.cyber.regRip" = "ks=";
+"bsod.cyber.regRsp" = " yg=";
+"bsod.cyber.regRbp" = " tg=";
+"bsod.cyber.failedToUnload" = "boşaltma başarısız ";
+"bsod.cyber.resourceBusy" = "kaynak meşgul";
+"bsod.cyber.refLabel" = "> başvuru: ";
+"bsod.cyber.haltCodeLabel" = "> durma_kodu: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "SİSTEM_DURMASI";
+"bsod.cyber.halt.kernelPanic" = "ÇEKİRDEK_PANİĞİ";
+"bsod.cyber.halt.fatalException" = "ÖLÜMCÜL_ÖZEL_DURUM";
+"bsod.cyber.halt.unrecoverableError" = "KURTARILAMAZ_HATA";
+"bsod.cyber.halt.watchdogTimeout" = "BEKÇİ_ZAMANAŞIMI";
+"bsod.cyber.halt.tripleFault" = "ÜÇLÜ_ARIZA";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "bellek_hatası";
+"bsod.cyber.fault.segmentation" = "bölütleme_hatası";
+"bsod.cyber.fault.bus" = "veri_yolu_hatası";
+"bsod.cyber.fault.stackOverflow" = "yığın_taşması";
+"bsod.cyber.fault.heapCorruption" = "öbek_bozulması";
+"bsod.cyber.fault.nullDeref" = "boş_başvuru";
+"bsod.cyber.fault.doubleFree" = "çift_serbest_bırakma";
+"bsod.cyber.fault.useAfterFree" = "serbest_sonrası_erişim";
+"bsod.cyber.fault.bufferOverrun" = "arabellek_taşması";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".kod";
+"bsod.cyber.seg.data" = ".veri";
+"bsod.cyber.seg.bss" = ".bss";
+"bsod.cyber.seg.rodata" = ".sbitveri";
+"bsod.cyber.seg.heap" = ".öbek";
+"bsod.cyber.seg.stack" = ".yığın";

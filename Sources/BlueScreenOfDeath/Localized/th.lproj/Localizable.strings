@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "กำลังรวบรวมข้อมูลวินิจฉัย ";
 "bsod.cyber.percentComplete" = "% เสร็จสมบูรณ์";
 "bsod.cyber.dumpingCore" = "กำลังดัมพ์คอร์";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "ร้ายแรง";
+"bsod.cyber.error" = "ข้อผิดพลาด";
+"bsod.cyber.kernelPanic" = "แกนกลาง.ล่ม";
+"bsod.cyber.at" = " ที่ ";
+"bsod.cyber.process" = ": กระบวนการ ";
+"bsod.cyber.exited" = " สิ้นสุด ";
+"bsod.cyber.signalFormat" = "สัญญาณ %d";
+"bsod.cyber.addr" = ": ที่อยู่=";
+"bsod.cyber.segment" = " ส่วน=";
+"bsod.cyber.stackTrace" = "ร่องรอย_สแต็ก";
+"bsod.cyber.registers" = "รีจิสเตอร์";
+"bsod.cyber.regRip" = "ตชค=";
+"bsod.cyber.regRsp" = " ตชส=";
+"bsod.cyber.regRbp" = " ตชฐ=";
+"bsod.cyber.failedToUnload" = "ไม่สามารถถอด ";
+"bsod.cyber.resourceBusy" = "ทรัพยากรไม่ว่าง";
+"bsod.cyber.refLabel" = "> อ้างอิง: ";
+"bsod.cyber.haltCodeLabel" = "> รหัส_หยุด: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "ระบบ_หยุด";
+"bsod.cyber.halt.kernelPanic" = "แกนกลาง_ล่ม";
+"bsod.cyber.halt.fatalException" = "ข้อยกเว้น_ร้ายแรง";
+"bsod.cyber.halt.unrecoverableError" = "ข้อผิดพลาด_กู้ไม่ได้";
+"bsod.cyber.halt.watchdogTimeout" = "สุนัขเฝ้า_หมดเวลา";
+"bsod.cyber.halt.tripleFault" = "ข้อบกพร่อง_สามชั้น";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "ข้อบกพร่อง_หน่วยความจำ";
+"bsod.cyber.fault.segmentation" = "ข้อบกพร่อง_การแบ่งส่วน";
+"bsod.cyber.fault.bus" = "ข้อผิดพลาด_บัส";
+"bsod.cyber.fault.stackOverflow" = "สแต็ก_ล้น";
+"bsod.cyber.fault.heapCorruption" = "ฮีป_เสียหาย";
+"bsod.cyber.fault.nullDeref" = "อ้างอิง_ว่างเปล่า";
+"bsod.cyber.fault.doubleFree" = "คืน_ซ้ำ";
+"bsod.cyber.fault.useAfterFree" = "ใช้_หลังคืน";
+"bsod.cyber.fault.bufferOverrun" = "บัฟเฟอร์_ล้น";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".คำสั่ง";
+"bsod.cyber.seg.data" = ".ข้อมูล";
+"bsod.cyber.seg.bss" = ".ไม่กำหนดค่า";
+"bsod.cyber.seg.rodata" = ".ข้อมูลอ่านอย่างเดียว";
+"bsod.cyber.seg.heap" = ".ฮีป";
+"bsod.cyber.seg.stack" = ".สแต็ก";

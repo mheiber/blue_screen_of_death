@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "raccolta dei dati diagnostici ";
 "bsod.cyber.percentComplete" = "% completato";
 "bsod.cyber.dumpingCore" = "dump del core";
+
+/* CyberWin 2070 - Parole chiave ed etichette del terminale */
+"bsod.cyber.fatal" = "FATALE";
+"bsod.cyber.error" = "ERRORE";
+"bsod.cyber.kernelPanic" = "nucleo.panico";
+"bsod.cyber.at" = " a ";
+"bsod.cyber.process" = ": processo ";
+"bsod.cyber.exited" = " terminato ";
+"bsod.cyber.signalFormat" = "segnale %d";
+"bsod.cyber.addr" = ": ind=";
+"bsod.cyber.segment" = " segmento=";
+"bsod.cyber.stackTrace" = "traccia_pila";
+"bsod.cyber.registers" = "registri";
+"bsod.cyber.regRip" = "pi=";
+"bsod.cyber.regRsp" = " pp=";
+"bsod.cyber.regRbp" = " pb=";
+"bsod.cyber.failedToUnload" = "impossibile scaricare ";
+"bsod.cyber.resourceBusy" = "risorsa occupata";
+"bsod.cyber.refLabel" = "> rif: ";
+"bsod.cyber.haltCodeLabel" = "> codice_arresto: ";
+
+/* CyberWin 2070 - Ragioni di arresto */
+"bsod.cyber.halt.systemHalt" = "ARRESTO_SISTEMA";
+"bsod.cyber.halt.kernelPanic" = "PANICO_NUCLEO";
+"bsod.cyber.halt.fatalException" = "ECCEZIONE_FATALE";
+"bsod.cyber.halt.unrecoverableError" = "ERRORE_IRRECUPERABILE";
+"bsod.cyber.halt.watchdogTimeout" = "SCADENZA_CANE_DI_GUARDIA";
+"bsod.cyber.halt.tripleFault" = "TRIPLO_GUASTO";
+
+/* CyberWin 2070 - Tipi di guasto */
+"bsod.cyber.fault.memory" = "guasto_memoria";
+"bsod.cyber.fault.segmentation" = "guasto_segmentazione";
+"bsod.cyber.fault.bus" = "errore_bus";
+"bsod.cyber.fault.stackOverflow" = "trabocco_pila";
+"bsod.cyber.fault.heapCorruption" = "corruzione_mucchio";
+"bsod.cyber.fault.nullDeref" = "deref_nulla";
+"bsod.cyber.fault.doubleFree" = "doppia_liberazione";
+"bsod.cyber.fault.useAfterFree" = "uso_dopo_liberazione";
+"bsod.cyber.fault.bufferOverrun" = "sforamento_buffer";
+
+/* CyberWin 2070 - Segmenti di memoria */
+"bsod.cyber.seg.text" = ".testo";
+"bsod.cyber.seg.data" = ".dati";
+"bsod.cyber.seg.bss" = ".bss";
+"bsod.cyber.seg.rodata" = ".dati_fissi";
+"bsod.cyber.seg.heap" = ".mucchio";
+"bsod.cyber.seg.stack" = ".pila";

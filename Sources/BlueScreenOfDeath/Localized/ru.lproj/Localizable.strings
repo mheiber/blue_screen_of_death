@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "сбор диагностики ";
 "bsod.cyber.percentComplete" = "% завершено";
 "bsod.cyber.dumpingCore" = "создание дампа ядра";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "КРИТИЧЕСКАЯ";
+"bsod.cyber.error" = "ОШИБКА";
+"bsod.cyber.kernelPanic" = "ядро.паника";
+"bsod.cyber.at" = " по адресу ";
+"bsod.cyber.process" = ": процесс ";
+"bsod.cyber.exited" = " завершён ";
+"bsod.cyber.signalFormat" = "сигнал %d";
+"bsod.cyber.addr" = ": адр=";
+"bsod.cyber.segment" = " сегмент=";
+"bsod.cyber.stackTrace" = "трассировка_стека";
+"bsod.cyber.registers" = "регистры";
+"bsod.cyber.regRip" = "ук=";
+"bsod.cyber.regRsp" = " ус=";
+"bsod.cyber.regRbp" = " уб=";
+"bsod.cyber.failedToUnload" = "не удалось выгрузить ";
+"bsod.cyber.resourceBusy" = "ресурс занят";
+"bsod.cyber.refLabel" = "> ссылка: ";
+"bsod.cyber.haltCodeLabel" = "> код_останова: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "ОСТАНОВ_СИСТЕМЫ";
+"bsod.cyber.halt.kernelPanic" = "ПАНИКА_ЯДРА";
+"bsod.cyber.halt.fatalException" = "КРИТИЧЕСКОЕ_ИСКЛЮЧЕНИЕ";
+"bsod.cyber.halt.unrecoverableError" = "НЕУСТРАНИМАЯ_ОШИБКА";
+"bsod.cyber.halt.watchdogTimeout" = "ТАЙМАУТ_СТОРОЖЕВОГО";
+"bsod.cyber.halt.tripleFault" = "ТРОЙНОЙ_СБОЙ";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "ошибка_памяти";
+"bsod.cyber.fault.segmentation" = "ошибка_сегментации";
+"bsod.cyber.fault.bus" = "ошибка_шины";
+"bsod.cyber.fault.stackOverflow" = "переполнение_стека";
+"bsod.cyber.fault.heapCorruption" = "повреждение_кучи";
+"bsod.cyber.fault.nullDeref" = "нулевая_ссылка";
+"bsod.cyber.fault.doubleFree" = "двойное_освобождение";
+"bsod.cyber.fault.useAfterFree" = "обращение_после_освобождения";
+"bsod.cyber.fault.bufferOverrun" = "переполнение_буфера";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".код";
+"bsod.cyber.seg.data" = ".данные";
+"bsod.cyber.seg.bss" = ".бсс";
+"bsod.cyber.seg.rodata" = ".конст";
+"bsod.cyber.seg.heap" = ".куча";
+"bsod.cyber.seg.stack" = ".стек";

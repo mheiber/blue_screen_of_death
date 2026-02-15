@@ -113,3 +113,50 @@
 "bsod.cyber.collectingDiagnostics" = "正在收集診斷資訊 ";
 "bsod.cyber.percentComplete" = "% 完成";
 "bsod.cyber.dumpingCore" = "正在傾印核心";
+
+/* CyberWin 2070 - Terminal keywords & labels */
+"bsod.cyber.fatal" = "致命";
+"bsod.cyber.error" = "錯誤";
+"bsod.cyber.kernelPanic" = "核心.恐慌";
+"bsod.cyber.at" = " 位於 ";
+"bsod.cyber.process" = ": 行程 ";
+"bsod.cyber.exited" = " 結束 ";
+"bsod.cyber.signalFormat" = "訊號 %d";
+"bsod.cyber.addr" = ": 位址=";
+"bsod.cyber.segment" = " 區段=";
+"bsod.cyber.stackTrace" = "堆疊_追蹤";
+"bsod.cyber.registers" = "暫存器";
+"bsod.cyber.regRip" = "指令指標=";
+"bsod.cyber.regRsp" = " 堆疊指標=";
+"bsod.cyber.regRbp" = " 基底指標=";
+"bsod.cyber.failedToUnload" = "卸載失敗 ";
+"bsod.cyber.resourceBusy" = "資源佔用";
+"bsod.cyber.refLabel" = "> 參照: ";
+"bsod.cyber.haltCodeLabel" = "> 停機碼: ";
+
+/* CyberWin 2070 - Halt reasons */
+"bsod.cyber.halt.systemHalt" = "系統停機";
+"bsod.cyber.halt.kernelPanic" = "核心恐慌";
+"bsod.cyber.halt.fatalException" = "致命例外";
+"bsod.cyber.halt.unrecoverableError" = "無法復原錯誤";
+"bsod.cyber.halt.watchdogTimeout" = "看門狗逾時";
+"bsod.cyber.halt.tripleFault" = "三重故障";
+
+/* CyberWin 2070 - Fault types */
+"bsod.cyber.fault.memory" = "記憶體故障";
+"bsod.cyber.fault.segmentation" = "區段錯誤";
+"bsod.cyber.fault.bus" = "匯流排錯誤";
+"bsod.cyber.fault.stackOverflow" = "堆疊溢位";
+"bsod.cyber.fault.heapCorruption" = "堆積損毀";
+"bsod.cyber.fault.nullDeref" = "空參照";
+"bsod.cyber.fault.doubleFree" = "重複釋放";
+"bsod.cyber.fault.useAfterFree" = "釋放後使用";
+"bsod.cyber.fault.bufferOverrun" = "緩衝區溢位";
+
+/* CyberWin 2070 - Memory segments */
+"bsod.cyber.seg.text" = ".指令";
+"bsod.cyber.seg.data" = ".資料";
+"bsod.cyber.seg.bss" = ".未初始化";
+"bsod.cyber.seg.rodata" = ".唯讀資料";
+"bsod.cyber.seg.heap" = ".堆積";
+"bsod.cyber.seg.stack" = ".堆疊";
