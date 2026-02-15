@@ -18,8 +18,8 @@
 "style.modern" = "Сучасний";
 "style.classic" = "Класичний";
 "style.classicDump" = "Класичний дамп";
-"style.mojibake" = "Mojibake";
-"style.cyberwin2070" = "CyberWin 2070";
+"style.mojibake" = "Модзібаке";
+"style.cyberwin2070" = "КіберВін 2070";
 "style.random" = "Випадковий";
 
 /* Intervals */

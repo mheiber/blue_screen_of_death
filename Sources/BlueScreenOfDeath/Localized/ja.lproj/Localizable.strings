@@ -18,8 +18,8 @@
 "style.modern" = "モダン";
 "style.classic" = "クラシック";
 "style.classicDump" = "クラシックダンプ";
-"style.mojibake" = "Mojibake";
-"style.cyberwin2070" = "CyberWin 2070";
+"style.mojibake" = "文字化け";
+"style.cyberwin2070" = "サイバーウィン 2070";
 "style.random" = "ランダム";
 
 /* Intervals */

@@ -18,8 +18,8 @@
 "style.modern" = "現代";
 "style.classic" = "經典";
 "style.classicDump" = "經典傾印";
-"style.mojibake" = "Mojibake";
-"style.cyberwin2070" = "CyberWin 2070";
+"style.mojibake" = "亂碼";
+"style.cyberwin2070" = "賽博視窗 2070";
 "style.random" = "隨機";
 
 /* Intervals */
