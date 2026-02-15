@@ -26,5 +26,7 @@
     <string>Copyright 2025. All rights reserved.</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.lifestyle</string>
 </dict>
 </plist>

@@ -11,7 +11,8 @@ let package = Package(
         .executableTarget(
             name: "BlueScreenOfDeath",
             path: "Sources/BlueScreenOfDeath",
-            exclude: ["Info.plist", "BlueScreenOfDeath.entitlements", "Resources"]
+            exclude: ["Info.plist", "BlueScreenOfDeath.entitlements", "Resources"],
+            resources: [.process("PrivacyInfo.xcprivacy")]
         ),
         .testTarget(
             name: "BlueScreenOfDeathTests",
