@@ -11,7 +11,7 @@ let package = Package(
         .executableTarget(
             name: "BlueScreenOfDeath",
             path: "Sources/BlueScreenOfDeath",
-            exclude: ["Info.plist"]
+            exclude: ["Info.plist", "BlueScreenOfDeath.entitlements", "Resources"]
         ),
         .testTarget(
             name: "BlueScreenOfDeathTests",
