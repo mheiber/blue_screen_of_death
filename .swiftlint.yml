@@ -1,0 +1,49 @@
+# SwiftLint configuration for Blue Screen of Death
+# A macOS menu bar wellness app
+
+excluded:
+  - .build
+  - Tests
+
+# Sensible defaults for a small macOS app
+disabled_rules:
+  - trailing_comma           # Allow trailing commas in arrays/dicts
+  - todo                     # Allow TODO comments during development
+  - blanket_disable_command  # Allow broad swiftlint:disable
+
+opt_in_rules:
+  - closure_spacing
+  - empty_count
+  - explicit_init
+  - fatal_error_message
+  - first_where
+  - implicitly_unwrapped_optional
+  - joined_default_parameter
+  - overridden_super_call
+  - private_outlet
+  - redundant_nil_coalescing
+  - sorted_first_last
+
+line_length:
+  warning: 120
+  error: 150
+
+type_body_length:
+  warning: 300
+  error: 500
+
+file_length:
+  warning: 400
+  error: 600
+
+function_body_length:
+  warning: 60
+  error: 100
+
+identifier_name:
+  min_length:
+    warning: 1
+  excluded:
+    - id
+    - x
+    - y
