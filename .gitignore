@@ -1,0 +1,28 @@
+# Swift / SPM
+.build/
+.swiftpm/
+Package.resolved
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+xcuserdata/
+DerivedData/
+
+# Xcode
+*.xcuserstate
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.perspectivev3
+!default.perspectivev3
+
+# macOS
+.DS_Store
+*.dSYM
+
+# Build artifacts
+*.app
+*.ipa
+
+# Temporary images
+screen.png
+persistence-of-memory.png
